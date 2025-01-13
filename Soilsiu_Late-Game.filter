@@ -196,10 +196,10 @@ ItemLevel = 20
     SetBorderColor 0 255 0 255
     SetBackgroundColor 0 0 0 255
 
-#### Show Uncut Spirit level 18 gems and above 
+#### Show Uncut Spirit level 19 gems and above 
 Show
 BaseType "Uncut Spirit Gem"
-ItemLevel >= 18
+ItemLevel >= 19
     MinimapIcon 2 Green Pentagon
     SetFontSize 20
     SetTextColor 0 150 0 250
@@ -304,8 +304,8 @@ WaystoneTier >= 15
     PlayEffect Green
     PlayAlertSound 10 150
     SetFontSize 20
-    SetTextColor 255 0 0 255
-    SetBorderColor 255 0 0 255
+    SetTextColor 0 255 0
+    SetBorderColor 0 255 0
     SetBackgroundColor 0 0 0 200
 
 #### Shows all Waystones that are of Rarity Rare
@@ -324,12 +324,12 @@ Rarity = Rare
 Show
 Class = Waystones
 Rarity >= Normal
-WaystoneTier >= 13
+WaystoneTier >= 14
     MinimapIcon 2 Green Pentagon
     PlayEffect Green
     PlayAlertSound 10 150
     SetFontSize 20
-    SetBorderColor 57 255 20 255
+    SetBorderColor 0 255 0 255
     SetBackgroundColor 0 0 0 200
 
 #### Hides all Waystones
