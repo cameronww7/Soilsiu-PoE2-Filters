@@ -59,7 +59,6 @@ Show
 Class = Quest Items
     SetFontSize 20
     SetBorderColor 0 191 0 200
-    SetBorderColor 0 191 0 200
     SetBackgroundColor 0 0 0 150
 
 #===============================================================================================================
@@ -71,7 +70,6 @@ Show
 BaseType == Gold
     SetFontSize 20
     SetTextColor 255 255 204 200
-    SetBackgroundColor 0 0 0 0
     SetBackgroundColor 0 0 0 0
 
 #===============================================================================================================
