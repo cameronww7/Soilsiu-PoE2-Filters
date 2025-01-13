@@ -1,0 +1,520 @@
+#===============================================================================================================
+# Soilsiu's Late Game - for Path of Exile 2
+#===============================================================================================================
+# VERSION:  0.1
+# TYPE:     LATE GAME
+# AUTHOR:   Soilsiu
+#
+#------------------------------------
+# INSTALLATION / UPDATE :
+#------------------------------------
+#
+# 0) It's recommended to check for updates once a month or at least before new leagues, to receive economy finetuning and new features!
+# 1) Paste this file into the following folder: %userprofile%/Documents/My Games/Path of Exile
+# 2) INGAME: Escape -> Options -> UI -> Scroll down -> Select the filter from the Dropdown box
+#
+#===============================================================================================================
+# Filter Settings
+#===============================================================================================================
+
+#===============================================================================================================
+# Overrides
+#  This is a section to toss in overrides, such as wanting to always show a certain base
+#===============================================================================================================
+
+Show
+Rarity Unique
+    PlayAlertSound 3 300
+    PlayEffect Brown
+    MinimapIcon 1 Brown Star
+    SetFontSize 20
+    SetTextColor 175 96 37 255
+    SetBorderColor 175 96 37 255
+    SetBackgroundColor 53 13 13 255
+
+#### This is an example override
+#Show
+#BaseType == "Expert Dualstring Bow"
+    #SetFontSize 20
+    #MinimapIcon 1 Green Square
+    #PlayEffect Green
+
+#===============================================================================================================
+# Hide Scrolls of Wisdom
+#===============================================================================================================
+
+Hide
+BaseType "Scroll of Wisdom"
+AreaLevel >= 30
+    SetFontSize 20
+    SetTextColor 220 190 132
+    SetBorderColor 255 255 255 150
+    SetBackgroundColor 0 0 0 150
+
+#===============================================================================================================
+# Quest Items
+#===============================================================================================================
+
+Show
+Class = Quest Items
+    SetFontSize 20
+    SetBorderColor 0 191 0 200
+    SetBorderColor 0 191 0 200
+    SetBackgroundColor 0 0 0 150
+
+#===============================================================================================================
+# Gold
+#===============================================================================================================
+
+#### Shows all Gold
+Show
+BaseType == Gold
+    SetFontSize 20
+    SetTextColor 255 255 204 200
+    SetBackgroundColor 0 0 0 0
+    SetBackgroundColor 0 0 0 0
+
+#===============================================================================================================
+# Currency Settings
+#===============================================================================================================
+
+Show
+BaseType "Divine Orb" "Perfect Jeweller's Orb" "Mirror of Kalandra" "Distilled Isolation" "Distilled Suffering"
+    PlayAlertSound 3 300
+    PlayEffect Green
+    MinimapIcon 0 Green Star
+    SetFontSize 25
+    SetTextColor 0 255 0 255
+    SetBorderColor 0 255 0 255
+    SetBackgroundColor 0 0 0 255
+Show
+Class "Pinnacle Keys"
+    PlayAlertSound 8 200
+    PlayEffect Green
+    MinimapIcon 0 Green Star
+    SetFontSize 25
+    SetTextColor 0 255 0 255
+    SetBorderColor 0 255 0 255
+    SetBackgroundColor 0 0 0 150
+
+Show
+Class = Currency
+BaseType = "Exalted Orb" "Regal Orb" "Orb of Alchemy" "Jeweller" "Orb of Annulment" "Orb of Chance" "Exotic Coinage" "Gemcutter's Prism" "Vaal Orb" "Chaos Orb" "Greater Jeweller's Orb"
+    MinimapIcon 1 Yellow Star
+    PlayAlertSound 11 100
+    PlayEffect Yellow
+    SetFontSize 20
+    SetTextColor 255 255 0 255
+    SetBorderColor 255 255 0 255
+    SetBackgroundColor 0 0 0 150
+
+Show
+Class Currency
+BaseType "Simulacrum Splinter" "Breach Splinter" " Artifact" "Distilled" "Catalyst" "Essence of" "Cowardly Fate" "Deadly Fate" "Victorious Fate"
+    PlayAlertSound 16 100
+    PlayEffect Purple
+    MinimapIcon 2 Purple Moon
+    SetFontSize 20
+    SetTextColor 191 0 255 220
+    SetBorderColor 191 0 255
+    SetBackgroundColor 0 0 0 150
+
+Show
+BaseType "Rune" "Soul Core" "Timeless" "Soul"
+    MinimapIcon 2 Cyan Circle
+    PlayEffect Cyan Temp
+    SetFontSize 20
+    SetTextColor 0 240 190 200
+    SetBorderColor 0 240 190 200
+    SetBackgroundColor 0 0 0 150
+
+Show
+BaseType "Artificer's Shard" "Arcanist's Etcher" "Armourer's Scrap" "Blacksmith's Whetstone" "Regal Shard" "Chance Shard"
+    PlayEffect Grey
+    MinimapIcon 2 Grey Raindrop
+    SetFontSize 20
+    SetTextColor 220 190 132
+    SetBorderColor 220 190 132 150
+    SetBackgroundColor 0 0 0 150
+
+Show
+BaseType "Orb of Augmentation" "Orb of Transmutation"
+    PlayEffect Grey Temp
+    SetFontSize 20
+    SetTextColor 220 190 132
+    SetBackgroundColor 0 0 0 150
+
+#===============================================================================================================
+# Trails Items
+#===============================================================================================================
+
+Show
+BaseType "Barya" "Ultimatum"
+    PlayAlertSound 2 300
+    PlayEffect Grey
+    MinimapIcon 1 Grey Square
+    SetFontSize 20
+    SetTextColor 255 207 255
+    SetBorderColor 255 207 255
+
+Show
+Class = Relics
+    SetFontSize 20
+
+Show
+BaseType "Gold Key" "Silver Key" "Bronze Key"
+    PlayAlertSound 2 300
+    PlayEffect White
+    MinimapIcon 2 White Circle
+    SetFontSize 20
+    SetTextColor 255 207 132
+    SetBorderColor 255 207 132
+    SetBackgroundColor 76 51 12
+
+Show
+BaseType "Cowardly Fate" "Deadly Fate" "Victorious Fate"
+    MinimapIcon 1 Purple Star
+    PlayAlertSound 12 200
+    PlayEffect Purple
+    SetFontSize 20
+    SetTextColor 255 100 0 255
+    SetBorderColor 100 100 255 255
+    SetBackgroundColor 0 0 0 150
+
+#===============================================================================================================
+# Uncut Gems (Skill, Spirit, Support, etc)
+#===============================================================================================================
+
+Show
+BaseType "Uncut Support Gem" "Uncut Skill Gem" "Uncut Spirit Gem"
+ItemLevel = 20
+    PlayAlertSound 3 300
+    PlayEffect Green
+    MinimapIcon 0 Green Star
+    SetFontSize 20
+    SetTextColor 0 255 0 255
+    SetBorderColor 0 255 0 255
+    SetBackgroundColor 0 0 0 255
+
+#### Show Uncut Spirit level 18 gems and above 
+Show
+BaseType "Uncut Spirit Gem"
+ItemLevel >= 18
+    MinimapIcon 2 Green Pentagon
+    SetFontSize 20
+    SetTextColor 0 150 0 250
+    SetBackgroundColor 0 0 0 250
+
+#### Show Uncut Skill level 19 gems and above 
+Show
+BaseType == "Uncut Skill Gem"
+ItemLevel >= 19
+    MinimapIcon 2 Green Pentagon
+    SetFontSize 20
+    SetTextColor 0 150 0 250
+    SetBackgroundColor 0 0 0 250
+
+#### Shows Uncut Support gem 3 Only
+##### I commented this out cause I do not need any more Gems
+#Show
+#BaseType == "Uncut Support Gem"
+#ItemLevel >= 3
+    #MinimapIcon 2 Green Pentagon
+    #SetFontSize 20
+    #SetTextColor 0 150 0 250
+    #SetBackgroundColor 0 0 0 250
+
+#### Make all gems pop during campaign
+Show
+AreaLevel < 68
+BaseType "Uncut Support Gem" "Uncut Skill Gem" "Uncut Spirit Gem"
+    PlayAlertSound 2 300
+    PlayEffect Cyan
+    MinimapIcon 1 Cyan Triangle
+    SetFontSize 20
+    SetTextColor 20 240 240
+    SetBorderColor 20 240 240
+    SetBackgroundColor 0 0 0 100
+
+#### Hide all gems that did not meet above requirements
+Hide
+BaseType "Uncut Support Gem" "Uncut Skill Gem" "Uncut Spirit Gem"
+    SetFontSize 20
+    SetTextColor 20 240 240 150
+    SetBackgroundColor 0 0 0 0
+
+#===============================================================================================================
+# Mapping Utility Items
+#===============================================================================================================
+
+Show
+Class = Tablet
+    PlayEffect Purple
+    PlayAlertSound 10 200
+    MinimapIcon 1 Purple Hexagon
+    SetFontSize 20
+    SetTextColor 191 0 255 220
+    SetBorderColor 191 0 255 220
+    SetBackgroundColor 255 255 255 200
+
+Show
+BaseType "Simulacrum" " Tablet" "Breachstone" "Cowardly Fate" "Deadly Fate" "Victorious Fate" "Expedition Logbook" "Test of"
+    PlayEffect Green
+    PlayAlertSound 4 200
+    MinimapIcon 1 Green Star
+    SetFontSize 20
+    SetTextColor 0 255 0
+    SetBorderColor 0 255 0
+    SetBackgroundColor 255 255 255 200
+
+Show
+Class = Map Fragments
+    PlayEffect Green
+    PlayAlertSound 7 200
+    MinimapIcon 2 Green Pentagon
+    SetFontSize 20
+    SetTextColor 200 0 0 250
+    SetBorderColor 200 0 0 250
+    SetBackgroundColor 255 255 255 200
+
+#===============================================================================================================
+# Shows all Currencies that were untagged
+#===============================================================================================================
+
+# Shows All Unknown Currency Or Currency not properly tagged
+Show
+Class = Currency
+    PlayEffect Grey
+    MinimapIcon 2 Grey Circle
+    SetFontSize 20
+    SetTextColor 220 190 132
+    SetBorderColor 220 190 132 150
+    SetBackgroundColor 0 0 0 150
+
+#===============================================================================================================
+# Waystone's aka Map's
+#===============================================================================================================
+
+# Makes Maps 15 and higher Super Green GG Drops
+Show
+Class = Waystones
+Rarity >= Normal
+WaystoneTier >= 15
+    MinimapIcon 2 Green Pentagon
+    PlayEffect Green
+    PlayAlertSound 10 150
+    SetFontSize 20
+    SetTextColor 255 0 0 255
+    SetBorderColor 255 0 0 255
+    SetBackgroundColor 0 0 0 200
+
+#### Shows all Waystones that are of Rarity Rare
+##### Turns all Waystones with Rarity Rare to Yellow
+Show
+Class = Waystones
+Rarity = Rare
+    MinimapIcon 2 Yellow Pentagon
+    PlayAlertSound 10 80
+    SetFontSize 20
+    SetTextColor 255 255 0 255
+    SetBorderColor 255 255 0 255
+    SetBackgroundColor 0 0 0 200
+
+#### There is no SetTextColor to show Rarity of the actual maps
+Show
+Class = Waystones
+Rarity >= Normal
+WaystoneTier >= 13
+    MinimapIcon 2 Green Pentagon
+    PlayEffect Green
+    PlayAlertSound 10 150
+    SetFontSize 20
+    SetBorderColor 57 255 20 255
+    SetBackgroundColor 0 0 0 200
+
+#### Hides all Waystones
+Hide
+Class = Waystones
+    SetFontSize 20
+    SetBorderColor 0 0 0 0
+    SetBackgroundColor 0 0 0 0
+
+#===============================================================================================================
+# Flasks (Endgame, Only shows Flasks with Quality 10% or Higher)
+#===============================================================================================================
+
+Show
+Class = "Life Flasks"
+Quality >= 10
+    SetFontSize 20
+    SetTextColor 200 0 0 200
+    SetBackgroundColor 0 0 0 150
+
+Hide
+Class = "Life Flasks"
+    SetFontSize 20
+    SetTextColor 200 0 0 150
+    SetBackgroundColor 0 0 0 150
+
+Show
+Class = "Mana Flasks"
+Quality >= 10
+    SetFontSize 20
+    SetTextColor 0 40 222 200
+    SetBackgroundColor 0 0 0 150
+
+Hide
+Class = "Mana Flasks"
+    SetFontSize 20
+    SetTextColor 0 40 222 170
+    SetBackgroundColor 0 0 0 150
+
+#===============================================================================================================
+# Show All Rares & Uniques
+#===============================================================================================================
+
+Show
+Rarity = Unique
+    PlayEffect Brown
+    MinimapIcon 2 Brown Circle
+    SetFontSize 20
+    SetTextColor 175 96 37 250
+    SetBorderColor 255 153 28 200
+    SetBackgroundColor 0 0 0 250
+
+Show
+Rarity = Rare
+    MinimapIcon 1 Yellow Cross
+    PlayEffect Yellow
+    SetFontSize 20
+    SetTextColor 255 215 0
+    SetBorderColor 255 255 0 250
+    SetBackgroundColor 0 0 0 150
+
+#===============================================================================================================
+# Jewels
+#===============================================================================================================
+
+Show
+Class "Jewel"
+    BaseType == "Time-Lost Emerald" "Time-Lost Ruby" "Time-Lost Sapphire"
+    PlayAlertSound 3 300
+    PlayEffect Blue
+    MinimapIcon 0 Blue Diamond
+    SetFontSize 20
+    SetTextColor 0 240 190 255
+    SetBorderColor 0 240 190 255
+    SetBackgroundColor 20 20 0 255
+
+Show
+Class = Jewels
+    SetFontSize 20
+    SetTextColor 50 150 100 250
+    SetBorderColor 50 150 100 250
+    SetBackgroundColor 0 0 0 200
+
+#===============================================================================================================
+# Ring / Amulets / Belts
+#===============================================================================================================
+
+Show
+BaseType == "Heavy Belt" "Sapphire Ring" "Stellar Amulet" 
+Rarity = Normal
+    MinimapIcon 2 Blue Square
+    PlayEffect Blue
+    SetFontSize 20
+    SetBorderColor 0 0 255 250
+    SetBackgroundColor 0 0 0 150
+
+Show
+Rarity "Normal"
+BaseType "Utility Belt"
+    PlayEffect Blue
+    MinimapIcon 2 Blue Kite
+    ItemLevel >= 82
+    SetFontSize 20
+    SetBorderColor 0 0 255 250
+    SetBackgroundColor 0 0 0 150
+
+#### Shows all Breach Rings
+Show
+BaseType "Breach Ring"
+    PlayEffect Blue
+    MinimapIcon 2 Blue Kite
+    SetFontSize 20
+    SetBorderColor 0 0 255 250
+    SetBackgroundColor 0 0 0 150
+
+Hide
+Class "Rings" "Amulets" "Belt"
+    SetFontSize 20
+    SetBackgroundColor 0 0 0 150
+
+#===============================================================================================================
+# Charms
+#===============================================================================================================
+
+Hide
+Class = Charms
+    SetFontSize 20
+    SetBorderColor 255 255 255 150
+
+#===============================================================================================================
+# Salvagable Items For Socket Shards or Quality Shards
+#===============================================================================================================
+
+#### This section is set to Hide to hide them since no longer need them
+Hide
+Sockets > 0
+Rarity Normal
+    SetFontSize 20
+    SetBorderColor 200 200 200
+
+Hide
+Quality > 1
+Rarity Normal
+    SetFontSize 20
+    SetBorderColor 200 200 200
+
+Hide
+Sockets > 0
+Rarity Magic
+    SetFontSize 20
+    SetBorderColor 0 0 200
+
+Hide
+Quality > 1
+Rarity Magic
+    SetFontSize 20
+    SetBorderColor 0 0 200
+
+
+#===============================================================================================================
+# Hide Item Options
+#===============================================================================================================
+
+Hide
+Class = "Boots" "Gloves" "Helmets" "Body Armours" "Crossbows" "Bows" "Two Hand Maces" "Staves" "Wands" "Shields" "Foci" "One Hand Maces" "Quivers" "Sceptres"
+Rarity = Magic
+Quality >= 1
+    SetFontSize 20
+    SetTextColor 136 136 255 250
+
+Hide
+Class = "Boots" "Gloves" "Helmets" "Body Armours" "Crossbows" "Bows" "Two Hand Maces" "Staves" "Wands" "Shields" "Foci" "One Hand Maces" "Quivers" "Sceptres"
+Rarity = Magic
+    SetFontSize 20
+    SetTextColor 136 136 255 100
+
+Hide
+Class = "Boots" "Gloves" "Helmets" "Body Armours" "Crossbows" "Bows" "Two Hand Maces" "Staves" "Wands" "Shields" "Foci" "One Hand Maces" "Quivers" "Sceptres"
+Rarity = Normal
+Quality >= 1
+    SetFontSize 20
+    SetTextColor 255 255 255 250
+
+Hide
+Class = "Boots" "Gloves" "Helmets" "Body Armours" "Crossbows" "Bows" "Two Hand Maces" "Staves" "Wands" "Shields" "Foci" "One Hand Maces" "Quivers" "Sceptres"
+Rarity = Normal
+    SetFontSize 20
+    SetTextColor 255 255 255 100
