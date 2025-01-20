@@ -45,7 +45,7 @@ Rarity Unique
 
 Hide
 BaseType "Scroll of Wisdom"
-AreaLevel >= 30
+AreaLevel >= 13
     SetFontSize 20
     SetTextColor 220 190 132
     SetBorderColor 255 255 255 150
@@ -235,11 +235,11 @@ BaseType "Uncut Support Gem" "Uncut Skill Gem" "Uncut Spirit Gem"
     SetBackgroundColor 0 0 0 100
 
 #### Hide all gems that did not meet above requirements
-Hide
-BaseType "Uncut Support Gem" "Uncut Skill Gem" "Uncut Spirit Gem"
-    SetFontSize 20
-    SetTextColor 20 240 240 150
-    SetBackgroundColor 0 0 0 0
+#Hide
+#BaseType "Uncut Support Gem" "Uncut Skill Gem" "Uncut Spirit Gem"
+#    SetFontSize 20
+#    SetTextColor 20 240 240 150
+#    SetBackgroundColor 0 0 0 0
 
 #===============================================================================================================
 # Mapping Utility Items
@@ -488,6 +488,20 @@ Quality > 1
 Rarity Magic
 AreaLevel <= 66
     SetFontSize 20
+    SetBorderColor 0 0 200
+
+Show
+Class = "Life Flasks"
+Quality >= 10
+    SetFontSize 20
+    SetTextColor 200 0 0 200
+    SetBorderColor 0 0 200
+
+Show
+Class = "Mana Flasks"
+Quality >= 10
+    SetFontSize 20
+    SetTextColor 200 0 0 200
     SetBorderColor 0 0 200
 
 
