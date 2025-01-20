@@ -23,7 +23,7 @@
 #===============================================================================================================
 
 Show
-Rarity Unique
+Rarity = Unique
     PlayAlertSound 3 300
     PlayEffect Brown
     MinimapIcon 1 Brown Star
@@ -197,34 +197,43 @@ ItemLevel = 20
 #### Show Uncut Spirit level 19 gems and above 
 Show
 BaseType "Uncut Spirit Gem"
-ItemLevel >= 19
-    MinimapIcon 2 Green Pentagon
+ItemLevel >= 15
+    PlayAlertSound 2 300
+    PlayEffect Cyan
+    MinimapIcon 1 Cyan Triangle
     SetFontSize 20
-    SetTextColor 0 150 0 250
-    SetBackgroundColor 0 0 0 250
+    SetTextColor 20 240 100
+    SetBorderColor 20 240 100
+    SetBackgroundColor 0 0 0 100
 
 #### Show Uncut Skill level 19 gems and above 
 Show
 BaseType == "Uncut Skill Gem"
-ItemLevel >= 19
-    MinimapIcon 2 Green Pentagon
+ItemLevel >= 15
+    PlayAlertSound 2 300
+    PlayEffect Cyan
+    MinimapIcon 1 Cyan Triangle
     SetFontSize 20
-    SetTextColor 0 150 0 250
-    SetBackgroundColor 0 0 0 250
+    SetTextColor 50 250 220
+    SetBorderColor 50 250 220
+    SetBackgroundColor 0 0 0 100
 
 #### Shows Uncut Support gem 3 Only
 ##### I commented this out cause I do not need any more Gems
-#Show
-#BaseType == "Uncut Support Gem"
-#ItemLevel >= 3
-    #MinimapIcon 2 Green Pentagon
-    #SetFontSize 20
-    #SetTextColor 0 150 0 250
-    #SetBackgroundColor 0 0 0 250
+Show
+BaseType == "Uncut Support Gem"
+ItemLevel >= 3
+    PlayAlertSound 2 300
+    PlayEffect Cyan
+    MinimapIcon 1 Cyan Triangle
+    SetFontSize 20
+    SetTextColor 20 240 240
+    SetBorderColor 20 240 240
+    SetBackgroundColor 0 0 0 100
 
 #### Make all gems pop during campaign
 Show
-AreaLevel < 68
+AreaLevel < 66
 BaseType "Uncut Support Gem" "Uncut Skill Gem" "Uncut Spirit Gem"
     PlayAlertSound 2 300
     PlayEffect Cyan
@@ -235,11 +244,11 @@ BaseType "Uncut Support Gem" "Uncut Skill Gem" "Uncut Spirit Gem"
     SetBackgroundColor 0 0 0 100
 
 #### Hide all gems that did not meet above requirements
-#Hide
-#BaseType "Uncut Support Gem" "Uncut Skill Gem" "Uncut Spirit Gem"
-#    SetFontSize 20
-#    SetTextColor 20 240 240 150
-#    SetBackgroundColor 0 0 0 0
+Hide
+BaseType "Uncut Support Gem" "Uncut Skill Gem" "Uncut Spirit Gem"
+    SetFontSize 20
+    SetTextColor 20 240 240 150
+    SetBackgroundColor 0 0 0 0
 
 #===============================================================================================================
 # Mapping Utility Items
@@ -343,29 +352,39 @@ Class = Waystones
 
 Show
 Class = "Life Flasks"
-Quality >= 10
+Quality >= 1
+    MinimapIcon 2 Red Moon
+    PlayEffect Red
+    PlayAlertSound 15 150
     SetFontSize 20
-    SetTextColor 200 0 0 200
-    SetBackgroundColor 0 0 0 150
+    SetTextColor 200 50 50 
+    SetBorderColor 200 50 50 
+    SetBackgroundColor 0 0 0
+
+Show
+Class = "Mana Flasks"
+Quality >= 1
+    MinimapIcon 2 Blue Moon
+    PlayEffect Blue
+    PlayAlertSound 15 150
+    SetFontSize 20
+    SetTextColor 50 100 200
+    SetBorderColor 50 100 200
+    SetBackgroundColor 0 0 0
 
 Show
 Class = "Life Flasks"
     SetFontSize 20
-    SetTextColor 200 0 0 150
-    SetBackgroundColor 0 0 0 150
-
-Show
-Class = "Mana Flasks"
-Quality >= 10
-    SetFontSize 20
-    SetTextColor 0 40 222 200
-    SetBackgroundColor 0 0 0 150
+    SetTextColor 200 50 50 
+    SetBorderColor 200 50 50 
+    SetBackgroundColor 0 0 0
 
 Show
 Class = "Mana Flasks"
     SetFontSize 20
-    SetTextColor 0 40 222 170
-    SetBackgroundColor 0 0 0 150
+    SetTextColor 50 100 200
+    SetBorderColor 50 100 200
+    SetBackgroundColor 0 0 0
 
 #===============================================================================================================
 # Show All Rares & Uniques
@@ -388,6 +407,7 @@ Rarity = Rare
     SetTextColor 255 215 0
     SetBorderColor 255 255 0 250
     SetBackgroundColor 0 0 0 150
+    
 
 #===============================================================================================================
 # Jewels
@@ -461,48 +481,26 @@ Class = Charms
 # Salvagable Items For Socket Shards or Quality Shards
 #===============================================================================================================
 
-#### This section is set to Hide to hide them since no longer need them
 Show
 Sockets > 0
-Rarity Normal
-AreaLevel <= 66
+Rarity = Normal Magic
     SetFontSize 20
-    SetBorderColor 200 200 200
+    SetTextColor 90 150 90
+    SetBorderColor 90 150 90
 
 Show
-Quality > 1
-Rarity Normal
-AreaLevel <= 66
+Quality >= 1
+Rarity = Normal Magic
     SetFontSize 20
-    SetBorderColor 200 200 200
+    SetTextColor 90 150 90
+    SetBorderColor 90 150 90
 
 Show
-Sockets > 0
-Rarity Magic
-AreaLevel <= 66
+Class = "Life Flasks" "Mana Flasks"
+Quality >= 1
     SetFontSize 20
-    SetBorderColor 0 0 200
-
-Show
-Quality > 1
-Rarity Magic
-AreaLevel <= 66
-    SetFontSize 20
-    SetBorderColor 0 0 200
-
-Show
-Class = "Life Flasks"
-Quality >= 10
-    SetFontSize 20
-    SetTextColor 200 0 0 200
-    SetBorderColor 0 0 200
-
-Show
-Class = "Mana Flasks"
-Quality >= 10
-    SetFontSize 20
-    SetTextColor 200 0 0 200
-    SetBorderColor 0 0 200
+    SetTextColor 90 150 90
+    SetBorderColor 90 150 90
 
 
 #===============================================================================================================
@@ -543,8 +541,7 @@ Rarity = Normal
 # Hide Item Options
 #===============================================================================================================
 
-#### This is a hide all
+#### This is a Shows all
 Show
     Rarity = Normal Magic
     SetFontSize 20
-    SetTextColor 255 255 255 100

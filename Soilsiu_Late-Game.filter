@@ -23,7 +23,7 @@
 #===============================================================================================================
 
 Show
-Rarity Unique
+Rarity = Unique
     PlayAlertSound 3 300
     PlayEffect Brown
     MinimapIcon 1 Brown Star
@@ -198,29 +198,38 @@ ItemLevel = 20
 Show
 BaseType "Uncut Spirit Gem"
 ItemLevel >= 19
-    MinimapIcon 2 Green Pentagon
+    PlayAlertSound 2 300
+    PlayEffect Cyan
+    MinimapIcon 1 Cyan Triangle
     SetFontSize 20
-    SetTextColor 0 150 0 250
-    SetBackgroundColor 0 0 0 250
+    SetTextColor 20 240 100
+    SetBorderColor 20 240 100
+    SetBackgroundColor 0 0 0 100
 
 #### Show Uncut Skill level 19 gems and above 
 Show
 BaseType == "Uncut Skill Gem"
 ItemLevel >= 19
-    MinimapIcon 2 Green Pentagon
+    PlayAlertSound 2 300
+    PlayEffect Cyan
+    MinimapIcon 1 Cyan Triangle
     SetFontSize 20
-    SetTextColor 0 150 0 250
-    SetBackgroundColor 0 0 0 250
+    SetTextColor 50 250 220
+    SetBorderColor 50 250 220
+    SetBackgroundColor 0 0 0 100
 
 #### Shows Uncut Support gem 3 Only
 ##### I commented this out cause I do not need any more Gems
 #Show
 #BaseType == "Uncut Support Gem"
 #ItemLevel >= 3
-    #MinimapIcon 2 Green Pentagon
-    #SetFontSize 20
-    #SetTextColor 0 150 0 250
-    #SetBackgroundColor 0 0 0 250
+    PlayAlertSound 2 300
+    PlayEffect Cyan
+    MinimapIcon 1 Cyan Triangle
+    SetFontSize 20
+    SetTextColor 20 240 240
+    SetBorderColor 20 240 240
+    SetBackgroundColor 0 0 0 100
 
 #### Make all gems pop during campaign
 Show
@@ -344,28 +353,24 @@ Class = Waystones
 Show
 Class = "Life Flasks"
 Quality >= 10
+    MinimapIcon 2 Red Moon
+    PlayEffect Red
+    PlayAlertSound 15 150
     SetFontSize 20
-    SetTextColor 200 0 0 200
-    SetBorderColor 0 0 200
+    SetTextColor 200 50 50 
+    SetBorderColor 200 50 50 
+    SetBackgroundColor 0 0 0
 
 Show
 Class = "Mana Flasks"
 Quality >= 10
+    MinimapIcon 2 Blue Moon
+    PlayEffect Blue
+    PlayAlertSound 15 150
     SetFontSize 20
-    SetTextColor 200 0 0 200
-    SetBorderColor 0 0 200
-
-Hide
-Class = "Life Flasks"
-    SetFontSize 20
-    SetTextColor 200 0 0 150
-    SetBackgroundColor 0 0 0 150
-
-Hide
-Class = "Mana Flasks"
-    SetFontSize 20
-    SetTextColor 0 40 222 170
-    SetBackgroundColor 0 0 0 150
+    SetTextColor 50 100 200
+    SetBorderColor 50 100 200
+    SetBackgroundColor 0 0 0
 
 #===============================================================================================================
 # Show All Rares & Uniques
@@ -406,6 +411,9 @@ Class "Jewel"
 
 Show
 Class = Jewels
+    PlayAlertSound 1 300
+    PlayEffect Green
+    MinimapIcon 0 Green Diamond
     SetFontSize 20
     SetTextColor 50 150 100 250
     SetBorderColor 50 150 100 250
@@ -425,7 +433,7 @@ Rarity = Normal
     SetBackgroundColor 0 0 0 150
 
 Show
-Rarity "Normal"
+Rarity = "Normal"
 BaseType "Utility Belt"
     PlayEffect Blue
     MinimapIcon 2 Blue Kite
@@ -458,41 +466,10 @@ Class = Charms
     SetBorderColor 255 255 255 150
 
 #===============================================================================================================
-# Salvagable Items For Socket Shards or Quality Shards
-#===============================================================================================================
-
-#### This section is set to Hide to hide them since no longer need them
-Hide
-Sockets > 0
-Rarity Normal
-    SetFontSize 20
-    SetBorderColor 200 200 200
-
-Hide
-Quality > 1
-Rarity Normal
-    SetFontSize 20
-    SetBorderColor 200 200 200
-
-Hide
-Sockets > 0
-Rarity Magic
-    SetFontSize 20
-    SetBorderColor 0 0 200
-
-Hide
-Quality > 1
-Rarity Magic
-    SetFontSize 20
-    SetBorderColor 0 0 200
-
-
-#===============================================================================================================
 # Hide Item Options
 #===============================================================================================================
 
 #### This is a hide all
-Show
+Hide
     Rarity = Normal Magic
     SetFontSize 20
-    SetTextColor 255 255 255 100
