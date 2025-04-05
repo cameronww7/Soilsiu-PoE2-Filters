@@ -83,7 +83,7 @@ BaseType "Divine Orb" "Perfect Jeweller's Orb" "Mirror of Kalandra" "Distilled I
     MinimapIcon 0 Green Star
     SetFontSize 25
     SetTextColor 0 255 0 255
-    SetBorderColor 0 255 0 255
+    SetBorderColor 0 255 0 255 
     SetBackgroundColor 0 0 0 255
 Show
 Class "Pinnacle Keys"
@@ -504,44 +504,9 @@ Quality >= 1
 
 
 #===============================================================================================================
-# Hide Item Options
+# Show Item Options
 #===============================================================================================================
-
-### Meant to be used to Flip to Show during campaign
-Show
-Class = "Boots" "Gloves" "Helmets" "Body Armours" "Crossbows" "Bows" "Two Hand Maces" "Staves" "Wands" "Shields" "Foci" "One Hand Maces" "Quivers" "Sceptres"
-Rarity = Magic
-Quality >= 1
-    SetFontSize 20
-    SetTextColor 136 136 255 250
-
-### Mean to be used to Flip to Show during campaign
-Show
-Class = "Boots" "Gloves" "Helmets" "Body Armours" "Crossbows" "Bows" "Two Hand Maces" "Staves" "Wands" "Shields" "Foci" "One Hand Maces" "Quivers" "Sceptres"
-Rarity = Magic
-    SetFontSize 20
-    SetTextColor 136 136 255 100
-
-### Meant to be used to Flip to Show during campaign
-Show
-Class = "Boots" "Gloves" "Helmets" "Body Armours" "Crossbows" "Bows" "Two Hand Maces" "Staves" "Wands" "Shields" "Foci" "One Hand Maces" "Quivers" "Sceptres"
-Rarity = Normal
-Quality >= 1
-    SetFontSize 20
-    SetTextColor 255 255 255 250
-
-### Meant to be used to Flip to Show during campaign
-Show
-Class = "Boots" "Gloves" "Helmets" "Body Armours" "Crossbows" "Bows" "Two Hand Maces" "Staves" "Wands" "Shields" "Foci" "One Hand Maces" "Quivers" "Sceptres"
-Rarity = Normal
-    SetFontSize 20
-    SetTextColor 255 255 255 100
-
-#===============================================================================================================
-# Hide Item Options
-#===============================================================================================================
-
 #### This is a Shows all
 Show
-    Rarity = Normal Magic
-    SetFontSize 20
+Rarity = Normal Magic
+SetFontSize 20
