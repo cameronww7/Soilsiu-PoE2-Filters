@@ -165,7 +165,7 @@ BaseType = "Jeweller" "Perfect" "Greater" "Artificer's Orb" "Chance Shard" "Orb 
 
 Show
 Class Currency
-BaseType "Simulacrum Splinter" "Breach Splinter" "Artifact" "Distilled" "Liquid " "Catalyst" "Essence of" "Cowardly Fate" "Deadly Fate" "Victorious Fate" "Omen of"
+BaseType "Simulacrum Splinter" "Breach Splinter" "Artifact" "Liquid " "Catalyst" "Essence of" "Cowardly Fate" "Deadly Fate" "Victorious Fate" "Omen of"
     PlayAlertSound 16 100
     PlayEffect Purple
     MinimapIcon 2 Purple Moon
@@ -425,8 +425,8 @@ Show
 Class = Waystones
 Rarity >= Normal
 WaystoneTier >= 6
-    MinimapIcon 2 Gray Pentagon
-    PlayEffect Gray
+    MinimapIcon 2 Grey Pentagon
+    PlayEffect Grey
     PlayAlertSound 10 150
     SetFontSize 20
     SetBorderColor 100 100 100 255
@@ -549,7 +549,7 @@ Rarity = Rare
 
 Show
 Class "Jewel"
-    BaseType == "Time-Lost" "Timeless"
+    BaseType == "Time-Lost Emerald" "Time-Lost Ruby" "Time-Lost Sapphire" "Timeless"
     PlayAlertSound 3 300
     PlayEffect Blue
     MinimapIcon 0 Blue Diamond
