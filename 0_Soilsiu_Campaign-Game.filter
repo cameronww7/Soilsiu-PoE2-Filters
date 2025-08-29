@@ -1,18 +1,27 @@
 #===============================================================================================================
-# Soilsiu's Mid Game - for Path of Exile 2
+# Soilsiu's Campaign Filter - for Path of Exile 2
 #===============================================================================================================
 # VERSION:  0.3.0
-# TYPE:     MID GAME
+# TYPE:     Campaign
 # AUTHOR:   Soilsiu
 # 
 # -> Following Allie's Guide - https://mobalytics.gg/poe-2/profile/allie/builds/0-3-allie-s-hollow-palm-invoker-starter
 #
 #------------------------------------
-# INSTALLATION / UPDATE :
+# What to Know:
+#------------------------------------
+# - Being a Soilsiu filter means Green is gonna be showing as GG Items or Key items
+# - Smaller Font
+#
+# - This filter will show almost everything during leveling since we are leveling
+#
+#------------------------------------
+# INSTALLATION:
 #------------------------------------
 #
 # 1) Paste this file into the following folder: %userprofile%/Documents/My Games/Path of Exile
 # 2) INGAME: Escape -> Options -> UI -> Scroll down -> Select the filter from the Dropdown box
+# 
 #===============================================================================================================
 # Filter Settings
 #===============================================================================================================
@@ -33,19 +42,19 @@ Rarity = Unique
     SetBackgroundColor 53 13 13 255
 
 #### This is an example override
-#Show
-#BaseType == "Expert Dualstring Bow"
-    #SetFontSize 20
-    #MinimapIcon 1 Green Square
-    #PlayEffect Green
+Show
+BaseType == "Dualstring Bow"
+    SetFontSize 20
+    MinimapIcon 1 Green Square
+    PlayEffect Green
 
 #===============================================================================================================
-# Hide Scrolls of Wisdom
+# Hide Scrolls of Wisdom once you get the Deckard Cain Dood
 #===============================================================================================================
 
 Hide
 BaseType "Scroll of Wisdom"
-AreaLevel >= 30
+AreaLevel >= 20
     SetFontSize 20
     SetTextColor 220 190 132
     SetBorderColor 255 255 255 150
@@ -83,7 +92,7 @@ BaseType "Divine Orb" "Perfect Jeweller's Orb" "Mirror of Kalandra" "Distilled I
     MinimapIcon 0 Green Star
     SetFontSize 25
     SetTextColor 0 255 0 255
-    SetBorderColor 0 255 0 255
+    SetBorderColor 0 255 0 255 
     SetBackgroundColor 0 0 0 255
 Show
 Class "Pinnacle Keys"
@@ -183,7 +192,7 @@ BaseType "Cowardly Fate" "Deadly Fate" "Victorious Fate"
 # Uncut Gems (Skill, Spirit, Support, etc)
 #===============================================================================================================
 
-how
+Show
 BaseType "Uncut Support Gem" "Uncut Skill Gem" "Uncut Spirit Gem"
 ItemLevel = 20
     PlayAlertSound 3 300
@@ -197,25 +206,25 @@ ItemLevel = 20
 #### Show Uncut Spirit level 19 gems and above 
 Show
 BaseType "Uncut Spirit Gem"
-ItemLevel >= 18
+ItemLevel >= 15
     PlayAlertSound 2 300
     PlayEffect Cyan
     MinimapIcon 1 Cyan Triangle
     SetFontSize 20
-    SetTextColor 70 240 150
-    SetBorderColor 70 240 150
+    SetTextColor 20 240 100
+    SetBorderColor 20 240 100
     SetBackgroundColor 0 0 0 100
 
 #### Show Uncut Skill level 19 gems and above 
 Show
 BaseType == "Uncut Skill Gem"
-ItemLevel >= 18
+ItemLevel >= 15
     PlayAlertSound 2 300
     PlayEffect Cyan
     MinimapIcon 1 Cyan Triangle
     SetFontSize 20
-    SetTextColor 75 180 255
-    SetBorderColor 75 180 255
+    SetTextColor 50 250 220
+    SetBorderColor 50 250 220
     SetBackgroundColor 0 0 0 100
 
 #### Shows Uncut Support gem 3 Only
@@ -331,7 +340,7 @@ Rarity = Rare
 Show
 Class = Waystones
 Rarity >= Normal
-WaystoneTier >= 14
+WaystoneTier >= 10
     MinimapIcon 2 Green Pentagon
     PlayEffect Green
     PlayAlertSound 10 150
@@ -340,7 +349,7 @@ WaystoneTier >= 14
     SetBackgroundColor 0 0 0 200
 
 #### Hides all Waystones
-Hide
+Show
 Class = Waystones
     SetFontSize 20
     SetBorderColor 0 0 0 0
@@ -352,7 +361,7 @@ Class = Waystones
 
 Show
 Class = "Life Flasks"
-Quality >= 10
+Quality >= 1
     MinimapIcon 2 Red Moon
     PlayEffect Red
     PlayAlertSound 15 150
@@ -363,10 +372,24 @@ Quality >= 10
 
 Show
 Class = "Mana Flasks"
-Quality >= 10
+Quality >= 1
     MinimapIcon 2 Blue Moon
     PlayEffect Blue
     PlayAlertSound 15 150
+    SetFontSize 20
+    SetTextColor 50 100 200
+    SetBorderColor 50 100 200
+    SetBackgroundColor 0 0 0
+
+Show
+Class = "Life Flasks"
+    SetFontSize 20
+    SetTextColor 200 50 50 
+    SetBorderColor 200 50 50 
+    SetBackgroundColor 0 0 0
+
+Show
+Class = "Mana Flasks"
     SetFontSize 20
     SetTextColor 50 100 200
     SetBorderColor 50 100 200
@@ -393,6 +416,7 @@ Rarity = Rare
     SetTextColor 255 215 0
     SetBorderColor 255 255 0 250
     SetBackgroundColor 0 0 0 150
+    
 
 #===============================================================================================================
 # Jewels
@@ -411,9 +435,6 @@ Class "Jewel"
 
 Show
 Class = Jewels
-    PlayAlertSound 1 300
-    PlayEffect Green
-    MinimapIcon 0 Green Diamond
     SetFontSize 20
     SetTextColor 50 150 100 250
     SetBorderColor 50 150 100 250
@@ -433,7 +454,7 @@ Rarity = Normal
     SetBackgroundColor 0 0 0 150
 
 Show
-Rarity = "Normal"
+Rarity "Normal"
 BaseType "Utility Belt"
     PlayEffect Blue
     MinimapIcon 2 Blue Kite
@@ -451,7 +472,7 @@ BaseType "Breach Ring"
     SetBorderColor 0 0 255 250
     SetBackgroundColor 0 0 0 150
 
-Hide
+Show
 Class "Rings" "Amulets" "Belt"
     SetFontSize 20
     SetBackgroundColor 0 0 0 150
@@ -460,16 +481,48 @@ Class "Rings" "Amulets" "Belt"
 # Charms
 #===============================================================================================================
 
-Hide
+Show
 Class = Charms
     SetFontSize 20
     SetBorderColor 255 255 255 150
 
 #===============================================================================================================
-# Hide Item Options
+# Salvagable Items For Socket Shards or Quality Shards
 #===============================================================================================================
 
-#### This is a hide all
-Hide
+Show
+Sockets > 0
+Rarity = Normal Magic
+    SetFontSize 20
+    SetTextColor 90 150 90
+    SetBorderColor 90 150 90
+
+Show
+Quality >= 1
+Rarity = Normal Magic
+    SetFontSize 20
+    SetTextColor 90 150 90
+    SetBorderColor 90 150 90
+
+Show
+Class = "Life Flasks" "Mana Flasks"
+Quality >= 1
+    SetFontSize 20
+    SetTextColor 90 150 90
+    SetBorderColor 90 150 90
+
+
+#===============================================================================================================
+# Show Item Options
+#===============================================================================================================
+#Hide
+#Class = "Boots" "Gloves" "Helmets" "Body Armours" "Crossbows" "Bows" "Two Hand Maces" "Staves" "Wands" "Shields" "Foci" "One Hand Maces" "Quivers" "Sceptres"
+#Rarity = Normal Magic
+    #SetFontSize 20
+    #SetTextColor 136 136 255 250
+
+
+#### This is a Shows all
+Show
     Rarity = Normal Magic
     SetFontSize 20
