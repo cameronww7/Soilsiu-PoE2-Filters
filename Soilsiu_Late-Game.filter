@@ -1,18 +1,18 @@
 #===============================================================================================================
-# Soilsiu's Late Game - for Path of Exile 2
+# Soilsiu's Mid Game - for Path of Exile 2
 #===============================================================================================================
-# VERSION:  0.1
-# TYPE:     LATE GAME
+# VERSION:  0.3.0
+# TYPE:     MID GAME
 # AUTHOR:   Soilsiu
+# 
+# -> Following Allie's Guide - https://mobalytics.gg/poe-2/profile/allie/builds/0-3-allie-s-hollow-palm-invoker-starter
 #
 #------------------------------------
 # INSTALLATION / UPDATE :
 #------------------------------------
 #
-# 0) It's recommended to check for updates once a month or at least before new leagues, to receive economy finetuning and new features!
 # 1) Paste this file into the following folder: %userprofile%/Documents/My Games/Path of Exile
 # 2) INGAME: Escape -> Options -> UI -> Scroll down -> Select the filter from the Dropdown box
-#
 #===============================================================================================================
 # Filter Settings
 #===============================================================================================================
