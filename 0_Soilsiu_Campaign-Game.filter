@@ -35,7 +35,7 @@
 ## I want this on while leveling since in 0.3.0 Dualstring Bow is a great craftable and item we want
 Show
 BaseType == "Dualstring Bow"
-    SetFontSize 20
+    SetFontSize 30
     MinimapIcon 1 Green Square
     PlayEffect Green
 
@@ -69,6 +69,7 @@ Class = Quest Items
 Show
 	StackSize >= 100
 	BaseType == "Gold"
+    SetFontSize 30
 	SetTextColor 255 255 255 255
 	SetBorderColor 255 255 255 255
 	PlayEffect Orange Temp
@@ -86,7 +87,7 @@ BaseType == Gold
 #===============================================================================================================
 
 Show # Showing Super Exotic Bases
-	Rarity Normal Magic Rare
+	Rarity = Normal Magic Rare
 	BaseType == "Diamond" "Time-Lost Diamond"
 	SetFontSize 20
 	SetTextColor 0 240 190 255
@@ -97,7 +98,7 @@ Show # Showing Super Exotic Bases
 	MinimapIcon 0 Blue Diamond
 
 Show # Showing Exotic Kalandra Bases
-	Rarity Normal Magic Rare
+	Rarity = Normal Magic Rare
 	BaseType == "Dusk Amulet" "Dusk Ring" "Gloam Amulet" "Gloam Ring" "Penumbra Amulet" "Penumbra Ring" "Tenebrous Amulet" "Tenebrous Ring"
 	SetFontSize 20
 	SetTextColor 0 240 190 255
@@ -108,7 +109,7 @@ Show # Showing Exotic Kalandra Bases
 	MinimapIcon 0 Blue Diamond
 
 Show # Showing Fishing Rod
-	Rarity Normal Magic Rare
+	Rarity = Normal Magic Rare
 	Class == "Fishing Rods"
 	SetFontSize 20
 	SetTextColor 240 0 0 255
@@ -155,7 +156,7 @@ BaseType = "Exalted Orb" "Greater Exalted Orb"
 
 Show
 Class = Currency
-BaseType = "Jeweller" "Perfect" "Artificer's Orb" "Chance Shard" "Greater" "Orb of Alchemy" "Regal Orb" "Vaal Orb"  "Orb of Chance" "Exotic Coinage" "Gemcutter's Prism" "Glassblower's Bauble" "Preserved Cranium" "Preserved Vertebrae" "Gnawed Collarbone" "Gnawed Jawbone" "Gnawed Rib" "Preserved Collarbone" "Preserved Jawbone" "Preserved Rib"
+BaseType = "Jeweller" "Perfect" "Greater" "Artificer's Orb" "Chance Shard" "Orb of Alchemy" "Regal Orb" "Vaal Orb"  "Orb of Chance" "Exotic Coinage" "Gemcutter's Prism" "Glassblower's Bauble" "Preserved Cranium" "Preserved Vertebrae" "Gnawed Collarbone" "Gnawed Jawbone" "Gnawed Rib" "Preserved Collarbone" "Preserved Jawbone" "Preserved Rib"
     PlayAlertSound 11 100
     PlayEffect Yellow
     SetFontSize 20
@@ -242,7 +243,7 @@ BaseType "Cowardly Fate" "Deadly Fate" "Victorious Fate"
     SetBorderColor 100 100 255 255
     SetBackgroundColor 0 0 0 150
 
-Show 
+Show # Special Test Keys
 	BaseType == "Test of Cunning Barya" "Test of Strength Barya" "Test of Time Barya" "Test of Will Barya"
 	SetFontSize 20
 	SetTextColor 0 0 0 255
@@ -252,7 +253,7 @@ Show
 	PlayEffect Purple Temp
 	MinimapIcon 1 White Hexagon
 
-Show 
+Show # Show Vault Keys
 	Class == "Vault Keys"
 	SetFontSize 20
 	SetTextColor 255 0 0 255
@@ -261,6 +262,10 @@ Show
 	PlayAlertSound 6 300
 	PlayEffect Red
 	MinimapIcon 0 Red Star
+
+#===============================================================================================================
+# Show All Relics
+#===============================================================================================================
 
 Show
 Class = Relics
@@ -347,7 +352,6 @@ WaystoneTier >= 15
     SetBorderColor 0 255 0
     SetBackgroundColor 0 0 0 200
 
-#### Shows all Waystones that are of Rarity Rare
 ##### Turns all Waystones with Rarity Rare to Yellow
 Show
 Class = Waystones
@@ -363,15 +367,15 @@ Rarity = Rare
 Show
 Class = Waystones
 Rarity >= Normal
-WaystoneTier >= 10
-    MinimapIcon 2 Green Pentagon
-    PlayEffect Green
+WaystoneTier >= 6
+    MinimapIcon 2 Gray Pentagon
+    PlayEffect Gray
     PlayAlertSound 10 150
     SetFontSize 20
-    SetBorderColor 0 255 0 255
+    SetBorderColor 100 100 100 255
     SetBackgroundColor 0 0 0 200
 
-#### Hides all Waystones
+#### Show all Waystones
 Show
 Class = Waystones
     SetFontSize 20
@@ -422,55 +426,61 @@ Class = "Mana Flasks"
 # Show All Rares & Uniques
 #===============================================================================================================
 
+# Show all Uniques
 Show
 Rarity = Unique
     PlayEffect Brown
     MinimapIcon 2 Brown Circle
-    SetFontSize 22
+    SetFontSize 30
     SetTextColor 175 96 37 250
     SetBorderColor 255 153 28 200
     SetBackgroundColor 0 0 0 250
 
+# Show all Unidentified Tier 5
 Show
 Rarity = Rare
     MinimapIcon 1 Yellow Cross
-    UnidentifiedItemTier >= 3
+    UnidentifiedItemTier = 5
     PlayEffect Yellow
     SetFontSize 30
     SetTextColor 255 215 0
     SetBorderColor 255 255 0 250
     SetBackgroundColor 0 0 0 150
 
+# Show all Unidentified Tier 4
 Show
 Rarity = Rare
     MinimapIcon 1 Yellow Cross
-    UnidentifiedItemTier >= 3
+    UnidentifiedItemTier = 4
     PlayEffect Yellow
     SetFontSize 27
     SetTextColor 255 215 0
     SetBorderColor 255 255 0 250
     SetBackgroundColor 0 0 0 150
 
+# Show all Unidentified Tier 3
 Show
 Rarity = Rare
     MinimapIcon 1 Yellow Cross
-    UnidentifiedItemTier >= 3
+    UnidentifiedItemTier = 3
     PlayEffect Yellow
     SetFontSize 25
     SetTextColor 255 215 0
     SetBorderColor 255 255 0 250
     SetBackgroundColor 0 0 0 150
 
+# Show all Unidentified Tier 2
 Show
 Rarity = Rare
     MinimapIcon 1 Yellow Cross
-    UnidentifiedItemTier >= 2
+    UnidentifiedItemTier = 2
     PlayEffect Yellow
     SetFontSize 22
     SetTextColor 255 215 0
     SetBorderColor 255 255 0 250
     SetBackgroundColor 0 0 0 150
 
+# Show all Rare items
 Show
 Rarity = Rare
     MinimapIcon 1 Yellow Cross
@@ -549,7 +559,7 @@ Class "Rings" "Amulets" "Belt"
 Show # Super GG CHARM
 	Quality >= 10
 	ItemLevel >= 82
-	Rarity Normal Magic
+	Rarity = Normal Magic
 	Class == "Charms"
 	AreaLevel > 65
 	SetFontSize 20
@@ -562,7 +572,7 @@ Show # Super GG CHARM
 
 Show # Show Quality Charms
 	Quality > 0
-	Rarity Normal Magic
+	Rarity = Normal Magic
 	Class == "Charms"
 	AreaLevel >= 65
 	SetFontSize 20
@@ -571,7 +581,7 @@ Show # Show Quality Charms
 
 Show # Show ENDGAME CHARMS charms
 	ItemLevel >= 83
-	Rarity Normal Magic
+	Rarity = Normal Magic
 	Class == "Charms"
 	BaseType == "Amethyst Charm" "Antidote Charm" "Dousing Charm" "Golden Charm" "Grounding Charm" "Ruby Charm" "Sapphire Charm" "Silver Charm" "Staunching Charm" "Stone Charm" "Thawing Charm" "Topaz Charm"
 	AreaLevel >= 65
@@ -580,7 +590,7 @@ Show # Show ENDGAME CHARMS charms
 	SetBackgroundColor 10 60 40
 
 Show # All Charms in zones lower than 65 (Campaign)
-	Rarity Normal Magic
+	Rarity = Normal Magic
 	Class == "Charms"
 	AreaLevel < 65
 	SetFontSize 20
