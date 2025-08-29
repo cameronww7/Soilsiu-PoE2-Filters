@@ -34,10 +34,10 @@ Rarity = Unique
 
 #### This is an example override
 #Show
-#BaseType == "Expert Dualstring Bow"
-    #SetFontSize 20
-    #MinimapIcon 1 Green Square
-    #PlayEffect Green
+BaseType == "Dualstring Bow"
+    SetFontSize 20
+    MinimapIcon 1 Green Square
+    PlayEffect Green
 
 #===============================================================================================================
 # Hide Scrolls of Wisdom
@@ -506,7 +506,14 @@ Quality >= 1
 #===============================================================================================================
 # Show Item Options
 #===============================================================================================================
+#Hide
+#Class = "Boots" "Gloves" "Helmets" "Body Armours" "Crossbows" "Bows" "Two Hand Maces" "Staves" "Wands" "Shields" "Foci" "One Hand Maces" "Quivers" "Sceptres"
+#Rarity = Normal Magic
+    #SetFontSize 20
+    #SetTextColor 136 136 255 250
+
+
 #### This is a Shows all
 Show
-Rarity = Normal Magic
-SetFontSize 20
+    Rarity = Normal Magic
+    SetFontSize 20

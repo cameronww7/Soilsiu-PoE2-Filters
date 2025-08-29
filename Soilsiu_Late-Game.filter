@@ -183,7 +183,7 @@ BaseType "Cowardly Fate" "Deadly Fate" "Victorious Fate"
 # Uncut Gems (Skill, Spirit, Support, etc)
 #===============================================================================================================
 
-Show
+how
 BaseType "Uncut Support Gem" "Uncut Skill Gem" "Uncut Spirit Gem"
 ItemLevel = 20
     PlayAlertSound 3 300
@@ -197,32 +197,32 @@ ItemLevel = 20
 #### Show Uncut Spirit level 19 gems and above 
 Show
 BaseType "Uncut Spirit Gem"
-ItemLevel >= 19
+ItemLevel >= 18
     PlayAlertSound 2 300
     PlayEffect Cyan
     MinimapIcon 1 Cyan Triangle
     SetFontSize 20
-    SetTextColor 20 240 100
-    SetBorderColor 20 240 100
+    SetTextColor 70 240 150
+    SetBorderColor 70 240 150
     SetBackgroundColor 0 0 0 100
 
 #### Show Uncut Skill level 19 gems and above 
 Show
 BaseType == "Uncut Skill Gem"
-ItemLevel >= 19
+ItemLevel >= 18
     PlayAlertSound 2 300
     PlayEffect Cyan
     MinimapIcon 1 Cyan Triangle
     SetFontSize 20
-    SetTextColor 50 250 220
-    SetBorderColor 50 250 220
+    SetTextColor 75 180 255
+    SetBorderColor 75 180 255
     SetBackgroundColor 0 0 0 100
 
 #### Shows Uncut Support gem 3 Only
 ##### I commented this out cause I do not need any more Gems
-#Show
-#BaseType == "Uncut Support Gem"
-#ItemLevel >= 3
+Show
+BaseType == "Uncut Support Gem"
+ItemLevel >= 3
     PlayAlertSound 2 300
     PlayEffect Cyan
     MinimapIcon 1 Cyan Triangle
@@ -233,7 +233,7 @@ ItemLevel >= 19
 
 #### Make all gems pop during campaign
 Show
-AreaLevel < 68
+AreaLevel < 66
 BaseType "Uncut Support Gem" "Uncut Skill Gem" "Uncut Spirit Gem"
     PlayAlertSound 2 300
     PlayEffect Cyan

@@ -202,8 +202,8 @@ ItemLevel >= 15
     PlayEffect Cyan
     MinimapIcon 1 Cyan Triangle
     SetFontSize 20
-    SetTextColor 20 240 100
-    SetBorderColor 20 240 100
+    SetTextColor 70 240 150
+    SetBorderColor 70 240 150
     SetBackgroundColor 0 0 0 100
 
 #### Show Uncut Skill level 19 gems and above 
@@ -214,8 +214,8 @@ ItemLevel >= 15
     PlayEffect Cyan
     MinimapIcon 1 Cyan Triangle
     SetFontSize 20
-    SetTextColor 50 250 220
-    SetBorderColor 50 250 220
+    SetTextColor 75 180 255
+    SetBorderColor 75 180 255
     SetBackgroundColor 0 0 0 100
 
 #### Shows Uncut Support gem 3 Only
@@ -473,6 +473,7 @@ Class = Charms
 #### Salvage Socketed items for Socket Shards
 Show
 Sockets > 0
+Class "Helmets" "Boots" "Gloves"
 Rarity = Normal Magic
     SetFontSize 20
     SetTextColor 90 150 90
@@ -481,6 +482,7 @@ Rarity = Normal Magic
 #### Salvage Quality Items for Quality Shards
 Show
 Quality >= 1
+Class "Helmets" "Boots" "Gloves"
 Rarity = Normal Magic
     SetFontSize 20
     SetTextColor 90 150 90
@@ -498,7 +500,7 @@ Quality >= 1
 # Hide Item Options
 #===============================================================================================================
 
-#### This is a Shows all
+#### This is a Hides all
 Hide
     Rarity = Normal Magic
     SetFontSize 20
