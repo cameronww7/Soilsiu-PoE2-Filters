@@ -474,7 +474,7 @@ Quality >= 10
     SetBackgroundColor 0 0 0
 
 #===============================================================================================================
-# Show All Rares & Uniques
+# Show All Uniques
 #===============================================================================================================
 
 # Show all Uniques
@@ -486,6 +486,10 @@ Rarity = Unique
     SetTextColor 175 96 37 250
     SetBorderColor 255 153 28 200
     SetBackgroundColor 0 0 0 250
+
+#===============================================================================================================
+# Show All Rares 
+#===============================================================================================================
 
 # Show all Unidentified Tier 5
 Show
@@ -547,45 +551,56 @@ Rarity = Rare
 
 Show
 Class "Jewel"
-    BaseType == "Time-Lost"
+    BaseType == "Time-Lost" "Timeless"
     PlayAlertSound 3 300
     PlayEffect Blue
     MinimapIcon 0 Blue Diamond
-    SetFontSize 25
+    SetFontSize 30
     SetTextColor 0 240 190 255
     SetBorderColor 0 240 190 255
     SetBackgroundColor 20 20 0 255
 
 Show
 Class = Jewels
-    PlayAlertSound 1 300
-    PlayEffect Green
-    MinimapIcon 0 Green Diamond
-    SetFontSize 20
-    SetTextColor 50 150 100 250
-    SetBorderColor 50 150 100 250
-    SetBackgroundColor 0 0 0 200
+    PlayAlertSound 2 300
+	PlayEffect Blue
+	MinimapIcon 1 Blue Diamond
+    SetFontSize 25
+	SetTextColor 0 70 255 255
+	SetBorderColor 0 70 255 255
+	SetBackgroundColor 30 0 70 255
 
 #===============================================================================================================
 # Ring / Amulets / Belts
 #===============================================================================================================
 
+# Show Specific Ring bases
 Show
-BaseType == "Heavy Belt" "Sapphire Ring" "Stellar Amulet" 
-Rarity = Normal
+BaseType == "Sapphire Ring" "Ruby Ring" "Topaz Ring" "Prismatic Ring" "Gold Ring" "Amethyst Ring"  "Golden Hoop"
+    PlayEffect Blue
     MinimapIcon 2 Blue Square
     PlayEffect Blue
-    SetFontSize 20
+    SetFontSize 25
     SetBorderColor 0 0 255 250
     SetBackgroundColor 0 0 0 150
 
+# Show Specific Amulets bases
 Show
-Rarity = "Normal"
-BaseType "Utility Belt"
+BaseType == "Stellar Amulet" "Solar Amulet" "Gold Amulet" "Bloodstone Amulet"
+    PlayEffect Blue
+    MinimapIcon 2 Blue Square
+    PlayEffect Blue
+    SetFontSize 25
+    SetBorderColor 0 0 255 250
+    SetBackgroundColor 0 0 0 150
+
+# Show Specific Belt bases
+Show
+BaseType "Utility Belt" "Heavy Belt"
     PlayEffect Blue
     MinimapIcon 2 Blue Kite
-    ItemLevel >= 82
-    SetFontSize 20
+    ItemLevel >= 50
+    SetFontSize 25
     SetBorderColor 0 0 255 250
     SetBackgroundColor 0 0 0 150
 
@@ -594,7 +609,7 @@ Show
 BaseType "Breach Ring"
     PlayEffect Blue
     MinimapIcon 2 Blue Kite
-    SetFontSize 20
+    SetFontSize 25
     SetBorderColor 0 0 255 250
     SetBackgroundColor 0 0 0 150
 
