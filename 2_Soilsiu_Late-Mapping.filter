@@ -68,13 +68,48 @@ Class = Quest Items
 # Gold
 #===============================================================================================================
 
-#### Shows piles of Gold greater than 1000 on Mini Map
 Show
-	StackSize >= 4000
+StackSize >= 5000
+BaseType == "Gold"
+    SetFontSize 25
+	SetTextColor 255 255 150 255
+	SetBorderColor 255 255 150 255
+	PlayEffect Orange Temp
+	MinimapIcon 1 White Cross
+
+Show
+	StackSize >= 2000
 	BaseType == "Gold"
+    SetFontSize 23
+	SetTextColor 255 255 150 255
+	SetBorderColor 255 255 150 255
+	PlayEffect Orange Temp
+	MinimapIcon 1 White Cross
+
+Show
+StackSize >= 1000
+BaseType == "Gold"
     SetFontSize 22
-	SetTextColor 255 255 255 255
-	SetBorderColor 255 255 255 255
+	SetTextColor 255 255 150 255
+	SetBorderColor 255 255 150 255
+	PlayEffect Orange Temp
+	MinimapIcon 1 White Cross
+    
+Show
+StackSize >= 500
+BaseType == "Gold"
+    SetFontSize 21
+	SetTextColor 255 255 150 255
+	SetBorderColor 255 255 150 255
+	PlayEffect Orange Temp
+	MinimapIcon 1 White Cross
+
+Show
+StackSize >= 200
+BaseType == "Gold"
+    SetFontSize 20
+	SetTextColor 255 255 150 255
+	SetBorderColor 255 255 150 255
 	PlayEffect Orange Temp
 	MinimapIcon 1 White Cross
 
@@ -82,7 +117,8 @@ Show
 Show
 BaseType == Gold
     SetFontSize 18
-    SetTextColor 255 255 204 200
+	SetTextColor 255 255 150 200
+	SetBorderColor 255 255 150 200
     SetBackgroundColor 0 0 0 0
 
 #===============================================================================================================
