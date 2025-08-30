@@ -47,7 +47,7 @@ BaseType "Scroll of Wisdom"
 AreaLevel >= 20
     SetFontSize 16
     SetTextColor 220 190 132
-    SetBorderColor 255 255 255 150
+    SetBorderColor 220 190 132 150
     SetBackgroundColor 0 0 0 150
 
 #===============================================================================================================
@@ -56,6 +56,7 @@ AreaLevel >= 20
 
 Show
 Class = Quest Items
+    MinimapIcon 1 Grey Square
     SetFontSize 16
     SetBorderColor 0 191 0 200
     SetBackgroundColor 0 0 0 150
@@ -68,8 +69,8 @@ Show
 StackSize >= 5000
 BaseType == "Gold"
     SetFontSize 25
-	SetTextColor 255 255 150 255
-	SetBorderColor 255 255 150 255
+	SetTextColor 255 215 0 255
+	SetBorderColor 255 215 0 255
 	PlayEffect Orange Temp
 	MinimapIcon 1 White Cross
 
@@ -77,8 +78,8 @@ Show
 	StackSize >= 2000
 	BaseType == "Gold"
     SetFontSize 23
-	SetTextColor 255 255 150 255
-	SetBorderColor 255 255 150 255
+	SetTextColor 255 215 0 255
+	SetBorderColor 255 215 0 255
 	PlayEffect Orange Temp
 	MinimapIcon 1 White Cross
 
@@ -86,8 +87,8 @@ Show
 StackSize >= 1000
 BaseType == "Gold"
     SetFontSize 20
-	SetTextColor 255 255 150 255
-	SetBorderColor 255 255 150 255
+	SetTextColor 255 215 0 255
+	SetBorderColor 255 215 0 255
 	PlayEffect Orange Temp
 	MinimapIcon 1 White Cross
     
@@ -95,8 +96,8 @@ Show
 StackSize >= 500
 BaseType == "Gold"
     SetFontSize 20
-	SetTextColor 255 255 150 255
-	SetBorderColor 255 255 150 255
+	SetTextColor 255 215 0 255
+	SetBorderColor 255 215 0 255
 	PlayEffect Orange Temp
 	MinimapIcon 1 White Cross
 
@@ -104,8 +105,8 @@ Show
 StackSize >= 200
 BaseType == "Gold"
     SetFontSize 20
-	SetTextColor 255 255 150 255
-	SetBorderColor 255 255 150 255
+	SetTextColor 255 215 0 255
+	SetBorderColor 255 215 0 255
 	PlayEffect Orange Temp
 	MinimapIcon 1 White Cross
 
@@ -726,6 +727,31 @@ Quality >= 1
     SetFontSize 16
     SetTextColor 90 150 90
     SetBorderColor 90 150 90
+
+
+#===============================================================================================================
+# Crafting Bases
+#===============================================================================================================
+
+# Hybrid EnergyShield Gear
+Show
+Class "Helmet" "Body Armour" "Glove" "Boots"
+Rarity = Normal Magic
+BaseArmour <= 1
+BaseEvasion >= 1
+BaseEnergyShield >= 1
+    SetFontSize 16
+    SetTextColor 136 136 255 250
+
+# Pure Evasion Only Gear
+Show
+Class "Helmet" "Body Armour" "Glove" "Boots"
+Rarity = Normal Magic
+BaseArmour <= 1
+BaseEvasion >= 1
+BaseEnergyShield <= 1
+    SetFontSize 16
+    SetTextColor 136 136 255 250
 
 #===============================================================================================================
 # Hide Item Options

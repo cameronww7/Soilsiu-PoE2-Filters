@@ -33,11 +33,17 @@
 
 #### This is an example override
 ## I want this on while leveling since in 0.3.0 Dualstring Bow is a great craftable and item we want
-Show
-BaseType == "Dualstring Bow"
-    SetFontSize 25
-    MinimapIcon 1 Green Square
-    PlayEffect Green
+#Show
+#BaseType == "Dualstring Bow"
+    #SetFontSize 25
+    #MinimapIcon 1 Green Square
+    #PlayEffect Green
+
+#Show
+#Class == "Quivers"
+    #SetFontSize 25
+    #MinimapIcon 1 Green Square
+    #PlayEffect Green
 
 #===============================================================================================================
 # Hide Scrolls of Wisdom once you get the Deckard Cain Dood
@@ -48,7 +54,7 @@ BaseType "Scroll of Wisdom"
 AreaLevel >= 20
     SetFontSize 16
     SetTextColor 220 190 132
-    SetBorderColor 255 255 255 150
+    SetBorderColor 220 190 132 150
     SetBackgroundColor 0 0 0 150
 
 #===============================================================================================================
@@ -57,6 +63,7 @@ AreaLevel >= 20
 
 Show
 Class = Quest Items
+    MinimapIcon 1 Grey Square
     SetFontSize 16
     SetBorderColor 0 191 0 200
     SetBackgroundColor 0 0 0 150
@@ -69,8 +76,8 @@ Show
 StackSize >= 5000
 BaseType == "Gold"
     SetFontSize 25
-	SetTextColor 255 255 150 255
-	SetBorderColor 255 255 150 255
+	SetTextColor 255 215 0 255
+	SetBorderColor 255 215 0 255
 	PlayEffect Orange Temp
 	MinimapIcon 1 White Cross
 
@@ -78,8 +85,8 @@ Show
 	StackSize >= 2000
 	BaseType == "Gold"
     SetFontSize 23
-	SetTextColor 255 255 150 255
-	SetBorderColor 255 255 150 255
+	SetTextColor 255 215 0 255
+	SetBorderColor 255 215 0 255
 	PlayEffect Orange Temp
 	MinimapIcon 1 White Cross
 
@@ -87,8 +94,8 @@ Show
 StackSize >= 1000
 BaseType == "Gold"
     SetFontSize 20
-	SetTextColor 255 255 150 255
-	SetBorderColor 255 255 150 255
+	SetTextColor 255 215 0 255
+	SetBorderColor 255 215 0 255
 	PlayEffect Orange Temp
 	MinimapIcon 1 White Cross
     
@@ -96,8 +103,8 @@ Show
 StackSize >= 500
 BaseType == "Gold"
     SetFontSize 20
-	SetTextColor 255 255 150 255
-	SetBorderColor 255 255 150 255
+	SetTextColor 255 215 0 255
+	SetBorderColor 255 215 0 255
 	PlayEffect Orange Temp
 	MinimapIcon 1 White Cross
 
@@ -105,8 +112,8 @@ Show
 StackSize >= 200
 BaseType == "Gold"
     SetFontSize 18
-	SetTextColor 255 255 150 255
-	SetBorderColor 255 255 150 255
+	SetTextColor 255 215 0 255
+	SetBorderColor 255 215 0 255
 	PlayEffect Orange Temp
 	MinimapIcon 1 White Cross
 
@@ -114,7 +121,7 @@ BaseType == "Gold"
 Show
 BaseType == Gold
     SetFontSize 16
-	SetTextColor 255 255 150 200
+	SetTextColor 255 215 0 200
 	SetBorderColor 0 0 0 1
     SetBackgroundColor 0 0 0 1
 
@@ -444,15 +451,151 @@ Quality >= 1
     SetBorderColor 50 100 200
     SetBackgroundColor 0 0 0
 
+#------------------------------------
+#   [3301] Life flasks
+#------------------------------------
+
 Show
-Class = "Life Flasks"
+	Class == "Life Flasks"
+	BaseType "Medium"
+	AreaLevel <= 8
     SetFontSize 16
     SetTextColor 200 50 50 
     SetBorderColor 200 50 50 
     SetBackgroundColor 0 0 0
 
 Show
-Class = "Mana Flasks"
+	Class == "Life Flasks"
+	BaseType "Greater"
+	AreaLevel <= 15
+    SetFontSize 16
+    SetTextColor 200 50 50 
+    SetBorderColor 200 50 50 
+    SetBackgroundColor 0 0 0
+
+Show
+	Class == "Life Flasks"
+	BaseType "Grand"
+	AreaLevel <= 22
+    SetFontSize 16
+    SetTextColor 200 50 50 
+    SetBorderColor 200 50 50 
+    SetBackgroundColor 0 0 0
+
+Show
+	Class == "Life Flasks"
+	BaseType "Giant"
+	AreaLevel <= 29
+    SetFontSize 16
+    SetTextColor 200 50 50 
+    SetBorderColor 200 50 50 
+    SetBackgroundColor 0 0 0
+
+Show
+	Class == "Life Flasks"
+	BaseType "Colossal"
+	AreaLevel <= 39
+    SetFontSize 16
+    SetTextColor 200 50 50 
+    SetBorderColor 200 50 50 
+    SetBackgroundColor 0 0 0
+
+Show
+	Class == "Life Flasks"
+	BaseType "Gargantuan"
+	AreaLevel <= 49
+	SetFontSize 18
+	SetBorderColor 20 140 60
+
+Show
+	Class == "Life Flasks"
+	BaseType "Transcendent"
+	AreaLevel <= 59
+    SetFontSize 16
+    SetTextColor 200 50 50 
+    SetBorderColor 200 50 50 
+    SetBackgroundColor 0 0 0
+
+Show
+	Class == "Life Flasks"
+	BaseType "Ultimate"
+	AreaLevel <= 65
+    SetFontSize 16
+    SetTextColor 200 50 50 
+    SetBorderColor 200 50 50 
+    SetBackgroundColor 0 0 0
+
+#------------------------------------
+#   [3302] Mana flasks
+#------------------------------------
+
+Show
+	Class == "Mana Flasks"
+	BaseType "Medium"
+	AreaLevel <= 8
+    SetFontSize 16
+    SetTextColor 50 100 200
+    SetBorderColor 50 100 200
+    SetBackgroundColor 0 0 0
+
+Show
+	Class == "Mana Flasks"
+	BaseType "Greater"
+	AreaLevel <= 15
+    SetFontSize 16
+    SetTextColor 50 100 200
+    SetBorderColor 50 100 200
+    SetBackgroundColor 0 0 0
+
+Show
+	Class == "Mana Flasks"
+	BaseType "Grand"
+	AreaLevel <= 22
+    SetFontSize 16
+    SetTextColor 50 100 200
+    SetBorderColor 50 100 200
+    SetBackgroundColor 0 0 0
+
+Show
+	Class == "Mana Flasks"
+	BaseType "Giant"
+	AreaLevel <= 29
+    SetFontSize 16
+    SetTextColor 50 100 200
+    SetBorderColor 50 100 200
+    SetBackgroundColor 0 0 0
+
+Show
+	Class == "Mana Flasks"
+	BaseType "Colossal"
+	AreaLevel <= 39
+    SetFontSize 16
+    SetTextColor 50 100 200
+    SetBorderColor 50 100 200
+    SetBackgroundColor 0 0 0
+
+Show
+	Class == "Mana Flasks"
+	BaseType "Gargantuan"
+	AreaLevel <= 49
+    SetFontSize 16
+    SetTextColor 50 100 200
+    SetBorderColor 50 100 200
+    SetBackgroundColor 0 0 0
+
+Show
+	Class == "Mana Flasks"
+	BaseType "Transcendent"
+	AreaLevel <= 59
+    SetFontSize 16
+    SetTextColor 50 100 200
+    SetBorderColor 50 100 200
+    SetBackgroundColor 0 0 0
+
+Show
+	Class == "Mana Flasks"
+	BaseType "Ultimate"
+	AreaLevel <= 65
     SetFontSize 16
     SetTextColor 50 100 200
     SetBorderColor 50 100 200
@@ -591,7 +734,7 @@ BaseType == "Stellar Amulet" "Solar Amulet" "Gold Amulet" "Bloodstone Amulet"
 
 # Show Specific Belt bases
 Show
-BaseType "Utility Belt" "Heavy Belt"
+BaseType "Linen Belt"
     PlayEffect Blue
     MinimapIcon 2 Blue Kite
     ItemLevel >= 50
@@ -608,10 +751,10 @@ BaseType "Breach Ring"
     SetBorderColor 0 0 255 250
     SetBackgroundColor 0 0 0 150
 
-Show
-Class "Rings" "Amulets" "Belt"
-    SetFontSize 16
-    SetBackgroundColor 0 0 0 150
+#Hide
+#Class "Rings" "Amulets" "Belt"
+    #SetFontSize 16
+    #SetBackgroundColor 0 0 0 150
 
 #===============================================================================================================
 # Charms
@@ -685,16 +828,43 @@ Quality >= 1
 
 
 #===============================================================================================================
+# Crafting Bases
+#===============================================================================================================
+
+# Pure Evasion Only Gear
+Show
+Class "Helmet" "Body Armour" "Glove" "Boots"
+Rarity = Normal Magic
+BaseArmour <= 1
+BaseEvasion >= 1
+BaseEnergyShield <= 1
+    SetFontSize 16
+    SetTextColor 136 136 255 250
+
+#===============================================================================================================
 # Show Item Options
 #===============================================================================================================
-#Hide
+#Hide all gear
 #Class = "Boots" "Gloves" "Helmets" "Body Armours" "Crossbows" "Bows" "Two Hand Maces" "Staves" "Wands" "Shields" "Foci" "One Hand Maces" "Quivers" "Sceptres"
 #Rarity = Normal Magic
     #SetFontSize 16
     #SetTextColor 136 136 255 250
 
+#Hide all gear
+#Class = "Boots" "Gloves" "Helmets" "Body Armours" "Belts'
+#Rarity = Normal Magic
+    #SetFontSize 16
+    #SetTextColor 136 136 255 250    
 
+# Hide all Weapons
+Hide
+Class = "Crossbows" "Bows" "Two Hand Maces" "Staves" "Wands" "Shields" "Foci" "One Hand Maces" "Quivers" "Sceptres"
+Rarity = Normal Magic
+	AreaLevel >= 39
+    SetFontSize 16
+    SetTextColor 136 136 255 250
+    
 #### This is a Shows all
-Show
+Hide
     Rarity = Normal Magic
     SetFontSize 16
