@@ -160,7 +160,8 @@ Show # Showing Fishing Rod
 #===============================================================================================================
 
 Show # PREMO Currency
-    BaseType "Divine Orb" "Perfect Chaos Orb" "Perfect Exalted Orb" "Perfect Jeweller's Orb" "Albino Rhoa Feather" "Hinekora's Lock" "Mirror of Kalandra"
+Class == "Stackable Currency"
+BaseType "Divine Orb" "Perfect Chaos Orb" "Perfect Exalted Orb" "Perfect Jeweller's Orb" "Albino Rhoa Feather" "Hinekora's Lock" "Mirror of Kalandra"
     PlayAlertSound 3 300
     PlayEffect Green
     MinimapIcon 0 Green Star
@@ -170,6 +171,7 @@ Show # PREMO Currency
     SetBackgroundColor 0 0 0 255
 
 Show # Even more GG Currency
+Class == "Stackable Currency"
 BaseType == "Ancient Collarbone" "Ancient Jawbone" "Ancient Rib" "Chaos Orb" "Fracturing Orb" "Greater Chaos Orb" "Orb of Annulment" "Perfect Regal Orb"
 	SetFontSize 16
 	SetTextColor 0 0 0 255
@@ -180,7 +182,7 @@ BaseType == "Ancient Collarbone" "Ancient Jawbone" "Ancient Rib" "Chaos Orb" "Fr
 	MinimapIcon 0 Red Circle
 
 Show
-Class = Currency
+Class == "Stackable Currency"
 BaseType = "Exalted Orb" "Greater Exalted Orb"
     MinimapIcon 1 Yellow Star
     PlayAlertSound 11 100
@@ -191,7 +193,7 @@ BaseType = "Exalted Orb" "Greater Exalted Orb"
     SetBackgroundColor 0 0 0 150
 
 Show
-Class = Currency
+Class == "Stackable Currency"
 BaseType = "Jeweller" "Perfect" "Greater" "Artificer's Orb" "Chance Shard" "Orb of Alchemy" "Regal Orb" "Vaal Orb"  "Orb of Chance" "Exotic Coinage" "Gemcutter's Prism" "Glassblower's Bauble" "Preserved Cranium" "Preserved Vertebrae" "Gnawed Collarbone" "Gnawed Jawbone" "Gnawed Rib" "Preserved Collarbone" "Preserved Jawbone" "Preserved Rib"
     PlayAlertSound 11 100
     PlayEffect Yellow
@@ -201,7 +203,7 @@ BaseType = "Jeweller" "Perfect" "Greater" "Artificer's Orb" "Chance Shard" "Orb 
     SetBackgroundColor 0 0 0 150
 
 Show
-Class Currency
+Class == "Stackable Currency"
 BaseType "Simulacrum Splinter" "Breach Splinter" "Artifact" "Liquid " "Catalyst" "Essence of" "Cowardly Fate" "Deadly Fate" "Victorious Fate" "Omen of"
     PlayAlertSound 16 100
     PlayEffect Purple
@@ -212,7 +214,8 @@ BaseType "Simulacrum Splinter" "Breach Splinter" "Artifact" "Liquid " "Catalyst"
     SetBackgroundColor 0 0 0 150
 
 Show
-BaseType "Rune" "Timeless" "Soul" "Talisman"
+Class == "Socketable"
+BaseType "Rune" "Soul" "Talisman"
     MinimapIcon 2 Cyan Circle
     PlayEffect Cyan Temp
     SetFontSize 16
@@ -221,6 +224,7 @@ BaseType "Rune" "Timeless" "Soul" "Talisman"
     SetBackgroundColor 0 0 0 150
 
 Show
+Class == "Stackable Currency"
 BaseType "Artificer's Shard" "Arcanist's Etcher" "Armourer's Scrap" "Blacksmith's Whetstone" "Regal Shard" 
     PlayEffect Grey
     MinimapIcon 2 Grey Raindrop
@@ -230,12 +234,12 @@ BaseType "Artificer's Shard" "Arcanist's Etcher" "Armourer's Scrap" "Blacksmith'
     SetBackgroundColor 0 0 0 150
 
 Show
+Class == "Stackable Currency"
 BaseType "Orb of Augmentation" "Orb of Transmutation"
     PlayEffect Grey Temp
     SetFontSize 16
     SetTextColor 220 190 132
     SetBackgroundColor 0 0 0 150
-
 #===============================================================================================================
 # Trails/Keys/Etc Items
 #===============================================================================================================
