@@ -66,7 +66,7 @@ Class = Quest Items
 
 #### Shows piles of Gold greater than 250 on Mini Map
 Show
-	StackSize >= 250
+	StackSize >= 2000
 	BaseType == "Gold"
     SetFontSize 25
 	SetTextColor 255 255 255 255
