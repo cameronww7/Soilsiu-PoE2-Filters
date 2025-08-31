@@ -423,9 +423,19 @@ Class = Map Fragments
 # Shows all Currencies that were untagged
 #===============================================================================================================
 
+# Shows All Unknown Socketable Or Socketable not properly tagged
+Show
+Class = "Socketable"
+    PlayEffect Grey
+    MinimapIcon 2 Grey Circle
+    SetFontSize 16
+    SetTextColor 220 190 132
+    SetBorderColor 220 190 132 150
+    SetBackgroundColor 0 0 0 150
+
 # Shows All Unknown Currency Or Currency not properly tagged
 Show
-Class = Currency
+Class == "Currency"
     PlayEffect Grey
     MinimapIcon 2 Grey Circle
     SetFontSize 16
