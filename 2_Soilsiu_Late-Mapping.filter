@@ -424,25 +424,37 @@ Class = Map Fragments
 # Shows all Currencies that were untagged
 #===============================================================================================================
 
-# Shows All Unknown Socketable Or Socketable not properly tagged
 Show
-Class = "Socketable"
-    PlayEffect Grey
-    MinimapIcon 2 Grey Circle
-    SetFontSize 16
-    SetTextColor 220 190 132
-    SetBorderColor 220 190 132 150
-    SetBackgroundColor 0 0 0 150
+Class "Jewel"
+    BaseType == "Time-Lost Emerald" "Time-Lost Ruby" "Time-Lost Sapphire"
+    PlayAlertSound 3 300
+    PlayEffect Blue
+    MinimapIcon 0 Blue Diamond
+    SetFontSize 25
+    SetTextColor 0 240 190 255
+    SetBorderColor 0 240 190 255
+    SetBackgroundColor 20 20 0 255
 
-# Shows All Unknown Currency Or Currency not properly tagged
 Show
-Class == "Currency"
-    PlayEffect Grey
-    MinimapIcon 2 Grey Circle
-    SetFontSize 16
-    SetTextColor 220 190 132
-    SetBorderColor 220 190 132 150
-    SetBackgroundColor 0 0 0 150
+Class = Jewels
+    PlayAlertSound 2 300
+	PlayEffect Blue
+	MinimapIcon 1 Blue Diamond
+    SetFontSize 20
+	SetTextColor 0 70 255 255
+	SetBorderColor 0 70 255 255
+	SetBackgroundColor 30 0 70 255
+
+Show
+Class == "Socketable"
+BaseType "Timeless"
+    PlayAlertSound 2 300
+	PlayEffect Blue
+	MinimapIcon 1 Blue Diamond
+    SetFontSize 20
+	SetTextColor 0 70 255 255
+	SetBorderColor 0 70 255 255
+	SetBackgroundColor 30 0 70 255
 
 #===============================================================================================================
 # Waystone's aka Map's
@@ -647,7 +659,7 @@ BaseType == "Stellar Amulet" "Solar Amulet" "Gold Amulet" "Bloodstone Amulet"
 
 # Show Specific Belt bases
 Show
-BaseType "Utility Belt" "Heavy Belt"
+BaseType "Utility Belt" "Heavy Belt" "Fine Belt"
     PlayEffect Blue
     MinimapIcon 2 Blue Kite
     ItemLevel >= 50
