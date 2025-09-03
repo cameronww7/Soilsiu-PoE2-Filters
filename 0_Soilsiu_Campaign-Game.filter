@@ -173,7 +173,7 @@ BaseType "Divine Orb" "Perfect Chaos Orb" "Perfect Exalted Orb" "Perfect Jewelle
 
 Show # Even more GG Currency
 Class == "Stackable Currency"
-BaseType == "Exalted Orb" "Greater Exalted Orb" "Chaos Orb" "Greater Chaos Orb" "Fracturing Orb" "Orb of Annulment" "Perfect Regal Orb"
+BaseType == "Chaos Orb" "Greater Chaos Orb" "Fracturing Orb" "Orb of Annulment" "Perfect Regal Orb"
     MinimapIcon 1 Green Cross
     PlayAlertSound 5 200
     PlayEffect Green
@@ -184,7 +184,7 @@ BaseType == "Exalted Orb" "Greater Exalted Orb" "Chaos Orb" "Greater Chaos Orb" 
 
 Show
 Class == "Stackable Currency"
-BaseType = "Jeweller" "Perfect" "Greater" "Artificer's Orb" "Chance Shard" "Orb of Alchemy" "Regal Orb" "Vaal Orb"  "Orb of Chance" "Exotic Coinage" "Gemcutter's Prism" "Glassblower's Bauble" 
+BaseType = "Exalted Orb" "Greater Exalted Orb" "Jeweller" "Perfect" "Greater" "Artificer's Orb" "Chance Shard" "Orb of Alchemy" "Regal Orb" "Vaal Orb"  "Orb of Chance" "Exotic Coinage" "Gemcutter's Prism" "Glassblower's Bauble" 
     MinimapIcon 2 Green Cross
     PlayAlertSound 5 200
     PlayEffect Green
@@ -333,8 +333,65 @@ Class = Relics
 # Uncut Gems (Skill, Spirit, Support, etc)
 #===============================================================================================================
 
+#### Show lvl 20 Gems
+Show
+BaseType "Uncut Support Gem" "Uncut Skill Gem" "Uncut Spirit Gem"
+ItemLevel = 20
+    PlayAlertSound 3 300
+    PlayEffect Green
+    MinimapIcon 0 Green Star
+    SetFontSize 15
+    SetTextColor 0 255 0 255
+    SetBorderColor 0 255 0 255
+    SetBackgroundColor 0 0 0 255
+
+#### Show Uncut Spirit Gem
+Show
+BaseType "Uncut Spirit Gem"
+    PlayAlertSound 2 300
+    PlayEffect Cyan
+    MinimapIcon 1 Cyan Triangle
+    SetFontSize 15
+    SetTextColor 70 240 150 255
+    SetBorderColor 70 240 150 255
+    SetBackgroundColor 0 0 0 255
+
+#### Show Uncut Skill Gem
+Show
+BaseType == "Uncut Skill Gem"
+    PlayAlertSound 2 300
+    PlayEffect Cyan
+    MinimapIcon 1 Cyan Triangle
+    SetFontSize 15
+    SetTextColor 75 180 200 255
+    SetBorderColor 75 180 200 255
+    SetBackgroundColor 0 0 0 255
+
+#### Shows Uncut Support Gem
+Show
+BaseType == "Uncut Support Gem"
+    PlayAlertSound 2 300
+    PlayEffect Cyan
+    MinimapIcon 1 Cyan Triangle
+    SetFontSize 15
+    SetTextColor 20 240 240 255
+    SetBorderColor 20 240 240 255
+    SetBackgroundColor 0 0 0 255
+
+Show
+Class == "Skill Gems" "Support Gems"
+BaseType == "Ahn's Citadel" "Ailith's Chimes" "Amanamu's Tithe" "Arakaali's Lust" "Arbiter's Ignition" "Arjun's Medal" "Atalui's Bloodletting" "Atziri's Allure" "Brutus' Brain" "Daresso's Passion" "Doedre's Undoing" "Einhar's Beastrite" "Esh's Radiance" "Garukhan's Resolve" "Ixchel's Torment" "Kalisa's Crescendo" "Kaom's Madness" "Kulemak's Dominion" "Kurgal's Leash" "Paquate's Pact" "Piety's Mercy" "Ratha's Assault" "Rigwald's Ferocity" "Romira's Requital" "Sione's Temper" "Tacati's Ire" "Tawhoa's Tending" "Tecrod's Revenge" "Tul's Stillness" "Uhtred's Augury" "Uhtred's Exodus" "Uhtred's Omen" "Uruk's Smelting" "Uul-Netol's Embrace" "Varashta's Blessing" "Vilenta's Propulsion" "Xoph's Pyre" "Zarokh's Refrain"
+    PlayAlertSound 2 300
+    PlayEffect Cyan
+    MinimapIcon 1 Cyan Triangle
+    SetFontSize 15
+    SetTextColor 20 240 240 255
+    SetBorderColor 20 240 240 255
+    SetBackgroundColor 0 0 0 255
+
 #### Show all Gems in Campaign Zones
 Show
+AreaLevel < 66
 BaseType "Uncut Support Gem" "Uncut Skill Gem" "Uncut Spirit Gem"
     PlayAlertSound 2 300
     PlayEffect Cyan
@@ -344,6 +401,13 @@ BaseType "Uncut Support Gem" "Uncut Skill Gem" "Uncut Spirit Gem"
     SetBorderColor 20 240 240 255
     SetBackgroundColor 0 0 0 255
 
+#### Show all gems that did not meet above requirements
+Show
+Class "Gem"
+    SetFontSize 15
+    SetTextColor 20 240 240 255
+    SetBorderColor 20 240 240 255
+    SetBackgroundColor 0 0 0 255
 
 #===============================================================================================================
 # Mapping Utility Items
@@ -650,7 +714,7 @@ Rarity = Rare
     MinimapIcon 1 Yellow Cross
     UnidentifiedItemTier <= 2
     PlayEffect Yellow
-    SetFontSize 22
+    SetFontSize 19
     SetTextColor 255 215 0
     SetBorderColor 255 255 0 250
     SetBackgroundColor 1 1 1 150
@@ -661,7 +725,7 @@ Rarity = Rare
     MinimapIcon 1 Yellow Cross
     UnidentifiedItemTier = 3
     PlayEffect Yellow
-    SetFontSize 20
+    SetFontSize 18
     SetTextColor 255 215 0
     SetBorderColor 255 255 0 250
     SetBackgroundColor 1 1 1 150
@@ -672,7 +736,7 @@ Rarity = Rare
     MinimapIcon 1 Yellow Cross
     UnidentifiedItemTier = 4
     PlayEffect Yellow
-    SetFontSize 20
+    SetFontSize 17
     SetTextColor 255 215 0
     SetBorderColor 255 255 0 250
     SetBackgroundColor 1 1 1 150
@@ -740,27 +804,19 @@ BaseType "Timeless"
 
 # Show Specific Ring bases
 Show
-BaseType == "Sapphire Ring" "Ruby Ring" "Topaz Ring" "Prismatic Ring" "Gold Ring" "Amethyst Ring"  "Golden Hoop"
+BaseType == "Sapphire Ring" "Ruby Ring" "Topaz Ring" "Prismatic Ring" "Gold Ring" "Amethyst Ring"
+Rarity = Magic
     PlayEffect Blue
     MinimapIcon 2 Blue Square
     PlayEffect Blue
     SetFontSize 15
     SetBorderColor 0 0 255 250
-    SetBackgroundColor 1 1 1 150
-
-# Show Specific Ring bases
-Show
-BaseType == "Iron Ring
-    PlayEffect Grey
-    MinimapIcon 2 Grey Square
-    PlayEffect Grey
-    SetFontSize 15
-    SetBorderColor 0 0 0 250
     SetBackgroundColor 1 1 1 150
 
 # Show Specific Amulets bases
 Show
-BaseType == "Stellar Amulet" "Solar Amulet" "Gold Amulet" "Bloodstone Amulet"
+BaseType == "Stellar Amulet" "Solar Amulet"
+Rarity = Magic
     PlayEffect Blue
     MinimapIcon 2 Blue Square
     PlayEffect Blue
@@ -768,15 +824,16 @@ BaseType == "Stellar Amulet" "Solar Amulet" "Gold Amulet" "Bloodstone Amulet"
     SetBorderColor 0 0 255 250
     SetBackgroundColor 1 1 1 150
 
-# Show Specific Belt bases
+# Show Specific bases to sell for Crafting as Gray Items
 Show
-BaseType "Linen Belt" "Fine Belt"
+BaseType "Heavy Belt" "Ornate Belt" "Solid Mask" "Gold Ring" "Stellar Amulet" "Solar Amulet" "Gold Amulet" "Sapphire Ring" "Emerald Ring" "Fine Belt" "Amethyst Ring" "Azure Amulet" "Wide Belt" "Long Belt" "Utility Belt" "Fine Belt" "Double Belt" "Mail Belt" "Rawhide Belt" 
+Rarity = Normal
     PlayEffect Blue
-    MinimapIcon 2 Blue Kite
-    ItemLevel >= 50
+    MinimapIcon 1 Blue Kite
     SetFontSize 15
+    SetTextColor 0 0 255 250
     SetBorderColor 0 0 255 250
-    SetBackgroundColor 1 1 1 150
+    SetBackgroundColor 1 1 1 200
 
 #### Shows all Breach Rings
 Show
@@ -787,10 +844,10 @@ BaseType "Breach Ring"
     SetBorderColor 0 0 255 250
     SetBackgroundColor 1 1 1 150
 
-#Hide
-#Class "Rings" "Amulets" "Belt"
-    #SetFontSize 15
-    #SetBackgroundColor 1 1 1 150
+Hide
+Class "Rings" "Amulets" "Belt"
+    SetFontSize 15
+    SetBackgroundColor 1 1 1 150
 
 #===============================================================================================================
 # Charms
