@@ -33,11 +33,11 @@
 
 #### This is an example override
 ## I want this on while leveling since in 0.3.0 Dualstring Bow is a great craftable and item we want
-#Show
-#BaseType == "Dualstring Bow"
-    #SetFontSize 25
-    #MinimapIcon 1 Green Square
-    #PlayEffect Green
+Show
+BaseType == "Dualstring Bow"
+    SetFontSize 25
+    MinimapIcon 1 Green Square
+    PlayEffect Green
 
 #Show
 #Class == "Quivers"
@@ -937,6 +937,23 @@ BaseEnergyShield <= 1
     SetFontSize 15
     SetTextColor 136 136 255 250
 
+# Pure EnergyShield/Evasion Only Gear
+Show
+Class "Helmet" "Body Armour" "Glove" "Boots"
+Rarity = Normal Magic
+BaseArmour <= 1
+BaseEvasion >= 1
+BaseEnergyShield >= 1
+    SetFontSize 15
+    SetTextColor 136 136 255 250
+
+# Pure Evasion Only Gear
+Show
+Class "Bows" "Quivers"
+Rarity = Normal Magic
+    SetFontSize 15
+    SetTextColor 136 136 255 250
+
 #===============================================================================================================
 # Show Item Options
 #===============================================================================================================
@@ -946,11 +963,11 @@ BaseEnergyShield <= 1
     #SetFontSize 15
     #SetTextColor 136 136 255 250
 
-#Hide all gear
-#Class = "Boots" "Gloves" "Helmets" "Body Armours" "Belts'
-#Rarity = Normal Magic
-    #SetFontSize 15
-    #SetTextColor 136 136 255 250    
+Hide all gear
+Class = "Boots" "Gloves" "Helmets" "Body Armours" "Belts'
+Rarity = Normal Magic
+    SetFontSize 15
+    SetTextColor 136 136 255 250    
 
 # Hide all Weapons
 Hide

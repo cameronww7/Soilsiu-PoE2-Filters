@@ -32,11 +32,11 @@
 #===============================================================================================================
 
 #### This is an example override
-#Show
-#BaseType == "Expert Dualstring Bow"
-    #SetFontSize 25
-    #MinimapIcon 1 Green Square
-    #PlayEffect Green
+Show
+BaseType == "Expert Dualstring Bow"
+    SetFontSize 25
+    MinimapIcon 1 Green Square
+    PlayEffect Green
 
 #===============================================================================================================
 # Hide Scrolls of Wisdom
