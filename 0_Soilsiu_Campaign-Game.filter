@@ -1,12 +1,10 @@
 #===============================================================================================================
-# Soilsiu's Campaign Filter - for Path of Exile 2
+# Soilsiu's Early Mapping Filter - for Path of Exile 2
 #===============================================================================================================
-# VERSION:  0.3.0
-# TYPE:     Campaign
+# VERSION:  0.4.0
+# TYPE:     Early Mapping
 # AUTHOR:   Soilsiu
 # 
-# -> Following Allie's Guide - https://mobalytics.gg/poe-2/profile/allie/builds/0-3-allie-s-hollow-palm-invoker-starter
-#
 #------------------------------------
 # What to Know:
 #------------------------------------
@@ -31,10 +29,8 @@
 #  This is a section to toss in overrides, such as wanting to always show a certain base
 #===============================================================================================================
 
-#### This is an example override
-## I want this on while leveling since in 0.3.0 Dualstring Bow is a great craftable and item we want
 Show
-BaseType == "Dualstring Bow"
+BaseType == "Obliterator Bow" "Dualstring Bow"
     SetFontSize 25
     MinimapIcon 1 Green Square
     PlayEffect Green
@@ -173,7 +169,7 @@ BaseType "Divine Orb" "Perfect Chaos Orb" "Perfect Exalted Orb" "Perfect Jewelle
 
 Show # Even more GG Currency
 Class == "Stackable Currency"
-BaseType == "Chaos Orb" "Greater Chaos Orb" "Fracturing Orb" "Orb of Annulment" "Perfect Regal Orb"
+BaseType == "Chaos Orb" "Exalted Orb" "Greater Chaos Orb" "Greater Exalted Orb" "Fracturing Orb" "Orb of Annulment" "Perfect Regal Orb"
     MinimapIcon 1 Green Cross
     PlayAlertSound 5 200
     PlayEffect Green
@@ -184,7 +180,7 @@ BaseType == "Chaos Orb" "Greater Chaos Orb" "Fracturing Orb" "Orb of Annulment" 
 
 Show
 Class == "Stackable Currency"
-BaseType = "Exalted Orb" "Greater Exalted Orb" "Jeweller" "Perfect" "Greater" "Artificer's Orb" "Chance Shard" "Orb of Alchemy" "Regal Orb" "Vaal Orb"  "Orb of Chance" "Exotic Coinage" "Gemcutter's Prism" "Glassblower's Bauble" 
+BaseType = "Gemcutter's Prism" "Glassblower's Bauble" "Jeweller" "Perfect" "Greater" "Artificer's Orb" "Chance Shard" "Orb of Alchemy" "Regal Orb" "Vaal Orb"  "Orb of Chance" "Exotic Coinage" 
     MinimapIcon 2 Green Cross
     PlayAlertSound 5 200
     PlayEffect Green
@@ -708,13 +704,36 @@ Rarity = Unique
 # Show All Rares 
 #===============================================================================================================
 
+# Show all Rare Jewelry items
+Show
+Class == "Ring" "Amulet" "Belt"
+Rarity = Rare
+    MinimapIcon 1 Yellow Cross
+    PlayEffect Yellow
+    SetFontSize 17
+    SetTextColor 255 215 0
+    SetBorderColor 255 255 0 250
+    SetBackgroundColor 1 1 1 150
+
+# Show Specific Base/Item Types
+Show
+Rarity = Rare
+BaseType "Dualstring Bow"
+Quality = 0
+    MinimapIcon 1 Yellow Cross
+    PlayEffect Yellow
+    SetFontSize 17
+    SetTextColor 255 215 0
+    SetBorderColor 255 255 0 250
+    SetBackgroundColor 1 1 1 150
+
 # Show all Unidentified Tier 2 Or 1
 Show
 Rarity = Rare
     MinimapIcon 1 Yellow Cross
     UnidentifiedItemTier <= 2
     PlayEffect Yellow
-    SetFontSize 19
+    SetFontSize 15
     SetTextColor 255 215 0
     SetBorderColor 255 255 0 250
     SetBackgroundColor 1 1 1 150
@@ -725,7 +744,7 @@ Rarity = Rare
     MinimapIcon 1 Yellow Cross
     UnidentifiedItemTier = 3
     PlayEffect Yellow
-    SetFontSize 18
+    SetFontSize 15
     SetTextColor 255 215 0
     SetBorderColor 255 255 0 250
     SetBackgroundColor 1 1 1 150
@@ -736,7 +755,7 @@ Rarity = Rare
     MinimapIcon 1 Yellow Cross
     UnidentifiedItemTier = 4
     PlayEffect Yellow
-    SetFontSize 17
+    SetFontSize 15
     SetTextColor 255 215 0
     SetBorderColor 255 255 0 250
     SetBackgroundColor 1 1 1 150
@@ -757,7 +776,7 @@ Show
 Rarity = Rare
     MinimapIcon 1 Yellow Cross
     PlayEffect Yellow
-    SetFontSize 15
+    SetFontSize 13
     SetTextColor 255 215 0
     SetBorderColor 255 255 0 250
     SetBackgroundColor 1 1 1 150
@@ -826,7 +845,7 @@ Rarity = Magic
 
 # Show Specific bases to sell for Crafting as Gray Items
 Show
-BaseType "Heavy Belt" "Ornate Belt" "Solid Mask" "Gold Ring" "Stellar Amulet" "Solar Amulet" "Gold Amulet" "Sapphire Ring" "Emerald Ring" "Fine Belt" "Amethyst Ring" "Azure Amulet" "Wide Belt" "Long Belt" "Utility Belt" "Fine Belt" "Double Belt" "Mail Belt" "Rawhide Belt" 
+BaseType "Heavy Belt" "Solid Mask" "Dualstring Bow" "Gemini Bow" "Primed Quiver" "Thawing Charm" "Fine Belt" 
 Rarity = Normal
     PlayEffect Blue
     MinimapIcon 1 Blue Kite
@@ -937,17 +956,7 @@ BaseEnergyShield <= 1
     SetFontSize 15
     SetTextColor 136 136 255 250
 
-# Pure EnergyShield/Evasion Only Gear
-Show
-Class "Helmet" "Body Armour" "Glove" "Boots"
-Rarity = Normal Magic
-BaseArmour <= 1
-BaseEvasion >= 1
-BaseEnergyShield >= 1
-    SetFontSize 15
-    SetTextColor 136 136 255 250
-
-# Pure Evasion Only Gear
+# Show Bows and Quivers
 Show
 Class "Bows" "Quivers"
 Rarity = Normal Magic

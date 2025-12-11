@@ -1,12 +1,10 @@
 #===============================================================================================================
 # Soilsiu's Early Mapping Filter - for Path of Exile 2
 #===============================================================================================================
-# VERSION:  0.3.0
+# VERSION:  0.4.0
 # TYPE:     Early Mapping
 # AUTHOR:   Soilsiu
 # 
-# -> Following Allie's Guide - https://mobalytics.gg/poe-2/profile/allie/builds/0-3-allie-s-hollow-palm-invoker-starter
-#
 #------------------------------------
 # What to Know:
 #------------------------------------
@@ -31,12 +29,17 @@
 #  This is a section to toss in overrides, such as wanting to always show a certain base
 #===============================================================================================================
 
-#### This is an example override
 Show
-BaseType == "Expert Dualstring Bow"
+BaseType == "Obliterator Bow" "Dualstring Bow"
     SetFontSize 25
     MinimapIcon 1 Green Square
     PlayEffect Green
+
+#Show
+#Class == "Quivers"
+    #SetFontSize 25
+    #MinimapIcon 1 Green Square
+    #PlayEffect Green
 
 #===============================================================================================================
 # Hide Scrolls of Wisdom
@@ -165,7 +168,7 @@ BaseType "Divine Orb" "Perfect Chaos Orb" "Perfect Exalted Orb" "Perfect Jewelle
 
 Show # Even more GG Currency
 Class == "Stackable Currency"
-BaseType == "Chaos Orb" "Greater Chaos Orb" "Fracturing Orb" "Orb of Annulment" "Perfect Regal Orb"
+BaseType == "Chaos Orb" "Exalted Orb" "Greater Chaos Orb" "Greater Exalted Orb" "Fracturing Orb" "Orb of Annulment" "Perfect Regal Orb"
     MinimapIcon 1 Green Cross
     PlayAlertSound 5 200
     PlayEffect Green
@@ -176,7 +179,7 @@ BaseType == "Chaos Orb" "Greater Chaos Orb" "Fracturing Orb" "Orb of Annulment" 
 
 Show
 Class == "Stackable Currency"
-BaseType = "Exalted Orb" "Greater Exalted Orb" "Jeweller" "Perfect" "Greater" "Artificer's Orb" "Chance Shard" "Orb of Alchemy" "Regal Orb" "Vaal Orb"  "Orb of Chance" "Exotic Coinage" "Gemcutter's Prism" "Glassblower's Bauble" 
+BaseType = "Gemcutter's Prism" "Glassblower's Bauble" "Jeweller" "Perfect" "Greater" "Artificer's Orb" "Chance Shard" "Orb of Alchemy" "Regal Orb" "Vaal Orb"  "Orb of Chance" "Exotic Coinage" 
     MinimapIcon 2 Green Cross
     PlayAlertSound 5 200
     PlayEffect Green
@@ -511,19 +514,45 @@ Class = Waystones
 # Flasks (Endgame, Only shows Flasks with Quality 10% or Higher)
 #===============================================================================================================
 
-Hide
+Show
+Class = "Life Flasks"
+Quality >= 1
+    Rarity = Normal Magic
+	BaseType == "Ultimate Life Flask"
+	AreaLevel >= 65
+    MinimapIcon 2 Red Moon
+    PlayEffect Red
+    PlayAlertSound 15 150
+    SetFontSize 15
+    SetTextColor 200 50 50 
+    SetBorderColor 200 50 50 
+    SetBackgroundColor 0 0 0
+
+Show
+Class = "Mana Flasks"
+Quality >= 1
+    Rarity = Normal Magic
+	BaseType == "Ultimate Mana Flask"
+	AreaLevel >= 65
+    MinimapIcon 2 Blue Moon
+    PlayEffect Blue
+    PlayAlertSound 15 150
+    SetFontSize 15
+    SetTextColor 50 100 200
+    SetBorderColor 50 100 200
+    SetBackgroundColor 0 0 0
+
+Show
 Class = "Life Flasks"
 	BaseType == "Ultimate Life Flask"
-    PlayAlertSound 15 150
     SetFontSize 15
     SetTextColor 200 50 50 255
     SetBorderColor 200 50 50 255
     SetBackgroundColor 0 0 0 255
 
-Hide
+Show
 Class = "Mana Flasks"
 	BaseType == "Ultimate Mana Flask"
-    PlayAlertSound 15 150
     SetFontSize 15
     SetTextColor 50 100 200 255
     SetBorderColor 50 100 200 255
@@ -547,11 +576,36 @@ Rarity = Unique
 # Show All Rares 
 #===============================================================================================================
 
-# Show all Rare items
+# Show all Rare Jewelry items
 Show
 Class == "Ring" "Amulet" "Belt"
 Rarity = Rare
     MinimapIcon 1 Yellow Cross
+    PlayEffect Yellow
+    SetFontSize 15
+    SetTextColor 255 215 0
+    SetBorderColor 255 255 0 250
+    SetBackgroundColor 1 1 1 150
+
+# Show Specific Base/Item Types
+Show
+Rarity = Rare
+BaseType "Bow"
+Quality = 0
+    MinimapIcon 1 Yellow Cross
+    PlayEffect Yellow
+    SetFontSize 15
+    SetTextColor 255 215 0
+    SetBorderColor 255 255 0 250
+    SetBackgroundColor 1 1 1 150
+
+# Hide Large Rare Items all Rare items that are not T1
+Hide
+Rarity = Rare
+BaseType = "Mace" "Quarterstaff" "Shield" "Bow" "Crossbow" "Focus" "Sceptre" "Quiver" "Spear"
+Quality = 0
+#    MinimapIcon 1 Yellow Cross
+    UnidentifiedItemTier <= 2
     PlayEffect Yellow
     SetFontSize 15
     SetTextColor 255 215 0
@@ -569,16 +623,6 @@ Rarity = Rare
     SetBorderColor 255 255 0 250
     SetBackgroundColor 1 1 1 150
 
-# Hide Large Rare Items all Rare items that are not T1 or T2 
-Hide
-Rarity = Rare
-BaseType = "Mace" "Quarterstaff" "Shield" "Bow" "Crossbow" "Focus" "Sceptre" "Quiver" "Spear"
-#    MinimapIcon 1 Yellow Cross
-    PlayEffect Yellow
-    SetFontSize 13
-    SetTextColor 255 215 0
-    SetBorderColor 255 255 0 250
-    SetBackgroundColor 1 1 1 150
 
 # Show all Unidentified Tier 3
 Show
@@ -592,7 +636,7 @@ Rarity = Rare
     SetBackgroundColor 1 1 1 150
 
 # Show all Unidentified Tier 4
-Show
+Hide
 Rarity = Rare
     MinimapIcon 1 Yellow Cross
     UnidentifiedItemTier = 4
@@ -603,7 +647,7 @@ Rarity = Rare
     SetBackgroundColor 1 1 1 150
 
 # Show all Unidentified Tier 5 or Higher
-Show
+Hide
 Rarity = Rare
     MinimapIcon 1 Yellow Cross
     UnidentifiedItemTier >= 5
@@ -614,7 +658,7 @@ Rarity = Rare
     SetBackgroundColor 1 1 1 150
 
 # Show all Rare items
-Show
+Hide
 Rarity = Rare
     MinimapIcon 1 Yellow Cross
     PlayEffect Yellow
@@ -665,7 +709,7 @@ BaseType "Timeless"
 
 # Show Specific Ring bases
 Show
-BaseType == "Sapphire Ring" "Ruby Ring" "Topaz Ring" "Prismatic Ring" "Gold Ring" "Amethyst Ring"
+BaseType == "Sapphire Ring" "Ruby Ring" "Topaz Ring" "Prismatic Ring" "Amethyst Ring"
 Rarity = Magic
     PlayEffect Blue
     MinimapIcon 2 Blue Square
@@ -686,7 +730,7 @@ BaseType == "Stellar Amulet" "Solar Amulet"
 
 # Show Specific bases to sell for Crafting as Gray Items
 Show
-BaseType "Heavy Belt" "Ornate Belt" "Solid Mask" "Gold Ring" "Stellar Amulet" "Solar Amulet" "Gold Amulet" "Sapphire Ring" "Emerald Ring" "Fine Belt" "Amethyst Ring" "Azure Amulet" "Wide Belt" "Long Belt" "Utility Belt" "Fine Belt" "Double Belt" "Mail Belt" "Rawhide Belt" 
+BaseType "Heavy Belt" "Solid Mask" "Dualstring Bow" "Gemini Bow" "Primed Quiver" "Thawing Charm" "Fine Belt" 
 Rarity = Normal
     PlayEffect Blue
     MinimapIcon 1 Blue Kite
@@ -793,18 +837,27 @@ Quality >= 1
 # Crafting Bases
 #===============================================================================================================
 
-# For 0.3.0
-# Hybrid EnergyShield Gear
-Hide
+# Pure Evasion Only Gear
+Show
 Class "Helmet" "Body Armour" "Glove" "Boots"
-Rarity = Normal
+Rarity = Normal Magic
+AreaLevel < 80
+BaseArmour <= 1
+BaseEvasion >= 1
+BaseEnergyShield <= 1
+    SetFontSize 13
+    SetTextColor 136 136 255 250
+
+# Pure EnergyShield/Evasion Only Gear
+Show
+Class "Helmet" "Body Armour" "Glove" "Boots"
+Rarity = Normal Magic
+AreaLevel < 80
 BaseArmour <= 1
 BaseEvasion >= 1
 BaseEnergyShield >= 1
-    SetFontSize 15
-    SetTextColor 136 136 136 250
-    SetBorderColor 0 0 0 100
-	SetBackgroundColor 0 0 0 100
+    SetFontSize 13
+    SetTextColor 136 136 255 250
 
 #===============================================================================================================
 # Hide Item Options
