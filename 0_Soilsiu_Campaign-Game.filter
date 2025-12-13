@@ -30,13 +30,13 @@
 #===============================================================================================================
 
 Show
-BaseType == "Obliterator Bow" "Dualstring Bow"
+BaseType == "Obliterator Bow" "Dualstring Bow" "Artillery Bow"
     SetFontSize 25
     MinimapIcon 1 Green Square
     PlayEffect Green
 
 Show
-BaseType = "Primed Quiver" "Visceral Quiver"
+BaseType = "Primed Quiver" "Visceral Quiver" "Broadhead Quiver"
     #SetFontSize 25
     #MinimapIcon 1 Green Square
     #PlayEffect Green
@@ -69,7 +69,7 @@ Class = Quest Items
 #===============================================================================================================
 
 Show
-StackSize >= 5000
+StackSize >= 2500
 BaseType == "Gold"
 	PlayEffect Orange Temp
 	MinimapIcon 0 Orange Cross
@@ -79,7 +79,7 @@ BaseType == "Gold"
     SetBackgroundColor 1 1 1 255
 
 Show
-StackSize >= 2500
+StackSize >= 1000
 BaseType == "Gold"
 	PlayEffect Orange Temp
 	MinimapIcon 0 Orange Cross
@@ -89,7 +89,7 @@ BaseType == "Gold"
     SetBackgroundColor 1 1 1 225   
     
 Show
-StackSize >= 1000
+StackSize >= 500
 BaseType == "Gold"
 	PlayEffect Orange Temp
     MinimapIcon 1 Orange Cross
@@ -99,7 +99,7 @@ BaseType == "Gold"
     SetBackgroundColor 1 1 1 200
 
 Show
-StackSize >= 500
+StackSize >= 50
 BaseType == "Gold"
 	PlayEffect Orange Temp
     SetFontSize 14
@@ -941,6 +941,16 @@ Quality >= 1
 # Crafting Bases
 #===============================================================================================================
 
+# Show EnergyShield/Evasion Only Gear
+Show
+Class = "Helmet" 
+Rarity = Normal Magic
+BaseArmour <= 1
+BaseEvasion >= 1
+BaseEnergyShield >= 1
+    SetFontSize 15
+    SetBackgroundColor 1 1 1 150
+
 # Show Pure Evasion Only Gear
 Show
 Class = "Helmet" "Body Armour" "Glove" "Boots"
@@ -953,7 +963,7 @@ BaseEnergyShield <= 1
 
 # Show Bows and Quivers
 Show
-Class == "Bows" "Quivers"
+BaseType == "Primed Quiver" "Visceral Quiver" "Broadhead Quiver" "Obliterator Bow" "Dualstring Bow" "Artillery Bow" "Recurve Bow"
 Rarity = Normal Magic
     SetFontSize 15
     SetBackgroundColor 1 1 1 150
@@ -979,7 +989,7 @@ Rarity = Normal Magic
 
 # Hide all Weapons
 Hide
-Class = "Crossbows" "Bows" "Two Hand Maces" "Staves" "Wands" "Shields" "Foci" "One Hand Maces" "Quivers" "Sceptres" "Focus"
+Class = "Crossbows" "Bows" "Two Hand Maces" "Staves" "Wands" "Shields" "Foci" "One Hand Maces" "Quivers" "Sceptres" "Focus" "Talisman"
 Rarity = Normal Magic
 	AreaLevel >= 39
     SetFontSize 15
