@@ -228,7 +228,7 @@ Class "Omen"
 
 # Color is TEALISH
 Show
-Class == "Socketable"
+Class == "Augment"
 BaseType "Rune" "Soul" "Talisman" "Liquid " " Splinter" "Catalyst" "Essence"
     MinimapIcon 2 Cyan Circle
     PlayEffect Cyan Temp
@@ -710,7 +710,7 @@ Class = Jewels
 	SetBackgroundColor 30 0 70 255
 
 Show
-Class == "Socketable"
+Class == "Augment"
 BaseType "Timeless"
     PlayAlertSound 2 300
 	PlayEffect Blue
@@ -726,7 +726,7 @@ BaseType "Timeless"
 
 # Show Specific Ring bases
 Show
-BaseType == "Sapphire Ring" "Ruby Ring" "Topaz Ring" "Prismatic Ring" "Amethyst Ring"
+BaseType == "Prismatic Ring" "Sapphire Ring" "Ruby Ring" "Topaz Ring" "Amethyst Ring"
 Rarity = Magic
     PlayEffect Blue
     MinimapIcon 2 Blue Square
@@ -737,7 +737,7 @@ Rarity = Magic
 
 # Show Specific Amulets bases
 Show
-BaseType == "Stellar Amulet" "Solar Amulet"
+BaseType == "Gold Amulet"
     PlayEffect Blue
     MinimapIcon 2 Blue Square
     PlayEffect Blue
@@ -800,7 +800,7 @@ Show # Show Quality Charms
 
 Show # Show Affix Specific ENDGAME CHARMS charms
 	Class == "Charms"
-	BaseType == "Amethyst Charm" "Stone Charm" "Thawing Charm"
+	BaseType == "Amethyst Charm" "Stone Charm" "Thawing Charm" "Staunching Charm" "Dousing Charm"
     PlayEffect Blue
 	MinimapIcon 2 Blue Diamond
     SetFontSize 15
@@ -825,7 +825,7 @@ Show # All Charms in zones lower than 65 (Campaign)
     SetFontSize 15
     SetTextColor 90 150 90 200
     SetBorderColor 90 150 90 200
-    SetBackgroundColor 0 0 0 200
+    SetBackgroundColor 1 1 1 150
 
 #===============================================================================================================
 # Salvagable Items For Socket Shards or Quality Shards
@@ -839,7 +839,7 @@ Rarity = Normal Magic
     SetFontSize 15
     SetTextColor 90 150 90
     SetBorderColor 90 150 90
-    SetBackgroundColor 0 0 0 200
+    SetBackgroundColor 1 1 1 150
 
 #### Salvage Quality Items for Quality Shards
 Show
@@ -849,7 +849,7 @@ Rarity = Normal Magic
     SetFontSize 15
     SetTextColor 90 150 90
     SetBorderColor 90 150 90
-    SetBackgroundColor 0 0 0 200
+    SetBackgroundColor 1 1 1 150
 
 #### Salvage Flasks for Quality Flask Shards
 Show
@@ -858,7 +858,7 @@ Quality >= 1
     SetFontSize 15
     SetTextColor 90 150 90
     SetBorderColor 90 150 90
-    SetBackgroundColor 0 0 0 200
+    SetBackgroundColor 1 1 1 150
 
 #===============================================================================================================
 # Hide Item Options

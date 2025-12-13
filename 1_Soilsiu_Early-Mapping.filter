@@ -224,7 +224,7 @@ Class "Omen"
 
 # Color is TEALISH
 Show
-Class == "Socketable"
+Class == "Augment"
 BaseType "Rune" "Soul" "Talisman" "Liquid " " Splinter" "Catalyst" "Essence"
     MinimapIcon 2 Cyan Circle
     PlayEffect Cyan Temp
@@ -693,7 +693,7 @@ Class = Jewels
 	SetBackgroundColor 30 0 70 255
 
 Show
-Class == "Socketable"
+Class == "Augment"
 BaseType "Timeless"
     PlayAlertSound 2 300
 	PlayEffect Blue
@@ -709,7 +709,7 @@ BaseType "Timeless"
 
 # Show Specific Ring bases
 Show
-BaseType == "Sapphire Ring" "Ruby Ring" "Topaz Ring" "Prismatic Ring" "Amethyst Ring"
+BaseType == "Prismatic Ring" "Sapphire Ring" "Ruby Ring" "Topaz Ring" "Amethyst Ring"
 Rarity = Magic
     PlayEffect Blue
     MinimapIcon 2 Blue Square
@@ -720,7 +720,7 @@ Rarity = Magic
 
 # Show Specific Amulets bases
 Show
-BaseType == "Stellar Amulet" "Solar Amulet"
+BaseType == "Gold Amulet"
     PlayEffect Blue
     MinimapIcon 2 Blue Square
     PlayEffect Blue
@@ -783,7 +783,7 @@ Show # Show Quality Charms
 
 Show # Show Affix Specific ENDGAME CHARMS charms
 	Class == "Charms"
-	BaseType == "Amethyst Charm" "Stone Charm" "Thawing Charm"
+	BaseType == "Amethyst Charm" "Stone Charm" "Thawing Charm" "Staunching Charm" "Dousing Charm"
     PlayEffect Blue
 	MinimapIcon 2 Blue Diamond
     SetFontSize 15
@@ -846,7 +846,7 @@ BaseArmour <= 1
 BaseEvasion >= 1
 BaseEnergyShield <= 1
     SetFontSize 13
-    SetTextColor 136 136 255 250
+    SetBackgroundColor 1 1 1 150
 
 # Pure EnergyShield/Evasion Only Gear
 Show
@@ -857,7 +857,7 @@ BaseArmour <= 1
 BaseEvasion >= 1
 BaseEnergyShield >= 1
     SetFontSize 13
-    SetTextColor 136 136 255 250
+    SetBackgroundColor 1 1 1 150
 
 #===============================================================================================================
 # Hide Item Options

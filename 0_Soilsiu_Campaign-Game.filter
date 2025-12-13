@@ -225,7 +225,7 @@ Class "Omen"
 
 # Color is TEALISH
 Show
-Class == "Socketable"
+Class == "Augment"
 BaseType "Rune" "Soul" "Talisman" "Liquid " " Splinter" "Catalyst" "Essence"
     MinimapIcon 2 Cyan Circle
     PlayEffect Cyan Temp
@@ -376,7 +376,7 @@ BaseType == "Uncut Support Gem"
 
 Show
 Class == "Skill Gems" "Support Gems"
-BaseType == "Ahn's Citadel" "Ailith's Chimes" "Amanamu's Tithe" "Arakaali's Lust" "Arbiter's Ignition" "Arjun's Medal" "Atalui's Bloodletting" "Atziri's Allure" "Brutus' Brain" "Daresso's Passion" "Doedre's Undoing" "Einhar's Beastrite" "Esh's Radiance" "Garukhan's Resolve" "Ixchel's Torment" "Kalisa's Crescendo" "Kaom's Madness" "Kulemak's Dominion" "Kurgal's Leash" "Paquate's Pact" "Piety's Mercy" "Ratha's Assault" "Rigwald's Ferocity" "Romira's Requital" "Sione's Temper" "Tacati's Ire" "Tawhoa's Tending" "Tecrod's Revenge" "Tul's Stillness" "Uhtred's Augury" "Uhtred's Exodus" "Uhtred's Omen" "Uruk's Smelting" "Uul-Netol's Embrace" "Varashta's Blessing" "Vilenta's Propulsion" "Xoph's Pyre" "Zarokh's Refrain"
+BaseType == "Ailith's Chimes" "Amanamu's Tithe" "Arbiter's Ignition" "Atziri's Call" "Atziri's Communion" "Atziri's Impatience" "Bhatair's Vengeance" "Cirel's Cultivation" "Dominus' Grasp" "Dreamer's Knell" "Eonyr's Thunder" "Esh's Radiance" "Garukhan's Resolve" "Guatelitzi's Ablation" "Hayoxi's Fulmination" "Helbrym's Hide" "Ixchel's Torment" "Kalisa's Crescendo" "Khatal's Rejuvenation" "Morgana's Tempest" "Oisín's Oath" "Rigwald's Ferocity" "Romira's Requital" "Tasalio's Rhythm" "Tul's Stillness" "Uhtred's Exodus" "Uhtred's Omen" "Varashta's Blessing" "Xibaqua's Rending" "Xoph's Pyre" "Zarokh's Revolt" "Zerphi's Infamy"
     PlayAlertSound 2 300
     PlayEffect Cyan
     MinimapIcon 1 Cyan Triangle
@@ -807,7 +807,7 @@ Class = Jewels
 	SetBackgroundColor 30 0 70 255
 
 Show
-Class == "Socketable"
+Class == "Augment"
 BaseType "Timeless"
     PlayAlertSound 2 300
 	PlayEffect Blue
@@ -823,8 +823,8 @@ BaseType "Timeless"
 
 # Show Specific Ring bases
 Show
-BaseType == "Sapphire Ring" "Ruby Ring" "Topaz Ring" "Prismatic Ring" "Gold Ring" "Amethyst Ring"
-Rarity = Magic
+BaseType == "Iron Ring" "Sapphire Ring" "Ruby Ring" "Topaz Ring" "Prismatic Ring" "Gold Ring" "Amethyst Ring" 
+Rarity = Magic Normal
     PlayEffect Blue
     MinimapIcon 2 Blue Square
     PlayEffect Blue
@@ -834,8 +834,8 @@ Rarity = Magic
 
 # Show Specific Amulets bases
 Show
-BaseType == "Stellar Amulet" "Solar Amulet"
-Rarity = Magic
+BaseType == "Stellar Amulet" "Solar Amulet" "Amber Amulet"
+Rarity = Magic Normal
     PlayEffect Blue
     MinimapIcon 2 Blue Square
     PlayEffect Blue
@@ -861,11 +861,6 @@ BaseType "Breach Ring"
     MinimapIcon 2 Blue Kite
     SetFontSize 15
     SetBorderColor 0 0 255 250
-    SetBackgroundColor 1 1 1 150
-
-Hide
-Class "Rings" "Amulets" "Belt"
-    SetFontSize 15
     SetBackgroundColor 1 1 1 150
 
 #===============================================================================================================
@@ -946,37 +941,52 @@ Quality >= 1
 # Crafting Bases
 #===============================================================================================================
 
-# Pure Evasion Only Gear
+# Show Energy/Evasion Only Gear
 Show
-Class "Helmet" "Body Armour" "Glove" "Boots"
+Class = "Helmet" "Body Armour" "Glove" "Boots"
+Rarity = Normal Magic
+AreaLevel < 5
+BaseArmour <= 1
+BaseEvasion >= 1
+BaseEnergyShield >= 1
+    SetFontSize 15
+    SetBackgroundColor 1 1 1 150
+
+# Show Pure Evasion Only Gear
+Show
+Class = "Helmet" "Body Armour" "Glove" "Boots"
 Rarity = Normal Magic
 BaseArmour <= 1
 BaseEvasion >= 1
 BaseEnergyShield <= 1
     SetFontSize 15
-    SetTextColor 136 136 255 250
+    SetBackgroundColor 1 1 1 150
 
 # Show Bows and Quivers
 Show
-Class "Bows" "Quivers"
+Class == "Bows" "Quivers"
 Rarity = Normal Magic
     SetFontSize 15
-    SetTextColor 136 136 255 250
+    SetBackgroundColor 1 1 1 150
+
+# Show Belts & Rings & Amulets
+Show
+Class == "Belts" "Rings" "Amulets"
+Rarity = Normal Magic
+AreaLevel < 15
+    SetFontSize 15
+    SetBackgroundColor 1 1 1 150
 
 #===============================================================================================================
 # Show Item Options
 #===============================================================================================================
-#Hide all gear
-#Class = "Boots" "Gloves" "Helmets" "Body Armours" "Crossbows" "Bows" "Two Hand Maces" "Staves" "Wands" "Shields" "Foci" "One Hand Maces" "Quivers" "Sceptres"
-#Rarity = Normal Magic
-    #SetFontSize 15
-    #SetTextColor 136 136 255 250
 
-Hide all gear
-Class = "Boots" "Gloves" "Helmets" "Body Armours" "Belts'
+# Hide all Gear
+Hide
+Class = "Boots" "Gloves" "Helmets" "Body Armours"
 Rarity = Normal Magic
     SetFontSize 15
-    SetTextColor 136 136 255 250    
+    SetBackgroundColor 1 1 1 150
 
 # Hide all Weapons
 Hide
@@ -984,11 +994,16 @@ Class = "Crossbows" "Bows" "Two Hand Maces" "Staves" "Wands" "Shields" "Foci" "O
 Rarity = Normal Magic
 	AreaLevel >= 39
     SetFontSize 15
-    SetTextColor 136 136 255 250
+    SetBackgroundColor 1 1 1 150
+
+# Hide all Belts & Rings & Amulets
+Hide
+Class "Rings" "Amulets" "Belt"
+    SetFontSize 15
+    SetBackgroundColor 1 1 1 150
     
 #### This is a Hides all
 Hide
     Rarity = Normal Magic
     SetFontSize 15
-    SetBorderColor 0 0 0 0
-	SetBackgroundColor 0 0 0 200
+    SetBackgroundColor 1 1 1 150
