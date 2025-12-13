@@ -39,8 +39,8 @@ BaseType == "Obliterator Bow" "Dualstring Bow"
     MinimapIcon 1 Green Square
     PlayEffect Green
 
-#Show
-#Class == "Quivers"
+Show
+Class == "Primed Quiver" "Visceral Quiver"
     #SetFontSize 25
     #MinimapIcon 1 Green Square
     #PlayEffect Green
