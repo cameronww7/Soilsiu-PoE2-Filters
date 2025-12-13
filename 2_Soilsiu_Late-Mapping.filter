@@ -1,5 +1,5 @@
 #===============================================================================================================
-# Soilsiu's Early Mapping Filter - for Path of Exile 2
+# Soilsiu's Endgame Mapping Filter - for Path of Exile 2
 #===============================================================================================================
 # VERSION:  0.4.0
 # TYPE:     Early Mapping
@@ -15,7 +15,7 @@
 #  - For example this filter will hide all skill gems below 18
 #  - This filter will Hide support gems 2 and below but show 3
 # - Life and Mana Flasks only show if they have Quality
-# - Only T14 Maps and higher show in  this Filter
+# - Only T12 Maps and higher show in  this Filter
 #
 #------------------------------------
 # INSTALLATION:
@@ -832,24 +832,24 @@ Show # All Charms in zones lower than 65 (Campaign)
 #===============================================================================================================
 
 #### Salvage Socketed items for Socket Shards
-Hide
+Show
 Sockets > 0
-Class "Helmets" "Boots" "Gloves"
+Class == "Helmets" "Boots" "Gloves"
 Rarity = Normal Magic
     SetFontSize 15
     SetTextColor 90 150 90
     SetBorderColor 90 150 90
-    SetBackgroundColor 1 1 1 150
+    SetBackgroundColor 0 0 0 200
 
 #### Salvage Quality Items for Quality Shards
 Show
 Quality >= 1
-Class "Helmets" "Boots" "Gloves"
+Class == "Helmets" "Boots" "Gloves"
 Rarity = Normal Magic
     SetFontSize 15
     SetTextColor 90 150 90
     SetBorderColor 90 150 90
-    SetBackgroundColor 1 1 1 150
+    SetBackgroundColor 0 0 0 200
 
 #### Salvage Flasks for Quality Flask Shards
 Show
@@ -858,7 +858,7 @@ Quality >= 1
     SetFontSize 15
     SetTextColor 90 150 90
     SetBorderColor 90 150 90
-    SetBackgroundColor 1 1 1 150
+    SetBackgroundColor 0 0 0 200
 
 #===============================================================================================================
 # Hide Item Options

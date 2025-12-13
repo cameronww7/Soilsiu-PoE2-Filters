@@ -805,9 +805,9 @@ Show # All Charms in zones lower than 65 (Campaign)
 #===============================================================================================================
 
 #### Salvage Socketed items for Socket Shards
-Hide # Hide
+Show
 Sockets > 0
-Class "Helmets" "Boots" "Gloves"
+Class == "Helmets" "Boots" "Gloves"
 Rarity = Normal Magic
     SetFontSize 15
     SetTextColor 90 150 90
@@ -817,7 +817,7 @@ Rarity = Normal Magic
 #### Salvage Quality Items for Quality Shards
 Show
 Quality >= 1
-Class "Helmets" "Boots" "Gloves"
+Class == "Helmets" "Boots" "Gloves"
 Rarity = Normal Magic
     SetFontSize 15
     SetTextColor 90 150 90
@@ -839,7 +839,7 @@ Quality >= 1
 
 # Pure Evasion Only Gear
 Show
-Class "Helmet" "Body Armour" "Glove" "Boots"
+Class "Body Armour"
 Rarity = Normal Magic
 AreaLevel < 80
 BaseArmour <= 1
@@ -850,7 +850,7 @@ BaseEnergyShield <= 1
 
 # Pure EnergyShield/Evasion Only Gear
 Show
-Class "Helmet" "Body Armour" "Glove" "Boots"
+Class "Helmet" "Glove" "Boots"
 Rarity = Normal Magic
 AreaLevel < 80
 BaseArmour <= 1
