@@ -36,7 +36,7 @@ BaseType == "Obliterator Bow" "Dualstring Bow"
     PlayEffect Green
 
 Show
-Class == "Primed Quiver" "Visceral Quiver"
+BaseType = "Primed Quiver" "Visceral Quiver"
     #SetFontSize 25
     #MinimapIcon 1 Green Square
     #PlayEffect Green
@@ -845,7 +845,7 @@ Rarity = Magic Normal
 
 # Show Specific bases to sell for Crafting as Gray Items
 Show
-BaseType "Heavy Belt" "Solid Mask" "Dualstring Bow" "Gemini Bow" "Primed Quiver" "Thawing Charm" "Fine Belt" 
+BaseType "Heavy Belt" "Thawing Charm"
 Rarity = Normal
     PlayEffect Blue
     MinimapIcon 1 Blue Kite
@@ -940,17 +940,6 @@ Quality >= 1
 #===============================================================================================================
 # Crafting Bases
 #===============================================================================================================
-
-# Show Energy/Evasion Only Gear
-Show
-Class = "Helmet" "Body Armour" "Glove" "Boots"
-Rarity = Normal Magic
-AreaLevel < 5
-BaseArmour <= 1
-BaseEvasion >= 1
-BaseEnergyShield >= 1
-    SetFontSize 15
-    SetBackgroundColor 1 1 1 150
 
 # Show Pure Evasion Only Gear
 Show

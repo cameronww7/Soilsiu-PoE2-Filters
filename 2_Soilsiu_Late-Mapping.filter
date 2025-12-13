@@ -40,7 +40,7 @@ BaseType == "Obliterator Bow" "Dualstring Bow"
     PlayEffect Green
 
 Show
-Class == "Primed Quiver" "Visceral Quiver"
+BaseType == "Primed Quiver" "Visceral Quiver"
     #SetFontSize 25
     #MinimapIcon 1 Green Square
     #PlayEffect Green
@@ -747,7 +747,7 @@ BaseType == "Gold Amulet"
 
 # Show Specific bases to sell for Crafting as Gray Items
 Show
-BaseType "Heavy Belt" "Dualstring Bow" "Obliterator Bow" "Visceral Quiver" "Thawing Charm"
+BaseType "Heavy Belt" "Thawing Charm"
 Rarity = Normal
     PlayEffect Blue
     MinimapIcon 1 Blue Kite
@@ -807,17 +807,6 @@ Show # Show Affix Specific ENDGAME CHARMS charms
     SetTextColor 90 150 90 200
     SetBorderColor 90 150 90 200
     SetBackgroundColor 0 0 0 200
-
-# Show Specific bases to sell for Crafting as Gray Items
-#Show
-#Class == "Charms"
-#Rarity = Normal
-#    PlayEffect Blue
-#    MinimapIcon 1 Blue Kite
-#    SetFontSize 15
-#    SetTextColor 0 0 255 250
-#    SetBorderColor 0 0 255 250
-#    SetBackgroundColor 1 1 1 200
 
 Show # All Charms in zones lower than 65 (Campaign)
 	Class == "Charms"
