@@ -33,17 +33,19 @@
 #  This is a section to toss in overrides, such as wanting to always show a certain base
 #===============================================================================================================
 
+# End Game Base Bows
 Show
-BaseType == "Obliterator Bow" "Dualstring Bow"
-    SetFontSize 25
+BaseType == "Obliterator Bow" "Fanatic Bow"
+    SetFontSize 20
     MinimapIcon 1 Green Square
     PlayEffect Green
 
+# End Game Base Quiver
 Show
 BaseType == "Primed Quiver" "Visceral Quiver"
-    #SetFontSize 25
-    #MinimapIcon 1 Green Square
-    #PlayEffect Green
+    SetFontSize 20
+    MinimapIcon 1 Green Square
+    PlayEffect Green
 
 #===============================================================================================================
 # Hide Scrolls of Wisdom
@@ -747,7 +749,7 @@ BaseType == "Gold Amulet"
 
 # Show Specific bases to sell for Crafting as Gray Items
 Show
-BaseType "Heavy Belt" "Thawing Charm"
+BaseType "Heavy Belt" "Thawing Charm" "Silver Charm"
 Rarity = Normal
     PlayEffect Blue
     MinimapIcon 1 Blue Kite
