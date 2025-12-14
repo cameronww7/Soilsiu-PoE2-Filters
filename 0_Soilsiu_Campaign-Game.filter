@@ -842,10 +842,10 @@ Rarity = Magic Normal
 
 # Show Specific Amulets bases
 Show
-BaseType == "Stellar Amulet" "Solar Amulet" "Amber Amulet"
+BaseType == "Stellar Amulet" "Solar Amulet" "Amber Amulet" "Gold Amulet"
 Rarity = Magic Normal
     PlayEffect Blue
-    MinimapIcon 2 Blue Square
+    MinimapIcon 2 Blue Square 
     PlayEffect Blue
     SetFontSize 15
     SetBorderColor 0 0 255 250
@@ -971,16 +971,22 @@ BaseEnergyShield <= 1
 
 # Show Bows and Quivers
 Show
-BaseType == "Primed Quiver" "Visceral Quiver" "Broadhead Quiver" "Obliterator Bow" "Dualstring Bow" "Artillery Bow" "Recurve Bow"
+BaseType == "Primed Quiver" "Visceral Quiver" "Broadhead Quiver" "Obliterator Bow" "Artillery Bow" "Recurve Bow"
 Rarity = Normal Magic
     SetFontSize 15
     SetBackgroundColor 1 1 1 150
 
 # Show Belts & Rings & Amulets
 Show
-Class == "Belts" "Rings" "Amulets"
+BaseType == "Rawhide Belt" "Utility Belt"
 Rarity = Normal Magic
-AreaLevel < 15
+    SetFontSize 15
+    SetBackgroundColor 1 1 1 150 
+
+# Show Rings & Amulets
+Show
+Class == "Rings" "Amulets"
+Rarity = Normal Magic
     SetFontSize 15
     SetBackgroundColor 1 1 1 150
 
