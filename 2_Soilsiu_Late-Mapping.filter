@@ -34,18 +34,18 @@
 #===============================================================================================================
 
 # End Game Base Bows
-Show
-BaseType == "Obliterator Bow" "Fanatic Bow"
-    SetFontSize 20
-    MinimapIcon 1 Green Square
-    PlayEffect Green
+#Show
+#BaseType == "Obliterator Bow" "Fanatic Bow"
+#    SetFontSize 20
+#    MinimapIcon 1 Green Square
+#    PlayEffect Green
 
 # End Game Base Quiver
-Show
-BaseType == "Primed Quiver" "Visceral Quiver"
-    SetFontSize 20
-    MinimapIcon 1 Green Square
-    PlayEffect Green
+#Show
+#BaseType == "Primed Quiver" "Visceral Quiver"
+#    SetFontSize 20
+#    MinimapIcon 1 Green Square
+#    PlayEffect Green
 
 #===============================================================================================================
 # Hide Scrolls of Wisdom
@@ -330,7 +330,7 @@ Class = Relics
 
 Show
 Class == "Skill Gems" "Support Gems"
-BaseType == "Ahn's Citadel" "Arakaali's Lust" "Daresso's Passion" "Doedre's Undoing" "Kaom's Madness" "Kurgal's Leash" "Paquate's Pact" "Sione's Temper" "Tacati's Ire" "Tawhoa's Tending" "Tecrod's Revenge" "Uruk's Smelting" "Vilenta's Propulsion"
+	BaseType == "Ahn's Citadel" "Arakaali's Lust" "Daresso's Passion" "Doedre's Undoing" "Kaom's Madness" "Kurgal's Leash" "Paquate's Pact" "Sione's Temper" "Tacati's Ire" "Tawhoa's Tending" "Tecrod's Revenge" "Uruk's Smelting" "Vilenta's Propulsion"
     PlayAlertSound 2 300
     PlayEffect Cyan
     MinimapIcon 1 Cyan Triangle
@@ -342,7 +342,7 @@ BaseType == "Ahn's Citadel" "Arakaali's Lust" "Daresso's Passion" "Doedre's Undo
 #### Show lvl 20 Gems
 Show
 BaseType "Uncut Support Gem" "Uncut Skill Gem" "Uncut Spirit Gem"
-GemLevel = 20
+ItemLevel = 20
     PlayAlertSound 3 300
     PlayEffect Green
     MinimapIcon 0 Green Star
@@ -360,18 +360,6 @@ BaseType "Uncut Spirit Gem"
     SetFontSize 15
     SetTextColor 70 240 150 255
     SetBorderColor 70 240 150 255
-    SetBackgroundColor 0 0 0 255
-
-#### Hude Level 18 & 17 Uncut Skill Gem
-Hide
-BaseType == "Uncut Skill Gem"
-    GemLevel = 17 18
-    PlayAlertSound 2 300
-    PlayEffect Cyan
-    MinimapIcon 1 Cyan Triangle
-    SetFontSize 15
-    SetTextColor 75 180 200 255
-    SetBorderColor 75 180 200 255
     SetBackgroundColor 0 0 0 255
 
 #### Show Uncut Skill Gem
@@ -542,7 +530,7 @@ Quality >= 1
 Show
 Class = "Mana Flasks"
 Quality >= 1
-    Rarity = Normal Magic
+    Rarity = Normal Magic   
 	BaseType == "Ultimate Mana Flask"
     MinimapIcon 2 Blue Moon
     PlayEffect Blue
@@ -552,19 +540,19 @@ Quality >= 1
     SetBorderColor 50 100 200
     SetBackgroundColor 0 0 0
 
-Show
+Hide
 Class = "Life Flasks"
 	BaseType == "Ultimate Life Flask"
-    AreaLevel < 70
+    #AreaLevel < 70
     SetFontSize 15
     SetTextColor 200 50 50 255
     SetBorderColor 200 50 50 255
     SetBackgroundColor 0 0 0 255
 
-Show
+Hide
 Class = "Mana Flasks"
 	BaseType == "Ultimate Mana Flask"
-    AreaLevel < 70
+    #AreaLevel < 70
     SetFontSize 15
     SetTextColor 50 100 200 255
     SetBorderColor 50 100 200 255
@@ -599,37 +587,60 @@ Rarity = Rare
     SetBorderColor 255 255 0 250
     SetBackgroundColor 1 1 1 150
 
+# Show all Rare Endgame Armor and Weapons
+Show
+UnidentifiedItemTier = 1 2
+Rarity Rare
+BaseType == "Acrid Wand" "Akoyan Club" "Ancient Buckler" "Ancient Cuffs" "Apostle Leggings" "Ashbark Talisman" "Attuned Wand" "Baroque Targe" "Death Mantle" "Divine Crown" "Elegant Crossbow" "Fang Talisman" "Feathered Raiment" "Flexed Crossbow" "Flowing Raiment" "Fortified Hammer" "Fortress Tower Shield" "Gemini Crossbow" "Gleaming Cuffs" "Grand Spear" "Guardian Spear" "Kamasan Tiara" "Leyline Focus" "Lunar Quarterstaff" "Luxurious Slippers" "Masked Greathelm" "Opulent Gloves" "Ornate Greaves" "Ornate Mitts" "Ornate Plate" "Paragon Greathelm" "Reaping Staff" "Roaring Staff" "Ruination Maul" "Sacramental Robe" "Sacred Focus" "Saintly Crown" "Sanctified Staff" "Sandsworn Sandals" "Seastorm Mantle" "Siphoning Wand" "Skullcrusher Quarterstaff" "Soaring Spear" "Soaring Targe" "Sorcerous Tiara" "Spiked Spear" "Spiny Talisman" "Stalking Spear" "Stoic Sceptre" "Strife Pick" "Striking Quarterstaff" "Tawhoan Greatclub" "Utzaal Cuirass" "Vaal Crest Shield" "Vaal Gloves" "Vaal Greaves" "Vaal Mitts" "Vaal Tower Shield" "Voltaic Staff" "Warlock Leggings" "Wildwood Talisman" "Wrath Sceptre" "Dueling Wand" "Paralysing Staff" "Adherent Cuffs" "Ancestral Tiara" "Blacksteel Crest Shield" "Cryptic Crown" "Cryptic Leggings" "Desert Buckler" "Golden Targe" "Imperial Greathelm" "Massive Mitts" "Sekhema Sandals" "Sirenscale Gloves" "Tasalian Focus" "Tasalian Greaves" "Tawhoan Tower Shield" "Warlord Cuirass" "Aegis Quarterstaff" "Maji Talisman" "Siege Crossbow" "Akoyan Spear" "Fanatic Greathammer" "Flying Spear" "Fungal Talisman" "Jade Talisman" "Desolate Crossbow" "Marauding Mace" "Massive Greathammer" "Razor Quarterstaff" "Thunder Talisman" "Alpha Talisman" "Conjurer Mantle" "Soldier Cuirass" "Vile Robe" "Wolfskin Mantle" "Chiming Staff" "Galvanic Wand" "Omen Sceptre" "Rattling Sceptre" "Withered Wand"
+    AreaLevel >= 65
+    MinimapIcon 1 Yellow Cross
+    PlayEffect Yellow
+    SetFontSize 15
+    SetTextColor 255 215 0
+    SetBorderColor 255 255 0 250
+    SetBackgroundColor 1 1 1 150
+
 # Hide Large Rare Items all Rare items that are not T1 Or T2
 Hide
+UnidentifiedItemTier = 3 4 5 6 7 8 9 # Hides everything thats not Tier 1 or 2 for big items
 Rarity = Rare
-BaseType = "Mace" "Quarterstaff" "Shield" "Bow" "Crossbow" "Focus" "Sceptre" "Quiver" "Spear"z
+BaseType = "Mace" "Quarterstaff" "Shield" "Bow" "Crossbow" "Focus" "Sceptre" "Quiver" "Spear" "Staff"
     MinimapIcon 1 Yellow Cross
-    UnidentifiedItemTier > 2 # Hides everything thats not Tier 1 or 2 for big items
     PlayEffect Yellow
     SetFontSize 15
     SetTextColor 255 215 0
     SetBorderColor 255 255 0 250
     SetBackgroundColor 1 1 1 150
 
-# Show all Unidentified Tier 2 Or 1
+# Show all Rare items
 Show
+UnidentifiedItemTier == 1 2
 Rarity = Rare
     MinimapIcon 1 Yellow Cross
-    UnidentifiedItemTier <= 2
     PlayEffect Yellow
-    SetFontSize 15
+    SetFontSize 13
     SetTextColor 255 215 0
     SetBorderColor 255 255 0 250
     SetBackgroundColor 1 1 1 150
 
-
-# Show all Unidentified Tier 3
+# Show all Rare items
 Show
 Rarity = Rare
+UnidentifiedItemTier == 1 2
     MinimapIcon 1 Yellow Cross
-    UnidentifiedItemTier = 3
     PlayEffect Yellow
-    SetFontSize 15
+    SetFontSize 13
+    SetTextColor 255 215 0
+    SetBorderColor 255 255 0 250
+    SetBackgroundColor 1 1 1 150
+
+# Show all Rare items
+Hide
+UnidentifiedItemTier == 3 4 5 6 7 8 9
+Rarity = Rare
+    MinimapIcon 1 Yellow Cross
+    PlayEffect Yellow
+    SetFontSize 13
     SetTextColor 255 215 0
     SetBorderColor 255 255 0 250
     SetBackgroundColor 1 1 1 150
@@ -643,6 +654,39 @@ Rarity = Rare
     SetTextColor 255 215 0
     SetBorderColor 255 255 0 250
     SetBackgroundColor 1 1 1 150
+
+#===============================================================================================================
+# Endgame Base Items
+#===============================================================================================================
+
+Show
+UnidentifiedItemTier >= 2
+Rarity Magic
+BaseType == "Acrid Wand" "Akoyan Club" "Ancient Buckler" "Ancient Cuffs" "Apostle Leggings" "Ashbark Talisman" "Attuned Wand" "Baroque Targe" "Death Mantle" "Divine Crown" "Elegant Crossbow" "Fang Talisman" "Feathered Raiment" "Flexed Crossbow" "Flowing Raiment" "Fortified Hammer" "Fortress Tower Shield" "Gemini Crossbow" "Gleaming Cuffs" "Grand Spear" "Guardian Spear" "Kamasan Tiara" "Leyline Focus" "Lunar Quarterstaff" "Luxurious Slippers" "Masked Greathelm" "Opulent Gloves" "Ornate Greaves" "Ornate Mitts" "Ornate Plate" "Paragon Greathelm" "Reaping Staff" "Roaring Staff" "Ruination Maul" "Sacramental Robe" "Sacred Focus" "Saintly Crown" "Sanctified Staff" "Sandsworn Sandals" "Seastorm Mantle" "Siphoning Wand" "Skullcrusher Quarterstaff" "Soaring Spear" "Soaring Targe" "Sorcerous Tiara" "Spiked Spear" "Spiny Talisman" "Stalking Spear" "Stoic Sceptre" "Strife Pick" "Striking Quarterstaff" "Tawhoan Greatclub" "Utzaal Cuirass" "Vaal Crest Shield" "Vaal Gloves" "Vaal Greaves" "Vaal Mitts" "Vaal Tower Shield" "Voltaic Staff" "Warlock Leggings" "Wildwood Talisman" "Wrath Sceptre" "Dueling Wand" "Paralysing Staff" "Adherent Cuffs" "Ancestral Tiara" "Blacksteel Crest Shield" "Cryptic Crown" "Cryptic Leggings" "Desert Buckler" "Golden Targe" "Imperial Greathelm" "Massive Mitts" "Sekhema Sandals" "Sirenscale Gloves" "Tasalian Focus" "Tasalian Greaves" "Tawhoan Tower Shield" "Warlord Cuirass" "Aegis Quarterstaff" "Maji Talisman" "Siege Crossbow" "Akoyan Spear" "Fanatic Greathammer" "Flying Spear" "Fungal Talisman" "Jade Talisman" "Desolate Crossbow" "Marauding Mace" "Massive Greathammer" "Razor Quarterstaff" "Thunder Talisman" "Alpha Talisman" "Conjurer Mantle" "Soldier Cuirass" "Vile Robe" "Wolfskin Mantle" "Chiming Staff" "Galvanic Wand" "Omen Sceptre" "Rattling Sceptre" "Withered Wand" "Obliterator Bow" "Fanatic Bow" "Primed Quiver" "Visceral Quiver"
+    AreaLevel >= 65
+    PlayAlertSound 3 300
+    PlayEffect White
+    MinimapIcon 1 White Diamond
+    SetFontSize 15
+    SetTextColor 255 255 255
+    SetBorderColor 255 255 255 250
+    SetBackgroundColor 1 1 1 150
+
+Show
+Rarity Normal
+# editted for the season based on what is not selling
+BaseType == "Ornate Mitts" "Ornate Greaves" "Death Mantle" "Vaal Mitts" "Dueling Wand" "Kamasan Tiara" "Luxurious Slippers" "Flowing Raiment" "Reaping Staff" "Siege Crossbow" "Leyline Focus" "Vile Robe" "Wolfskin Mantle" "Sanctified Staff" "Sacred Focus" "Roaring Staff" "Chiming Staff" "Ashbark Talisman" "Lunar Quarterstaff" "Obliterator Bow" "Paralysing Staff" "Spiny Talisman" "Skullcrusher Quarterstaff" "Vaal Greaves" "Primed Quiver" "Visceral Quiver" "Fanatic Bow" 
+# Untouched 
+#BaseType == "Acrid Wand" "Akoyan Club" "Ancient Buckler" "Ancient Cuffs" "Apostle Leggings" "Ashbark Talisman" "Attuned Wand" "Baroque Targe" "Death Mantle" "Divine Crown" "Elegant Crossbow" "Fang Talisman" "Feathered Raiment" "Flexed Crossbow" "Flowing Raiment" "Fortified Hammer" "Fortress Tower Shield" "Gemini Crossbow" "Gleaming Cuffs" "Grand Spear" "Guardian Spear" "Kamasan Tiara" "Leyline Focus" "Lunar Quarterstaff" "Luxurious Slippers" "Masked Greathelm" "Opulent Gloves" "Ornate Greaves" "Ornate Mitts" "Ornate Plate" "Paragon Greathelm" "Reaping Staff" "Roaring Staff" "Ruination Maul" "Sacramental Robe" "Sacred Focus" "Saintly Crown" "Sanctified Staff" "Sandsworn Sandals" "Seastorm Mantle" "Siphoning Wand" "Skullcrusher Quarterstaff" "Soaring Spear" "Soaring Targe" "Sorcerous Tiara" "Spiked Spear" "Spiny Talisman" "Stalking Spear" "Stoic Sceptre" "Strife Pick" "Striking Quarterstaff" "Tawhoan Greatclub" "Utzaal Cuirass" "Vaal Crest Shield" "Vaal Gloves" "Vaal Greaves" "Vaal Mitts" "Vaal Tower Shield" "Voltaic Staff" "Warlock Leggings" "Wildwood Talisman" "Wrath Sceptre" "Dueling Wand" "Paralysing Staff" "Adherent Cuffs" "Ancestral Tiara" "Blacksteel Crest Shield" "Cryptic Crown" "Cryptic Leggings" "Desert Buckler" "Golden Targe" "Imperial Greathelm" "Massive Mitts" "Sekhema Sandals" "Sirenscale Gloves" "Tasalian Focus" "Tasalian Greaves" "Tawhoan Tower Shield" "Warlord Cuirass" "Aegis Quarterstaff" "Maji Talisman" "Siege Crossbow" "Akoyan Spear" "Fanatic Greathammer" "Flying Spear" "Fungal Talisman" "Jade Talisman" "Desolate Crossbow" "Marauding Mace" "Massive Greathammer" "Razor Quarterstaff" "Thunder Talisman" "Alpha Talisman" "Conjurer Mantle" "Soldier Cuirass" "Vile Robe" "Wolfskin Mantle" "Chiming Staff" "Galvanic Wand" "Omen Sceptre" "Rattling Sceptre" "Withered Wand"
+    AreaLevel >= 65
+    PlayAlertSound 3 300
+    PlayEffect White
+    MinimapIcon 1 White Diamond
+    SetFontSize 15
+    SetTextColor 255 255 255
+    SetBorderColor 255 255 255 250
+    SetBackgroundColor 1 1 1 150
+
 #===============================================================================================================
 # Jewels
 #===============================================================================================================
@@ -706,7 +750,7 @@ BaseType == "Gold Amulet"
 
 # Show Specific bases to sell for Crafting as Gray Items
 Show
-BaseType "Heavy Belt" "Thawing Charm" "Silver Charm"
+BaseType "Heavy Belt" "Thawing Charm" "Gauze Wraps" "Armoured Vest"
 Rarity = Normal
     PlayEffect Blue
     MinimapIcon 1 Blue Kite
@@ -758,7 +802,7 @@ Show # Show Quality Charms
 Show # Show Affix Specific ENDGAME CHARMS charms
 	Class == "Charms"
 	BaseType == "Amethyst Charm" "Stone Charm" "Thawing Charm" "Staunching Charm" "Dousing Charm"
-    AreaLevel >= 70
+    AreaLevel <= 70
     PlayEffect Blue
 	MinimapIcon 2 Blue Diamond
     SetFontSize 15

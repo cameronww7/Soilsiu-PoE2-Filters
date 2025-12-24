@@ -707,62 +707,6 @@ Rarity = Rare
     SetBorderColor 255 255 0 250
     SetBackgroundColor 1 1 1 150
 
-# Show Specific Base/Item Types
-Show
-Rarity = Rare
-BaseType "Dualstring Bow"
-Quality = 0
-    MinimapIcon 1 Yellow Cross
-    PlayEffect Yellow
-    SetFontSize 17
-    SetTextColor 255 215 0
-    SetBorderColor 255 255 0 250
-    SetBackgroundColor 1 1 1 150
-
-# Show all Unidentified Tier 2 Or 1
-Show
-Rarity = Rare
-    MinimapIcon 1 Yellow Cross
-    UnidentifiedItemTier <= 2
-    PlayEffect Yellow
-    SetFontSize 15
-    SetTextColor 255 215 0
-    SetBorderColor 255 255 0 250
-    SetBackgroundColor 1 1 1 150
-
-# Show all Unidentified Tier 3
-Show
-Rarity = Rare
-    MinimapIcon 1 Yellow Cross
-    UnidentifiedItemTier = 3
-    PlayEffect Yellow
-    SetFontSize 15
-    SetTextColor 255 215 0
-    SetBorderColor 255 255 0 250
-    SetBackgroundColor 1 1 1 150
-
-# Show all Unidentified Tier 4
-Show
-Rarity = Rare
-    MinimapIcon 1 Yellow Cross
-    UnidentifiedItemTier = 4
-    PlayEffect Yellow
-    SetFontSize 15
-    SetTextColor 255 215 0
-    SetBorderColor 255 255 0 250
-    SetBackgroundColor 1 1 1 150
-
-# Show all Unidentified Tier 5 or Higher
-Show
-Rarity = Rare
-    MinimapIcon 1 Yellow Cross
-    UnidentifiedItemTier >= 5
-    PlayEffect Yellow
-    SetFontSize 15
-    SetTextColor 255 215 0
-    SetBorderColor 255 255 0 250
-    SetBackgroundColor 1 1 1 150
-
 # Show all Rare items
 Show
 Rarity = Rare
@@ -837,7 +781,7 @@ Rarity = Magic Normal
 
 # Show Specific bases to sell for Crafting as Gray Items
 Show
-BaseType "Heavy Belt" "Thawing Charm" "Silver Charm"
+BaseType == "Heavy Belt" "Thawing Charm" "Gauze Wraps" "Armoured Vest"
 Rarity = Normal
     PlayEffect Blue
     MinimapIcon 1 Blue Kite
