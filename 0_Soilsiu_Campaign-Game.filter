@@ -145,7 +145,7 @@ BaseType == Gold
 #===============================================================================================================
 
 Show # Showing Super Exotic Bases
-	Rarity = Normal Magic Rare
+	Rarity == Normal Magic Rare
 	BaseType == "Abyssal Signet" "Diamond" "Pearlescent Amulet" "Reflecting Staff" "Sacrificial Regalia" "Time-Lost Diamond"
 	PlayAlertSound 3 300
 	PlayEffect Blue
@@ -156,7 +156,7 @@ Show # Showing Super Exotic Bases
 	SetBackgroundColor 0 75 30 255
 
 Show # Showing Exotic Kalandra Bases
-	Rarity = Normal Magic Rare
+	Rarity == Normal Magic Rare
 	BaseType == "Dusk Amulet" "Dusk Ring" "Gloam Amulet" "Gloam Ring" "Penumbra Amulet" "Penumbra Ring" "Tenebrous Amulet" "Tenebrous Ring"
 	PlayAlertSound 3 300
 	PlayEffect Blue
@@ -167,7 +167,7 @@ Show # Showing Exotic Kalandra Bases
 	SetBackgroundColor 0 75 30 255
 
 Show # Showing Fishing Rod
-	Rarity = Normal Magic Rare
+	Rarity == Normal Magic Rare
 	Class == "Fishing Rods"
     PlayAlertSound 3 300
 	PlayEffect Orange
@@ -356,14 +356,14 @@ Class = Relics
 
 Show
 Class == "Skill Gems" "Support Gems"
-BaseType == "Ailith's Chimes" "Amanamu's Tithe" "Arbiter's Ignition" "Atziri's Call" "Atziri's Communion" "Atziri's Impatience" "Bhatair's Vengeance" "Cirel's Cultivation" "Dominus' Grasp" "Dreamer's Knell" "Eonyr's Thunder" "Esh's Radiance" "Garukhan's Resolve" "Guatelitzi's Ablation" "Hayoxi's Fulmination" "Helbrym's Hide" "Ixchel's Torment" "Kalisa's Crescendo" "Khatal's Rejuvenation" "Morgana's Tempest" "Oisín's Oath" "Rigwald's Ferocity" "Romira's Requital" "Tasalio's Rhythm" "Tul's Stillness" "Uhtred's Exodus" "Uhtred's Omen" "Varashta's Blessing" "Xibaqua's Rending" "Xoph's Pyre" "Zarokh's Revolt" "Zerphi's Infamy"
+BaseType == "Amanamu's Tithe" "Arbiter's Ignition" "Atalui's Bloodletting" "Dialla's Desire" "Esh's Radiance" "Garukhan's Resolve" "Ixchel's Torment" "Rakiata's Flow" "Rigwald's Ferocity" "Tul's Stillness" "Uhtred's Augury" "Uhtred's Exodus" "Uhtred's Omen" "Uul-Netol's Embrace" "Xoph's Pyre" "Atziri's Call" "Atziri's Communion" "Atziri's Impatience" "Brutus' Brain" "Doedre's Undoing" "Dreamer's Knell" "Eonyr's Thunder" "Helbrym's Hide" "Khatal's Rejuvenation" "Kulemak's Dominion" "Sione's Temper" "Tecrod's Revenge" "Zerphi's Infamy" "Ailith's Chimes" "Arjun's Medal" "Atziri's Allure" "Dominus' Grasp" "Hayoxi's Fulmination" "Ratha's Assault" "Uruk's Smelting" "Zarokh's Revolt" "Ahn's Citadel" "Arakaali's Lust" "Daresso's Passion" "Doedre's Undoing" "Kaom's Madness" "Kurgal's Leash" "Paquate's Pact" "Sione's Temper" "Tacati's Ire" "Tawhoa's Tending" "Tecrod's Revenge" "Uruk's Smelting" "Vilenta's Propulsion"
     PlayAlertSound 2 300
     PlayEffect Cyan
     MinimapIcon 1 Cyan Triangle
-    SetFontSize 15
+    SetFontSize 20
     SetTextColor 20 240 240 255
     SetBorderColor 20 240 240 255
-    SetBackgroundColor 0 0 0 255
+    SetBackgroundColor 1 1 1 255
 
 #### Show lvl 20 Gems
 Show
@@ -375,7 +375,7 @@ ItemLevel = 20
     SetFontSize 15
     SetTextColor 0 255 0 255
     SetBorderColor 0 255 0 255
-    SetBackgroundColor 0 0 0 255
+    SetBackgroundColor 1 1 1 255
 
 #### Show Uncut Spirit Gem
 Show
@@ -386,7 +386,7 @@ BaseType "Uncut Spirit Gem"
     SetFontSize 15
     SetTextColor 70 240 150 255
     SetBorderColor 70 240 150 255
-    SetBackgroundColor 0 0 0 255
+    SetBackgroundColor 1 1 1 255
 
 #### Show Uncut Skill Gem
 Show
@@ -397,7 +397,7 @@ BaseType == "Uncut Skill Gem"
     SetFontSize 15
     SetTextColor 75 180 200 255
     SetBorderColor 75 180 200 255
-    SetBackgroundColor 0 0 0 255
+    SetBackgroundColor 1 1 1 255
 
 #### Shows Uncut Support Gem
 Show
@@ -408,7 +408,7 @@ BaseType == "Uncut Support Gem"
     SetFontSize 15
     SetTextColor 20 240 240 255
     SetBorderColor 20 240 240 255
-    SetBackgroundColor 0 0 0 255
+    SetBackgroundColor 1 1 1 255
 
 #### Show all Gems in Campaign Zones
 Show
@@ -420,7 +420,7 @@ BaseType "Uncut Support Gem" "Uncut Skill Gem" "Uncut Spirit Gem"
     SetFontSize 15
     SetTextColor 20 240 240 255
     SetBorderColor 20 240 240 255
-    SetBackgroundColor 0 0 0 255
+    SetBackgroundColor 1 1 1 255
 
 #### Show all gems that did not meet above requirements
 Show
@@ -428,7 +428,7 @@ Class "Gem"
     SetFontSize 15
     SetTextColor 20 240 240 255
     SetBorderColor 20 240 240 255
-    SetBackgroundColor 0 0 0 255
+    SetBackgroundColor 1 1 1 255
 
 #===============================================================================================================
 # Mapping Utility Items
@@ -500,7 +500,7 @@ Class = Waystones
     PlayAlertSound 10 150
     SetFontSize 15
     SetBorderColor 200 200 200 255
-    SetBackgroundColor 0 0 0 200
+    SetBackgroundColor 1 1 1 200
 
 #===============================================================================================================
 # Flasks (Endgame, Only shows Flasks with Quality 10% or Higher)
@@ -515,7 +515,7 @@ Quality >= 1
     SetFontSize 15
     SetTextColor 200 50 50 
     SetBorderColor 200 50 50 
-    SetBackgroundColor 0 0 0
+    SetBackgroundColor 1 1 1 255
 
 Show
 Class = "Mana Flasks"
@@ -526,7 +526,7 @@ Quality >= 1
     SetFontSize 15
     SetTextColor 50 100 200
     SetBorderColor 50 100 200
-    SetBackgroundColor 0 0 0
+    SetBackgroundColor 1 1 1 255
 
 #------------------------------------
 #   [3301] Life flasks
@@ -539,7 +539,7 @@ Show
     SetFontSize 15
     SetTextColor 200 50 50 
     SetBorderColor 200 50 50 
-    SetBackgroundColor 0 0 0
+    SetBackgroundColor 1 1 1 255
 
 Show
 	Class == "Life Flasks"
@@ -548,7 +548,7 @@ Show
     SetFontSize 15
     SetTextColor 200 50 50 
     SetBorderColor 200 50 50 
-    SetBackgroundColor 0 0 0
+    SetBackgroundColor 1 1 1 255
 
 Show
 	Class == "Life Flasks"
@@ -557,7 +557,7 @@ Show
     SetFontSize 15
     SetTextColor 200 50 50 
     SetBorderColor 200 50 50 
-    SetBackgroundColor 0 0 0
+    SetBackgroundColor 1 1 1 255
 
 Show
 	Class == "Life Flasks"
@@ -566,7 +566,7 @@ Show
     SetFontSize 15
     SetTextColor 200 50 50 
     SetBorderColor 200 50 50 
-    SetBackgroundColor 0 0 0
+    SetBackgroundColor 1 1 1 255
 
 Show
 	Class == "Life Flasks"
@@ -575,7 +575,7 @@ Show
     SetFontSize 15
     SetTextColor 200 50 50 
     SetBorderColor 200 50 50 
-    SetBackgroundColor 0 0 0
+    SetBackgroundColor 1 1 1 255
 
 Show
 	Class == "Life Flasks"
@@ -591,7 +591,7 @@ Show
     SetFontSize 15
     SetTextColor 200 50 50 
     SetBorderColor 200 50 50 
-    SetBackgroundColor 0 0 0
+    SetBackgroundColor 1 1 1 255
 
 Show
 	Class == "Life Flasks"
@@ -600,7 +600,7 @@ Show
     SetFontSize 15
     SetTextColor 200 50 50 
     SetBorderColor 200 50 50 
-    SetBackgroundColor 0 0 0
+    SetBackgroundColor 1 1 1 255
 
 #------------------------------------
 #   [3302] Mana flasks
@@ -613,7 +613,7 @@ Show
     SetFontSize 15
     SetTextColor 50 100 200
     SetBorderColor 50 100 200
-    SetBackgroundColor 0 0 0
+    SetBackgroundColor 1 1 1 255
 
 Show
 	Class == "Mana Flasks"
@@ -622,7 +622,7 @@ Show
     SetFontSize 15
     SetTextColor 50 100 200
     SetBorderColor 50 100 200
-    SetBackgroundColor 0 0 0
+    SetBackgroundColor 1 1 1 255
 
 Show
 	Class == "Mana Flasks"
@@ -631,7 +631,7 @@ Show
     SetFontSize 15
     SetTextColor 50 100 200
     SetBorderColor 50 100 200
-    SetBackgroundColor 0 0 0
+    SetBackgroundColor 1 1 1 255
 
 Show
 	Class == "Mana Flasks"
@@ -640,7 +640,7 @@ Show
     SetFontSize 15
     SetTextColor 50 100 200
     SetBorderColor 50 100 200
-    SetBackgroundColor 0 0 0
+    SetBackgroundColor 1 1 1 255
 
 Show
 	Class == "Mana Flasks"
@@ -649,7 +649,7 @@ Show
     SetFontSize 15
     SetTextColor 50 100 200
     SetBorderColor 50 100 200
-    SetBackgroundColor 0 0 0
+    SetBackgroundColor 1 1 1 255
 
 Show
 	Class == "Mana Flasks"
@@ -658,7 +658,7 @@ Show
     SetFontSize 15
     SetTextColor 50 100 200
     SetBorderColor 50 100 200
-    SetBackgroundColor 0 0 0
+    SetBackgroundColor 1 1 1 255
 
 Show
 	Class == "Mana Flasks"
@@ -667,7 +667,7 @@ Show
     SetFontSize 15
     SetTextColor 50 100 200
     SetBorderColor 50 100 200
-    SetBackgroundColor 0 0 0
+    SetBackgroundColor 1 1 1 255
 
 Show
 	Class == "Mana Flasks"
@@ -676,7 +676,7 @@ Show
     SetFontSize 15
     SetTextColor 50 100 200
     SetBorderColor 50 100 200
-    SetBackgroundColor 0 0 0
+    SetBackgroundColor 1 1 1 255
 
 #===============================================================================================================
 # Show All Uniques
@@ -690,7 +690,7 @@ Rarity = Unique
     SetFontSize 20
     SetTextColor 175 96 37 250
     SetBorderColor 255 153 28 200
-    SetBackgroundColor 0 0 0 250
+    SetBackgroundColor 1 1 1 250
 
 #===============================================================================================================
 # Show All Rares 
@@ -728,9 +728,9 @@ Class "Jewel"
     PlayEffect Blue
     MinimapIcon 0 Blue Diamond
     SetFontSize 25
-    SetTextColor 0 240 190 255
-    SetBorderColor 0 240 190 255
-    SetBackgroundColor 20 20 0 255
+	SetTextColor 0 100 255 255
+	SetBorderColor 0 100 255 255
+	SetBackgroundColor 1 1 1 255
 
 Show
 Class = Jewels
@@ -738,9 +738,9 @@ Class = Jewels
 	PlayEffect Blue
 	MinimapIcon 1 Blue Diamond
     SetFontSize 15
-	SetTextColor 0 70 255 255
-	SetBorderColor 0 70 255 255
-	SetBackgroundColor 30 0 70 255
+	SetTextColor 0 100 255 255
+	SetBorderColor 0 100 255 255
+	SetBackgroundColor 1 1 1 255
 
 Show
 Class == "Augment"
@@ -749,9 +749,9 @@ BaseType "Timeless"
 	PlayEffect Blue
 	MinimapIcon 1 Blue Diamond
     SetFontSize 15
-	SetTextColor 0 70 255 255
-	SetBorderColor 0 70 255 255
-	SetBackgroundColor 30 0 70 255
+	SetTextColor 0 100 255 255
+	SetBorderColor 0 100 255 255
+	SetBackgroundColor 1 1 1 255
 
 #===============================================================================================================
 # Ring / Amulets / Belts
@@ -759,45 +759,38 @@ BaseType "Timeless"
 
 # Show Specific Ring bases
 Show
-BaseType == "Iron Ring" "Sapphire Ring" "Ruby Ring" "Topaz Ring" "Prismatic Ring" "Gold Ring" "Amethyst Ring" 
-Rarity = Normal Magic
-    PlayEffect Blue
-    MinimapIcon 2 Blue Square
-    PlayEffect Blue
-    SetFontSize 15
-    SetBorderColor 0 0 255 250
-    SetBackgroundColor 1 1 1 150
+Rarity == Normal Magic
+BaseType == "Breach Ring" "Iron Ring" "Sapphire Ring" "Ruby Ring" "Topaz Ring" "Prismatic Ring" "Gold Ring" "Amethyst Ring" 
+    PlayEffect White
+    MinimapIcon 2 White Square 
+    PlayEffect White
+    SetFontSize 13
+    SetTextColor 100 150 150
+    SetBorderColor 100 150 150 255
+    SetBackgroundColor 1 1 1 255
 
 # Show Specific Amulets bases
 Show
-BaseType == "Stellar Amulet" "Solar Amulet" "Amber Amulet" "Gold Amulet"
-Rarity = Magic Normal
-    PlayEffect Blue
-    MinimapIcon 2 Blue Square 
-    PlayEffect Blue
-    SetFontSize 15
-    SetBorderColor 0 0 255 250
-    SetBackgroundColor 1 1 1 150
+Rarity == Normal Magic
+BaseType == "Stellar Amulet" "Solar Amulet" "Amber Amulet" "Gold Amulet" 
+    PlayEffect White
+    MinimapIcon 2 White Square 
+    PlayEffect White
+    SetFontSize 13
+    SetTextColor 100 150 150
+    SetBorderColor 100 150 150 255
+    SetBackgroundColor 1 1 1 255
 
-# Show Specific bases to sell for Crafting as Gray Items
+# Show Specific bases to sell for Crafting as Chance Items
 Show
-BaseType == "Heavy Belt" "Thawing Charm" "Gauze Wraps" "Armoured Vest"
-Rarity = Normal
-    PlayEffect Blue
-    MinimapIcon 1 Blue Kite
-    SetFontSize 15
-    SetTextColor 0 0 255 250
-    SetBorderColor 0 0 255 250
-    SetBackgroundColor 1 1 1 200
-
-#### Shows all Breach Rings
-Show
-BaseType "Breach Ring"
-    PlayEffect Blue
-    MinimapIcon 2 Blue Kite
-    SetFontSize 15
-    SetBorderColor 0 0 255 250
-    SetBackgroundColor 1 1 1 150
+Rarity == Normal
+BaseType "Heavy Belt" "Thawing Charm" "Gauze Wraps" "Linen Belt" "Wide Belt" "Armoured Vest" "Crimson Amulet" "Double Belt" "Emerald Ring" "Fine Belt" "Iron Ring" "Lazuli Ring" "Long Belt" "Rawhide Belt" "Utility Belt" "Vile Robe" "Obliterator Bow" "Visceral Quiver" 
+    PlayEffect Green
+    MinimapIcon 1 Green Kite
+    SetFontSize 18
+    SetTextColor 100 255 150
+    SetBorderColor 100 255 150 255
+    SetBackgroundColor 1 1 1 255
 
 #===============================================================================================================
 # Charms
@@ -852,38 +845,38 @@ Show # All Charms in zones lower than 65 (Campaign)
 Show
 Sockets > 0
 Class == "Helmets" "Boots" "Gloves" "Staves" "Wands" "Talismans" "Daggers" "Claws" "Spears" "Bucklers"
-Rarity = Normal Magic
+Rarity == Normal Magic
     SetFontSize 15
     SetTextColor 90 150 90
     SetBorderColor 90 150 90
-    SetBackgroundColor 0 0 0 200
+    SetBackgroundColor 1 1 1 200
 
 Show
 Sockets > 0
-Rarity = Normal Magic
+Rarity == Normal Magic
 AreaLevel < 45
     SetFontSize 15
     SetTextColor 90 150 90
     SetBorderColor 90 150 90
-    SetBackgroundColor 0 0 0 200
+    SetBackgroundColor 1 1 1 200
 
 Show
 Quality >= 1
 Class == "Helmets" "Boots" "Gloves" "Staves" "Wands" "Talismans" "Daggers" "Claws" "Spears" "Bucklers"
-Rarity = Normal Magic
+Rarity == Normal Magic
     SetFontSize 15
     SetTextColor 90 150 90
     SetBorderColor 90 150 90
-    SetBackgroundColor 0 0 0 200
+    SetBackgroundColor 1 1 1 200
 
 Show
 Quality >= 1
-Rarity = Normal Magic
+Rarity == Normal Magic
 AreaLevel < 45
     SetFontSize 15
     SetTextColor 90 150 90
     SetBorderColor 90 150 90
-    SetBackgroundColor 0 0 0 200
+    SetBackgroundColor 1 1 1 200
 
 Show
 Class = "Life Flasks" "Mana Flasks"
@@ -891,7 +884,7 @@ Quality >= 1
     SetFontSize 15
     SetTextColor 90 150 90
     SetBorderColor 90 150 90
-    SetBackgroundColor 0 0 0 200
+    SetBackgroundColor 1 1 1 200
 
 #===============================================================================================================
 # Crafting Bases
@@ -900,7 +893,7 @@ Quality >= 1
 # Show EnergyShield/Evasion Only Gear
 Show
 Class = "Helmet" 
-Rarity = Normal Magic
+Rarity == Normal Magic
 BaseArmour <= 1
 BaseEvasion >= 1
 BaseEnergyShield >= 1
@@ -911,7 +904,7 @@ BaseEnergyShield >= 1
 # Show Pure Evasion Only Gear
 Show
 Class = "Helmet" "Body Armour" "Glove" "Boots"
-Rarity = Normal Magic
+Rarity == Normal Magic
 BaseArmour <= 1
 BaseEvasion >= 1
 BaseEnergyShield <= 1
@@ -922,14 +915,14 @@ BaseEnergyShield <= 1
 # Show Bows and Quivers
 Show
 BaseType == "Primed Quiver" "Visceral Quiver" "Broadhead Quiver" "Obliterator Bow" "Artillery Bow" "Recurve Bow"
-Rarity = Normal Magic
+Rarity == Normal Magic
     SetFontSize 15
     SetBackgroundColor 1 1 1 150
 
 # Show Belts & Rings & Amulets
 Show
 BaseType == "Rawhide Belt" "Utility Belt"
-Rarity = Normal Magic
+Rarity == Normal Magic
     PlayEffect Blue
     MinimapIcon 2 Blue Square 
     PlayEffect Blue
@@ -940,7 +933,7 @@ Rarity = Normal Magic
 # Show Rings & Amulets
 Show
 Class == "Rings" "Amulets"
-Rarity = Normal Magic
+Rarity == Normal Magic
     PlayEffect Blue
     MinimapIcon 2 Blue Square 
     PlayEffect Blue
@@ -955,14 +948,14 @@ Rarity = Normal Magic
 # Hide all Gear
 Hide
 Class = "Boots" "Gloves" "Helmets" "Body Armours"
-Rarity = Normal Magic
+Rarity == Normal Magic
     SetFontSize 15
     SetBackgroundColor 1 1 1 150
 
 # Hide all Weapons
 Hide
 Class = "Crossbows" "Bows" "Two Hand Maces" "Staves" "Wands" "Shields" "Foci" "One Hand Maces" "Quivers" "Sceptres" "Focus" "Talisman"
-Rarity = Normal Magic
+Rarity == Normal Magic
 	AreaLevel >= 39
     SetFontSize 15
     SetBackgroundColor 1 1 1 150
@@ -975,6 +968,6 @@ Class "Rings" "Amulets" "Belt"
     
 #### This is a Hides all
 Hide
-    Rarity = Normal Magic
+    Rarity == Normal Magic
     SetFontSize 15
     SetBackgroundColor 1 1 1 150

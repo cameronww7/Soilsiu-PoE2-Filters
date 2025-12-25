@@ -122,7 +122,7 @@ BaseType == Gold
 #===============================================================================================================
 
 Show # Showing Super Exotic Bases
-	Rarity = Normal Magic Rare
+	Rarity == Normal Magic Rare
 	BaseType == "Abyssal Signet" "Diamond" "Pearlescent Amulet" "Reflecting Staff" "Sacrificial Regalia" "Time-Lost Diamond"
 	PlayAlertSound 3 300
 	PlayEffect Blue
@@ -133,7 +133,7 @@ Show # Showing Super Exotic Bases
 	SetBackgroundColor 0 75 30 255
 
 Show # Showing Exotic Kalandra Bases
-	Rarity = Normal Magic Rare
+	Rarity == Normal Magic Rare
 	BaseType == "Dusk Amulet" "Dusk Ring" "Gloam Amulet" "Gloam Ring" "Penumbra Amulet" "Penumbra Ring" "Tenebrous Amulet" "Tenebrous Ring"
 	PlayAlertSound 3 300
 	PlayEffect Blue
@@ -144,7 +144,7 @@ Show # Showing Exotic Kalandra Bases
 	SetBackgroundColor 0 75 30 255
 
 Show # Showing Fishing Rod
-	Rarity = Normal Magic Rare
+	Rarity == Normal Magic Rare
 	Class == "Fishing Rods"
     PlayAlertSound 3 300
 	PlayEffect Orange
@@ -326,14 +326,14 @@ Class = Relics
 
 Show
 Class == "Skill Gems" "Support Gems"
-	BaseType == "Ahn's Citadel" "Arakaali's Lust" "Daresso's Passion" "Doedre's Undoing" "Kaom's Madness" "Kurgal's Leash" "Paquate's Pact" "Sione's Temper" "Tacati's Ire" "Tawhoa's Tending" "Tecrod's Revenge" "Uruk's Smelting" "Vilenta's Propulsion"
+BaseType == "Amanamu's Tithe" "Arbiter's Ignition" "Atalui's Bloodletting" "Dialla's Desire" "Esh's Radiance" "Garukhan's Resolve" "Ixchel's Torment" "Rakiata's Flow" "Rigwald's Ferocity" "Tul's Stillness" "Uhtred's Augury" "Uhtred's Exodus" "Uhtred's Omen" "Uul-Netol's Embrace" "Xoph's Pyre" "Atziri's Call" "Atziri's Communion" "Atziri's Impatience" "Brutus' Brain" "Doedre's Undoing" "Dreamer's Knell" "Eonyr's Thunder" "Helbrym's Hide" "Khatal's Rejuvenation" "Kulemak's Dominion" "Sione's Temper" "Tecrod's Revenge" "Zerphi's Infamy" "Ailith's Chimes" "Arjun's Medal" "Atziri's Allure" "Dominus' Grasp" "Hayoxi's Fulmination" "Ratha's Assault" "Uruk's Smelting" "Zarokh's Revolt" "Ahn's Citadel" "Arakaali's Lust" "Daresso's Passion" "Doedre's Undoing" "Kaom's Madness" "Kurgal's Leash" "Paquate's Pact" "Sione's Temper" "Tacati's Ire" "Tawhoa's Tending" "Tecrod's Revenge" "Uruk's Smelting" "Vilenta's Propulsion"
     PlayAlertSound 2 300
     PlayEffect Cyan
     MinimapIcon 1 Cyan Triangle
     SetFontSize 20
     SetTextColor 20 240 240 255
     SetBorderColor 20 240 240 255
-    SetBackgroundColor 0 0 0 255
+    SetBackgroundColor 1 1 1 255
 
 #### Show lvl 20 Gems
 Show
@@ -345,7 +345,7 @@ ItemLevel = 20
     SetFontSize 15
     SetTextColor 0 255 0 255
     SetBorderColor 0 255 0 255
-    SetBackgroundColor 0 0 0 255
+    SetBackgroundColor 1 1 1 255
 
 #### Show Uncut Spirit Gem
 Show
@@ -356,7 +356,7 @@ BaseType "Uncut Spirit Gem"
     SetFontSize 15
     SetTextColor 70 240 150 255
     SetBorderColor 70 240 150 255
-    SetBackgroundColor 0 0 0 255
+    SetBackgroundColor 1 1 1 255
 
 #### Show Uncut Skill Gem
 Show
@@ -367,7 +367,7 @@ BaseType == "Uncut Skill Gem"
     SetFontSize 15
     SetTextColor 75 180 200 255
     SetBorderColor 75 180 200 255
-    SetBackgroundColor 0 0 0 255
+    SetBackgroundColor 1 1 1 255
 
 #### Shows Uncut Support Gem
 Show
@@ -378,7 +378,7 @@ BaseType == "Uncut Support Gem"
     SetFontSize 15
     SetTextColor 20 240 240 255
     SetBorderColor 20 240 240 255
-    SetBackgroundColor 0 0 0 255
+    SetBackgroundColor 1 1 1 255
 
 #### Show all Gems in Campaign Zones
 Show
@@ -390,7 +390,7 @@ BaseType "Uncut Support Gem" "Uncut Skill Gem" "Uncut Spirit Gem"
     SetFontSize 15
     SetTextColor 20 240 240 255
     SetBorderColor 20 240 240 255
-    SetBackgroundColor 0 0 0 255
+    SetBackgroundColor 1 1 1 255
 
 #### Show all gems that did not meet above requirements
 Show
@@ -398,7 +398,7 @@ Class "Gem"
     SetFontSize 15
     SetTextColor 20 240 240 255
     SetBorderColor 20 240 240 255
-    SetBackgroundColor 0 0 0 255
+    SetBackgroundColor 1 1 1 255
 
 #===============================================================================================================
 # Mapping Utility Items
@@ -473,7 +473,7 @@ WaystoneTier >= 15
     SetFontSize 15
     SetTextColor 0 255 0
     SetBorderColor 0 255 0
-    SetBackgroundColor 0 0 0 200
+    SetBackgroundColor 1 1 1 200
 
 ##### Turns all Waystones with Rarity Rare to Yellow
 Show
@@ -484,7 +484,7 @@ Rarity = Rare
     SetFontSize 15
     SetTextColor 255 200 0 255
     SetBorderColor 255 200 0 255
-    SetBackgroundColor 0 0 0 200
+    SetBackgroundColor 1 1 1 200
 
 #### There is no SetTextColor to show Rarity of the actual maps
 Show
@@ -496,7 +496,7 @@ WaystoneTier >= 6
     PlayAlertSound 10 150
     SetFontSize 15
     SetBorderColor 200 200 200 255
-    SetBackgroundColor 0 0 0 200
+    SetBackgroundColor 1 1 1 200
 
 #### Show all Waystones
 Show
@@ -504,7 +504,7 @@ Class = Waystones
     SetFontSize 15
     PlayEffect Grey
     SetBorderColor 0 0 0 0
-    SetBackgroundColor 0 0 0 0
+    SetBackgroundColor 1 1 1 0
 
 #===============================================================================================================
 # Flasks (Endgame, Only shows Flasks with Quality 10% or Higher)
@@ -513,7 +513,7 @@ Class = Waystones
 Show
 Class = "Life Flasks"
 Quality >= 1
-    Rarity = Normal Magic
+    Rarity == Normal Magic
 	BaseType == "Ultimate Life Flask"
     MinimapIcon 2 Red Moon
     PlayEffect Red
@@ -521,12 +521,12 @@ Quality >= 1
     SetFontSize 15
     SetTextColor 200 50 50 
     SetBorderColor 200 50 50 
-    SetBackgroundColor 0 0 0
+    SetBackgroundColor 1 1 1 255
 
 Show
 Class = "Mana Flasks"
 Quality >= 1
-    Rarity = Normal Magic
+    Rarity == Normal Magic
 	BaseType == "Ultimate Mana Flask"
     MinimapIcon 2 Blue Moon
     PlayEffect Blue
@@ -534,7 +534,7 @@ Quality >= 1
     SetFontSize 15
     SetTextColor 50 100 200
     SetBorderColor 50 100 200
-    SetBackgroundColor 0 0 0
+    SetBackgroundColor 1 1 1 255
 
 Show
 Class = "Life Flasks"
@@ -543,7 +543,7 @@ Class = "Life Flasks"
     SetFontSize 15
     SetTextColor 200 50 50 255
     SetBorderColor 200 50 50 255
-    SetBackgroundColor 0 0 0 255
+    SetBackgroundColor 1 1 1 255
 
 Show
 Class = "Mana Flasks"
@@ -552,7 +552,7 @@ Class = "Mana Flasks"
     SetFontSize 15
     SetTextColor 50 100 200 255
     SetBorderColor 50 100 200 255
-    SetBackgroundColor 0 0 0 255
+    SetBackgroundColor 1 1 1 255
 
 #===============================================================================================================
 # Show All Uniques
@@ -566,16 +566,16 @@ Rarity = Unique
     SetFontSize 20
     SetTextColor 175 96 37 250
     SetBorderColor 255 153 28 200
-    SetBackgroundColor 0 0 0 250
+    SetBackgroundColor 1 1 1 250
 
 #===============================================================================================================
 # Show All Rares 
 #===============================================================================================================
 
-# Show all Rare Jewelry items
+# Show all Rare Identified Jewelry items
 Show
-Class == "Ring" "Amulet" "Belt"
 Rarity = Rare
+Class == "Ring" "Amulet" "Belt"
     MinimapIcon 1 Yellow Cross
     PlayEffect Yellow
     SetFontSize 17
@@ -583,23 +583,22 @@ Rarity = Rare
     SetBorderColor 255 255 0 250
     SetBackgroundColor 1 1 1 150
 
-# Show all Rare Endgame Armor and Weapons
+# Show all Rare Unidentified Jewelry items
 Show
-UnidentifiedItemTier = 1 2
-Rarity Rare
-BaseType == "Acrid Wand" "Akoyan Club" "Ancient Buckler" "Ancient Cuffs" "Apostle Leggings" "Ashbark Talisman" "Attuned Wand" "Baroque Targe" "Death Mantle" "Divine Crown" "Elegant Crossbow" "Fang Talisman" "Feathered Raiment" "Flexed Crossbow" "Flowing Raiment" "Fortified Hammer" "Fortress Tower Shield" "Gemini Crossbow" "Gleaming Cuffs" "Grand Spear" "Guardian Spear" "Kamasan Tiara" "Leyline Focus" "Lunar Quarterstaff" "Luxurious Slippers" "Masked Greathelm" "Opulent Gloves" "Ornate Greaves" "Ornate Mitts" "Ornate Plate" "Paragon Greathelm" "Reaping Staff" "Roaring Staff" "Ruination Maul" "Sacramental Robe" "Sacred Focus" "Saintly Crown" "Sanctified Staff" "Sandsworn Sandals" "Seastorm Mantle" "Siphoning Wand" "Skullcrusher Quarterstaff" "Soaring Spear" "Soaring Targe" "Sorcerous Tiara" "Spiked Spear" "Spiny Talisman" "Stalking Spear" "Stoic Sceptre" "Strife Pick" "Striking Quarterstaff" "Tawhoan Greatclub" "Utzaal Cuirass" "Vaal Crest Shield" "Vaal Gloves" "Vaal Greaves" "Vaal Mitts" "Vaal Tower Shield" "Voltaic Staff" "Warlock Leggings" "Wildwood Talisman" "Wrath Sceptre" "Dueling Wand" "Paralysing Staff" "Adherent Cuffs" "Ancestral Tiara" "Blacksteel Crest Shield" "Cryptic Crown" "Cryptic Leggings" "Desert Buckler" "Golden Targe" "Imperial Greathelm" "Massive Mitts" "Sekhema Sandals" "Sirenscale Gloves" "Tasalian Focus" "Tasalian Greaves" "Tawhoan Tower Shield" "Warlord Cuirass" "Aegis Quarterstaff" "Maji Talisman" "Siege Crossbow" "Akoyan Spear" "Fanatic Greathammer" "Flying Spear" "Fungal Talisman" "Jade Talisman" "Desolate Crossbow" "Marauding Mace" "Massive Greathammer" "Razor Quarterstaff" "Thunder Talisman" "Alpha Talisman" "Conjurer Mantle" "Soldier Cuirass" "Vile Robe" "Wolfskin Mantle" "Chiming Staff" "Galvanic Wand" "Omen Sceptre" "Rattling Sceptre" "Withered Wand"
-    AreaLevel >= 65
+Rarity = Rare
+UnidentifiedItemTier <= 9
+Class == "Ring" "Amulet" "Belt"
     MinimapIcon 1 Yellow Cross
     PlayEffect Yellow
-    SetFontSize 15
+    SetFontSize 17
     SetTextColor 255 215 0
     SetBorderColor 255 255 0 250
     SetBackgroundColor 1 1 1 150
 
 # Hide Large Rare Items all Rare items that are not T1 Or T2
 Hide
-UnidentifiedItemTier = 5 6 7 8 9 # Hides everything thats not Tier 1 or 2 for big items
 Rarity = Rare
+UnidentifiedItemTier >= 4
 BaseType = "Mace" "Quarterstaff" "Shield" "Bow" "Crossbow" "Focus" "Sceptre" "Quiver" "Spear" "Staff"
     MinimapIcon 1 Yellow Cross
     PlayEffect Yellow
@@ -608,10 +607,11 @@ BaseType = "Mace" "Quarterstaff" "Shield" "Bow" "Crossbow" "Focus" "Sceptre" "Qu
     SetBorderColor 255 255 0 250
     SetBackgroundColor 1 1 1 150
 
-# Show all Rare items
+# Show all Rare items Unidentified Tier 1-4
 Show
-UnidentifiedItemTier == 1 2 3 4
 Rarity = Rare
+UnidentifiedItemTier <= 4
+    AreaLevel >= 65 
     MinimapIcon 1 Yellow Cross
     PlayEffect Yellow
     SetFontSize 13
@@ -619,21 +619,10 @@ Rarity = Rare
     SetBorderColor 255 255 0 250
     SetBackgroundColor 1 1 1 150
 
-# Show all Rare items
-Show
-UnidentifiedItemTier == 1 2 3 4
-Rarity = Rare
-    MinimapIcon 1 Yellow Cross
-    PlayEffect Yellow
-    SetFontSize 13
-    SetTextColor 255 215 0
-    SetBorderColor 255 255 0 250
-    SetBackgroundColor 1 1 1 150
-
-# Show all Rare items
+# Hide all Rare items of Unidentified After Filtering
 Hide
-UnidentifiedItemTier == 5 6 7 8 9
 Rarity = Rare
+UnidentifiedItemTier <= 9
     MinimapIcon 1 Yellow Cross
     PlayEffect Yellow
     SetFontSize 13
@@ -641,7 +630,7 @@ Rarity = Rare
     SetBorderColor 255 255 0 250
     SetBackgroundColor 1 1 1 150
 
-# Show all Rare items
+# Hide all Rare items Identified After Filtering
 Hide
 Rarity = Rare
     MinimapIcon 1 Yellow Cross
@@ -649,38 +638,6 @@ Rarity = Rare
     SetFontSize 13
     SetTextColor 255 215 0
     SetBorderColor 255 255 0 250
-    SetBackgroundColor 1 1 1 150
-
-#===============================================================================================================
-# Endgame Base Items
-#===============================================================================================================
-
-Show
-UnidentifiedItemTier >= 2
-Rarity Magic
-BaseType == "Acrid Wand" "Akoyan Club" "Ancient Buckler" "Ancient Cuffs" "Apostle Leggings" "Ashbark Talisman" "Attuned Wand" "Baroque Targe" "Death Mantle" "Divine Crown" "Elegant Crossbow" "Fang Talisman" "Feathered Raiment" "Flexed Crossbow" "Flowing Raiment" "Fortified Hammer" "Fortress Tower Shield" "Gemini Crossbow" "Gleaming Cuffs" "Grand Spear" "Guardian Spear" "Kamasan Tiara" "Leyline Focus" "Lunar Quarterstaff" "Luxurious Slippers" "Masked Greathelm" "Opulent Gloves" "Ornate Greaves" "Ornate Mitts" "Ornate Plate" "Paragon Greathelm" "Reaping Staff" "Roaring Staff" "Ruination Maul" "Sacramental Robe" "Sacred Focus" "Saintly Crown" "Sanctified Staff" "Sandsworn Sandals" "Seastorm Mantle" "Siphoning Wand" "Skullcrusher Quarterstaff" "Soaring Spear" "Soaring Targe" "Sorcerous Tiara" "Spiked Spear" "Spiny Talisman" "Stalking Spear" "Stoic Sceptre" "Strife Pick" "Striking Quarterstaff" "Tawhoan Greatclub" "Utzaal Cuirass" "Vaal Crest Shield" "Vaal Gloves" "Vaal Greaves" "Vaal Mitts" "Vaal Tower Shield" "Voltaic Staff" "Warlock Leggings" "Wildwood Talisman" "Wrath Sceptre" "Dueling Wand" "Paralysing Staff" "Adherent Cuffs" "Ancestral Tiara" "Blacksteel Crest Shield" "Cryptic Crown" "Cryptic Leggings" "Desert Buckler" "Golden Targe" "Imperial Greathelm" "Massive Mitts" "Sekhema Sandals" "Sirenscale Gloves" "Tasalian Focus" "Tasalian Greaves" "Tawhoan Tower Shield" "Warlord Cuirass" "Aegis Quarterstaff" "Maji Talisman" "Siege Crossbow" "Akoyan Spear" "Fanatic Greathammer" "Flying Spear" "Fungal Talisman" "Jade Talisman" "Desolate Crossbow" "Marauding Mace" "Massive Greathammer" "Razor Quarterstaff" "Thunder Talisman" "Alpha Talisman" "Conjurer Mantle" "Soldier Cuirass" "Vile Robe" "Wolfskin Mantle" "Chiming Staff" "Galvanic Wand" "Omen Sceptre" "Rattling Sceptre" "Withered Wand" "Obliterator Bow" "Fanatic Bow" "Primed Quiver" "Visceral Quiver"
-    AreaLevel >= 65
-    PlayAlertSound 3 300
-    PlayEffect White
-    MinimapIcon 1 White Diamond
-    SetFontSize 15
-    SetTextColor 255 255 255
-    SetBorderColor 255 255 255 250
-    SetBackgroundColor 1 1 1 150
-
-Show
-Rarity Normal
-# editted for the season based on what is not selling
-BaseType == "Ornate Mitts" "Ornate Greaves" "Death Mantle" "Vaal Mitts" "Dueling Wand" "Kamasan Tiara" "Luxurious Slippers" "Flowing Raiment" "Reaping Staff" "Siege Crossbow" "Leyline Focus" "Vile Robe" "Wolfskin Mantle" "Sanctified Staff" "Sacred Focus" "Roaring Staff" "Chiming Staff" "Ashbark Talisman" "Lunar Quarterstaff" "Obliterator Bow" "Paralysing Staff" "Spiny Talisman" "Skullcrusher Quarterstaff" "Vaal Greaves" "Primed Quiver" "Visceral Quiver" "Fanatic Bow"
-# Untouched 
-#BaseType == "Acrid Wand" "Akoyan Club" "Ancient Buckler" "Ancient Cuffs" "Apostle Leggings" "Ashbark Talisman" "Attuned Wand" "Baroque Targe" "Death Mantle" "Divine Crown" "Elegant Crossbow" "Fang Talisman" "Feathered Raiment" "Flexed Crossbow" "Flowing Raiment" "Fortified Hammer" "Fortress Tower Shield" "Gemini Crossbow" "Gleaming Cuffs" "Grand Spear" "Guardian Spear" "Kamasan Tiara" "Leyline Focus" "Lunar Quarterstaff" "Luxurious Slippers" "Masked Greathelm" "Opulent Gloves" "Ornate Greaves" "Ornate Mitts" "Ornate Plate" "Paragon Greathelm" "Reaping Staff" "Roaring Staff" "Ruination Maul" "Sacramental Robe" "Sacred Focus" "Saintly Crown" "Sanctified Staff" "Sandsworn Sandals" "Seastorm Mantle" "Siphoning Wand" "Skullcrusher Quarterstaff" "Soaring Spear" "Soaring Targe" "Sorcerous Tiara" "Spiked Spear" "Spiny Talisman" "Stalking Spear" "Stoic Sceptre" "Strife Pick" "Striking Quarterstaff" "Tawhoan Greatclub" "Utzaal Cuirass" "Vaal Crest Shield" "Vaal Gloves" "Vaal Greaves" "Vaal Mitts" "Vaal Tower Shield" "Voltaic Staff" "Warlock Leggings" "Wildwood Talisman" "Wrath Sceptre" "Dueling Wand" "Paralysing Staff" "Adherent Cuffs" "Ancestral Tiara" "Blacksteel Crest Shield" "Cryptic Crown" "Cryptic Leggings" "Desert Buckler" "Golden Targe" "Imperial Greathelm" "Massive Mitts" "Sekhema Sandals" "Sirenscale Gloves" "Tasalian Focus" "Tasalian Greaves" "Tawhoan Tower Shield" "Warlord Cuirass" "Aegis Quarterstaff" "Maji Talisman" "Siege Crossbow" "Akoyan Spear" "Fanatic Greathammer" "Flying Spear" "Fungal Talisman" "Jade Talisman" "Desolate Crossbow" "Marauding Mace" "Massive Greathammer" "Razor Quarterstaff" "Thunder Talisman" "Alpha Talisman" "Conjurer Mantle" "Soldier Cuirass" "Vile Robe" "Wolfskin Mantle" "Chiming Staff" "Galvanic Wand" "Omen Sceptre" "Rattling Sceptre" "Withered Wand"
-    AreaLevel >= 65
-    PlayAlertSound 3 300
-    PlayEffect White
-    MinimapIcon 1 White Diamond
-    SetFontSize 15
-    SetTextColor 255 255 255
-    SetBorderColor 255 255 255 250
     SetBackgroundColor 1 1 1 150
 
 #===============================================================================================================
@@ -694,9 +651,9 @@ Class "Jewel"
     PlayEffect Blue
     MinimapIcon 0 Blue Diamond
     SetFontSize 25
-    SetTextColor 0 240 190 255
-    SetBorderColor 0 240 190 255
-    SetBackgroundColor 20 20 0 255
+	SetTextColor 0 100 255 255
+	SetBorderColor 0 100 255 255
+	SetBackgroundColor 1 1 1 255
 
 Show
 Class = Jewels
@@ -704,9 +661,9 @@ Class = Jewels
 	PlayEffect Blue
 	MinimapIcon 1 Blue Diamond
     SetFontSize 15
-	SetTextColor 0 70 255 255
-	SetBorderColor 0 70 255 255
-	SetBackgroundColor 30 0 70 255
+	SetTextColor 0 100 255 255
+	SetBorderColor 0 100 255 255
+	SetBackgroundColor 1 1 1 255
 
 Show
 Class == "Augment"
@@ -715,59 +672,86 @@ BaseType "Timeless"
 	PlayEffect Blue
 	MinimapIcon 1 Blue Diamond
     SetFontSize 15
-	SetTextColor 0 70 255 255
-	SetBorderColor 0 70 255 255
-	SetBackgroundColor 30 0 70 255
+	SetTextColor 0 100 255 255
+	SetBorderColor 0 100 255 255
+	SetBackgroundColor 1 1 1 255
 
 #===============================================================================================================
 # Ring / Amulets / Belts
 #===============================================================================================================
 
-#### Shows all Breach Rings
-Show
-BaseType "Breach Ring"
-    PlayEffect Blue
-    MinimapIcon 2 Blue Kite
-    SetFontSize 15
-    SetBorderColor 0 0 255 250
-    SetBackgroundColor 1 1 1 150
-
 # Show Specific Ring bases
 Show
-BaseType == "Prismatic Ring" "Sapphire Ring" "Ruby Ring" "Topaz Ring" "Amethyst Ring" "Iron Ring"
-Rarity = Normal Magic
-    PlayEffect Blue
-    MinimapIcon 2 Blue Square
-    PlayEffect Blue
-    SetFontSize 15
-    SetBorderColor 0 0 255 250
-    SetBackgroundColor 1 1 1 150
+Rarity == Normal Magic
+BaseType == "Breach Ring" "Iron Ring" "Sapphire Ring" "Ruby Ring" "Topaz Ring" "Prismatic Ring" "Gold Ring" "Amethyst Ring" 
+    PlayEffect White
+    MinimapIcon 2 White Square 
+    PlayEffect White
+    SetFontSize 13
+    SetTextColor 100 150 150
+    SetBorderColor 100 150 150 255
+    SetBackgroundColor 1 1 1 255
 
 # Show Specific Amulets bases
 Show
-BaseType == "Gold Amulet"
-    PlayEffect Blue
-    MinimapIcon 2 Blue Square
-    PlayEffect Blue
-    SetFontSize 15
-    SetBorderColor 0 0 255 250
-    SetBackgroundColor 1 1 1 150
+Rarity == Normal Magic
+BaseType == "Stellar Amulet" "Solar Amulet" "Amber Amulet" "Gold Amulet" 
+    PlayEffect White
+    MinimapIcon 2 White Square 
+    PlayEffect White
+    SetFontSize 13
+    SetTextColor 100 150 150
+    SetBorderColor 100 150 150 255
+    SetBackgroundColor 1 1 1 255
 
-# Show Specific bases to sell for Crafting as Gray Items
+# Show Specific bases to sell for Crafting as Chance Items
 Show
-BaseType "Heavy Belt" "Thawing Charm" "Gauze Wraps" "Armoured Vest"
-Rarity = Normal
-    PlayEffect Blue
-    MinimapIcon 1 Blue Kite
-    SetFontSize 15
-    SetTextColor 0 0 255 250
-    SetBorderColor 0 0 255 250
-    SetBackgroundColor 1 1 1 200
+Rarity == Normal
+BaseType "Heavy Belt" "Thawing Charm" "Gauze Wraps" "Linen Belt" "Wide Belt" "Armoured Vest" "Crimson Amulet" "Double Belt" "Emerald Ring" "Fine Belt" "Iron Ring" "Lazuli Ring" "Long Belt" "Rawhide Belt" "Utility Belt" "Vile Robe" "Obliterator Bow" "Visceral Quiver" 
+    PlayEffect Green
+    MinimapIcon 1 Green Kite
+    SetFontSize 18
+    SetTextColor 100 255 150
+    SetBorderColor 100 255 150 255
+    SetBackgroundColor 1 1 1 255
 
-Hide
-Class "Rings" "Amulets" "Belt"
+#===============================================================================================================
+# Endgame Base Items
+#===============================================================================================================
+
+Show
+UnidentifiedItemTier >= 1
+Rarity Magic
+    ItemLevel >= 79
+    PlayAlertSound 3 300
+    PlayEffect White
+    MinimapIcon 1 White Diamond
     SetFontSize 15
+    SetTextColor 255 255 255
+    SetBorderColor 255 255 255 250
     SetBackgroundColor 1 1 1 150
+
+Show
+Rarity == Normal
+Class == "Ring" "Amulet" "Belt"
+    PlayAlertSound 3 300
+    PlayEffect White
+    MinimapIcon 1 White Diamond
+    SetFontSize 15
+    SetTextColor 255 255 255
+    SetBorderColor 255 255 255 250
+    SetBackgroundColor 1 1 1 250
+
+Show
+Rarity == Normal
+    ItemLevel >= 79
+    PlayAlertSound 3 300
+    PlayEffect White
+    MinimapIcon 1 White Diamond
+    SetFontSize 15
+    SetTextColor 255 255 255
+    SetBorderColor 255 255 255 250
+    SetBackgroundColor 1 1 1 250
 
 #===============================================================================================================
 # Charms
@@ -822,23 +806,23 @@ Show # All Charms in zones lower than 65 (Campaign)
 Show
 Sockets > 0
 Class == "Helmets" "Boots" "Gloves" "Staves" "Wands" "Talismans" "Daggers" "Claws" "Spears" "Bucklers"
-Rarity = Normal Magic
+Rarity == Normal Magic
 	AreaLevel <= 72
     SetFontSize 15
     SetTextColor 90 150 90
     SetBorderColor 90 150 90
-    SetBackgroundColor 0 0 0 200
+    SetBackgroundColor 1 1 1 200
 
 #### Salvage Quality Items for Quality Shards
 Show
 Quality >= 1
 Class == "Helmets" "Boots" "Gloves" "Staves" "Wands" "Talismans" "Daggers" "Claws" "Spears" "Bucklers"
-Rarity = Normal Magic
+Rarity == Normal Magic
 	AreaLevel <= 72
     SetFontSize 15
     SetTextColor 90 150 90
     SetBorderColor 90 150 90
-    SetBackgroundColor 0 0 0 200
+    SetBackgroundColor 1 1 1 200
 
 #### Salvage Flasks for Quality Flask Shards
 Show
@@ -847,7 +831,7 @@ Quality >= 1
     SetFontSize 15
     SetTextColor 90 150 90
     SetBorderColor 90 150 90
-    SetBackgroundColor 0 0 0 200
+    SetBackgroundColor 1 1 1 200
 
 #===============================================================================================================
 # Crafting Bases
@@ -856,7 +840,7 @@ Quality >= 1
 # Pure Evasion Only Gear
 #Show
 #Class "Body Armour"
-#Rarity = Normal Magic
+#Rarity == Normal Magic
 #AreaLevel < 80
 #BaseArmour <= 1
 #BaseEvasion >= 1
@@ -867,7 +851,7 @@ Quality >= 1
 # Pure EnergyShield/Evasion Only Gear
 #Show
 #Class "Helmet" "Glove" "Boots"
-#Rarity = Normal Magic
+#Rarity == Normal Magic
 #AreaLevel < 80
 #BaseArmour <= 1
 #BaseEvasion >= 1
@@ -881,7 +865,7 @@ Quality >= 1
 
 #### This is a Hides all
 Hide
-    Rarity = Normal Magic
+    Rarity == Normal Magic
     SetFontSize 15
     SetBorderColor 0 0 0 0
-	SetBackgroundColor 0 0 0 200
+	SetBackgroundColor 1 1 1 200
