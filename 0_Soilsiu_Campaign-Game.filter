@@ -31,28 +31,28 @@
 
 # End Campaign Base Bows
 Show
-BaseType == "Obliterator Bow" "Fanatic Bow"
+BaseType "Obliterator Bow" "Fanatic Bow"
     SetFontSize 20
     MinimapIcon 1 Green Square
     PlayEffect Green
 
 # End Campaign Base Quivers
 Show
-BaseType = "Primed Quiver" "Visceral Quiver"
+BaseType "Primed Quiver" "Visceral Quiver"
     SetFontSize 20
     MinimapIcon 1 Green Square
     PlayEffect Green
 
 # Early Campaign Game Base Bows
 Show
-BaseType == "Artillery Bow" 
+BaseType "Artillery Bow" 
     SetFontSize 20
     MinimapIcon 1 Green Square
     PlayEffect Green
 
 # Early Campaign Game Base Bows
 Show
-BaseType == "Dualstring Bow" "Cultist Bow" "Zealot Bow"
+BaseType "Dualstring Bow" "Cultist Bow" "Zealot Bow"
     AreaLevel <= 45
     SetFontSize 20
     MinimapIcon 1 Green Square
@@ -60,7 +60,7 @@ BaseType == "Dualstring Bow" "Cultist Bow" "Zealot Bow"
 
 # Early Campaign Game Base Quivers
 Show
-BaseType = "Primed Quiver" "Broadhead Quiver"
+BaseType "Primed Quiver" "Broadhead Quiver"
     AreaLevel <= 60
     SetFontSize 20
     MinimapIcon 1 Green Square
@@ -83,7 +83,7 @@ AreaLevel >= 20
 #===============================================================================================================
 
 Show
-Class == "Instance Local Items" "Quest Items"
+Class "Instance Local Items" "Quest Items"
     MinimapIcon 1 Grey Square
     SetFontSize 15
     SetBorderColor 0 191 0 200
@@ -95,7 +95,7 @@ Class == "Instance Local Items" "Quest Items"
 
 Show
 StackSize >= 2500
-BaseType == "Gold"
+BaseType "Gold"
 	PlayEffect Orange Temp
 	MinimapIcon 0 Orange Cross
     SetFontSize 17
@@ -105,7 +105,7 @@ BaseType == "Gold"
 
 Show
 StackSize >= 1000
-BaseType == "Gold"
+BaseType "Gold"
 	PlayEffect Orange Temp
 	MinimapIcon 0 Orange Cross
     SetFontSize 16
@@ -115,7 +115,7 @@ BaseType == "Gold"
     
 Show
 StackSize >= 500
-BaseType == "Gold"
+BaseType "Gold"
 	PlayEffect Orange Temp
     MinimapIcon 1 Orange Cross
     SetFontSize 15
@@ -125,7 +125,7 @@ BaseType == "Gold"
 
 Show
 StackSize >= 50
-BaseType == "Gold"
+BaseType "Gold"
 	PlayEffect Orange Temp
     SetFontSize 14
 	SetTextColor 200 175 0 200
@@ -134,7 +134,7 @@ BaseType == "Gold"
 
 #### Shows all Gold
 Show
-BaseType == Gold
+BaseType == "Gold"
     SetFontSize 13
 	SetTextColor 200 175 0 175
     SetBorderColor 1 1 1 0
@@ -145,8 +145,8 @@ BaseType == Gold
 #===============================================================================================================
 
 Show # Showing Super Exotic Bases
-	Rarity == Normal Magic Rare
-	BaseType == "Abyssal Signet" "Diamond" "Pearlescent Amulet" "Reflecting Staff" "Sacrificial Regalia" "Time-Lost Diamond"
+	Rarity Normal Magic Rare
+	BaseType "Abyssal Signet" "Diamond" "Pearlescent Amulet" "Reflecting Staff" "Sacrificial Regalia" "Time-Lost Diamond"
 	PlayAlertSound 3 300
 	PlayEffect Blue
 	MinimapIcon 0 Blue Diamond
@@ -156,8 +156,8 @@ Show # Showing Super Exotic Bases
 	SetBackgroundColor 0 75 30 255
 
 Show # Showing Exotic Kalandra Bases
-	Rarity == Normal Magic Rare
-	BaseType == "Dusk Amulet" "Dusk Ring" "Gloam Amulet" "Gloam Ring" "Penumbra Amulet" "Penumbra Ring" "Tenebrous Amulet" "Tenebrous Ring"
+	Rarity Normal Magic Rare
+	BaseType "Dusk Amulet" "Dusk Ring" "Gloam Amulet" "Gloam Ring" "Penumbra Amulet" "Penumbra Ring" "Tenebrous Amulet" "Tenebrous Ring"
 	PlayAlertSound 3 300
 	PlayEffect Blue
 	MinimapIcon 0 Blue Diamond
@@ -167,8 +167,8 @@ Show # Showing Exotic Kalandra Bases
 	SetBackgroundColor 0 75 30 255
 
 Show # Showing Fishing Rod
-	Rarity == Normal Magic Rare
-	Class == "Fishing Rods"
+	Rarity Normal Magic Rare
+	Class "Fishing Rods"
     PlayAlertSound 3 300
 	PlayEffect Orange
 	MinimapIcon 0 Orange Pentagon
@@ -182,7 +182,7 @@ Show # Showing Fishing Rod
 #===============================================================================================================
 
 Show # PREMO Currency
-Class == "Stackable Currency"
+Class "Stackable Currency"
 BaseType "Divine Orb" "Perfect Chaos Orb" "Perfect Exalted Orb" "Perfect Jeweller's Orb" "Albino Rhoa Feather" "Hinekora's Lock" "Mirror of Kalandra"
     PlayAlertSound 3 300
     PlayEffect Green
@@ -193,8 +193,8 @@ BaseType "Divine Orb" "Perfect Chaos Orb" "Perfect Exalted Orb" "Perfect Jewelle
     SetBackgroundColor 1 1 1 255
 
 Show # Even more GG Currency
-Class == "Stackable Currency"
-BaseType == "Chaos Orb" "Exalted Orb" "Greater Chaos Orb" "Greater Exalted Orb" "Fracturing Orb" "Orb of Annulment" "Perfect Regal Orb"
+Class "Stackable Currency"
+BaseType "Chaos Orb" "Exalted Orb" "Greater Chaos Orb" "Greater Exalted Orb" "Fracturing Orb" "Orb of Annulment" "Perfect Regal Orb"
     MinimapIcon 1 Green Cross
     PlayAlertSound 5 200
     PlayEffect Green
@@ -204,8 +204,8 @@ BaseType == "Chaos Orb" "Exalted Orb" "Greater Chaos Orb" "Greater Exalted Orb" 
     SetBackgroundColor 1 1 1 255
 
 Show
-Class == "Stackable Currency"
-BaseType = "Gemcutter's Prism" "Glassblower's Bauble" "Jeweller" "Perfect" "Greater" "Artificer's Orb" "Chance Shard" "Orb of Alchemy" "Regal Orb" "Vaal Orb"  "Orb of Chance" "Exotic Coinage" 
+Class "Stackable Currency"
+BaseType "Gemcutter's Prism" "Glassblower's Bauble" "Jeweller" "Perfect" "Greater" "Artificer's Orb" "Chance Shard" "Orb of Alchemy" "Regal Orb" "Vaal Orb"  "Orb of Chance" "Exotic Coinage" 
     MinimapIcon 2 Green Cross
     PlayAlertSound 5 200
     PlayEffect Green
@@ -215,8 +215,8 @@ BaseType = "Gemcutter's Prism" "Glassblower's Bauble" "Jeweller" "Perfect" "Grea
     SetBackgroundColor 1 1 1 255
 
 Show # Even more GG Currency
-Class == "Stackable Currency"
-BaseType == "Ancient Collarbone" "Ancient Jawbone" "Ancient Rib" "Preserved Cranium" "Preserved Vertebrae" "Gnawed Collarbone" "Gnawed Jawbone" "Gnawed Rib" "Preserved Collarbone" "Preserved Jawbone" "Preserved Rib"
+Class "Stackable Currency"
+BaseType "Ancient Collarbone" "Ancient Jawbone" "Ancient Rib" "Preserved Cranium" "Preserved Vertebrae" "Gnawed Collarbone" "Gnawed Jawbone" "Gnawed Rib" "Preserved Collarbone" "Preserved Jawbone" "Preserved Rib"
     PlayAlertSound 13 150
     PlayEffect Purple
     MinimapIcon 2 Purple Moon
@@ -227,7 +227,7 @@ BaseType == "Ancient Collarbone" "Ancient Jawbone" "Ancient Rib" "Preserved Cran
 
 # Color is PURPLE
 Show
-Class == "Stackable Currency"
+Class "Stackable Currency"
 BaseType "Simulacrum Splinter" "Breach Splinter" "Artifact" "Liquid " "Catalyst" "Essence of" "Cowardly Fate" "Deadly Fate" "Victorious Fate" "Omen of "
     PlayAlertSound 13 150
     PlayEffect Purple
@@ -250,7 +250,7 @@ Class "Omen"
 
 # Color is TEALISH
 Show
-Class == "Augment"
+Class "Augment"
 BaseType "Rune" "Soul" "Talisman" "Liquid " " Splinter" "Catalyst" "Essence"
     MinimapIcon 2 Cyan Circle
     PlayEffect Cyan Temp
@@ -262,7 +262,7 @@ BaseType "Rune" "Soul" "Talisman" "Liquid " " Splinter" "Catalyst" "Essence"
 
 # Color is A dark GOLDish
 Show
-Class == "Stackable Currency"
+Class "Stackable Currency"
 BaseType "Artificer's Shard" "Arcanist's Etcher" "Armourer's Scrap" "Blacksmith's Whetstone" "Regal Shard" 
     PlayEffect Grey
     MinimapIcon 2 Grey Raindrop
@@ -272,7 +272,7 @@ BaseType "Artificer's Shard" "Arcanist's Etcher" "Armourer's Scrap" "Blacksmith'
     SetBackgroundColor 1 1 1 175
 
 Show
-Class == "Stackable Currency"
+Class "Stackable Currency"
 BaseType "Orb of Augmentation" "Orb of Transmutation"
     PlayEffect Grey Temp
     SetFontSize 15
@@ -323,7 +323,7 @@ BaseType "Cowardly Fate" "Deadly Fate" "Victorious Fate"
     SetBackgroundColor 1 1 1 150
 
 Show # Special Test Keys
-	BaseType == "Test of Cunning Barya" "Test of Strength Barya" "Test of Time Barya" "Test of Will Barya"
+	BaseType "Test of Cunning Barya" "Test of Strength Barya" "Test of Time Barya" "Test of Will Barya"
 	SetFontSize 15
 	SetTextColor 0 0 0 255
 	SetBorderColor 0 0 0 255
@@ -333,7 +333,7 @@ Show # Special Test Keys
 	MinimapIcon 1 White Hexagon
 
 Show # Show Vault Keys
-	Class == "Vault Keys"
+	Class "Vault Keys"
 	SetFontSize 15
 	SetTextColor 255 0 0 255
 	SetBorderColor 255 0 0 255
@@ -347,7 +347,7 @@ Show # Show Vault Keys
 #===============================================================================================================
 
 Show
-Class = Relics
+Class Relics
     SetFontSize 15
 
 #===============================================================================================================
@@ -355,8 +355,8 @@ Class = Relics
 #===============================================================================================================
 
 Show
-Class == "Skill Gems" "Support Gems"
-BaseType == "Amanamu's Tithe" "Arbiter's Ignition" "Atalui's Bloodletting" "Dialla's Desire" "Esh's Radiance" "Garukhan's Resolve" "Ixchel's Torment" "Rakiata's Flow" "Rigwald's Ferocity" "Tul's Stillness" "Uhtred's Augury" "Uhtred's Exodus" "Uhtred's Omen" "Uul-Netol's Embrace" "Xoph's Pyre" "Atziri's Call" "Atziri's Communion" "Atziri's Impatience" "Brutus' Brain" "Doedre's Undoing" "Dreamer's Knell" "Eonyr's Thunder" "Helbrym's Hide" "Khatal's Rejuvenation" "Kulemak's Dominion" "Sione's Temper" "Tecrod's Revenge" "Zerphi's Infamy" "Ailith's Chimes" "Arjun's Medal" "Atziri's Allure" "Dominus' Grasp" "Hayoxi's Fulmination" "Ratha's Assault" "Uruk's Smelting" "Zarokh's Revolt" "Ahn's Citadel" "Arakaali's Lust" "Daresso's Passion" "Doedre's Undoing" "Kaom's Madness" "Kurgal's Leash" "Paquate's Pact" "Sione's Temper" "Tacati's Ire" "Tawhoa's Tending" "Tecrod's Revenge" "Uruk's Smelting" "Vilenta's Propulsion"
+Class "Skill Gems" "Support Gems"
+BaseType "Amanamu's Tithe" "Arbiter's Ignition" "Atalui's Bloodletting" "Dialla's Desire" "Esh's Radiance" "Garukhan's Resolve" "Ixchel's Torment" "Rakiata's Flow" "Rigwald's Ferocity" "Tul's Stillness" "Uhtred's Augury" "Uhtred's Exodus" "Uhtred's Omen" "Uul-Netol's Embrace" "Xoph's Pyre" "Atziri's Call" "Atziri's Communion" "Atziri's Impatience" "Brutus' Brain" "Doedre's Undoing" "Dreamer's Knell" "Eonyr's Thunder" "Helbrym's Hide" "Khatal's Rejuvenation" "Kulemak's Dominion" "Sione's Temper" "Tecrod's Revenge" "Zerphi's Infamy" "Ailith's Chimes" "Arjun's Medal" "Atziri's Allure" "Dominus' Grasp" "Hayoxi's Fulmination" "Ratha's Assault" "Uruk's Smelting" "Zarokh's Revolt" "Ahn's Citadel" "Arakaali's Lust" "Daresso's Passion" "Doedre's Undoing" "Kaom's Madness" "Kurgal's Leash" "Paquate's Pact" "Sione's Temper" "Tacati's Ire" "Tawhoa's Tending" "Tecrod's Revenge" "Uruk's Smelting" "Vilenta's Propulsion"
     PlayAlertSound 2 300
     PlayEffect Cyan
     MinimapIcon 1 Cyan Triangle
@@ -368,7 +368,7 @@ BaseType == "Amanamu's Tithe" "Arbiter's Ignition" "Atalui's Bloodletting" "Dial
 #### Show lvl 20 Gems
 Show
 BaseType "Uncut Support Gem" "Uncut Skill Gem" "Uncut Spirit Gem"
-ItemLevel = 19 20
+ItemLevel 19 20
     PlayAlertSound 3 300
     PlayEffect Green
     MinimapIcon 0 Green Star
@@ -390,7 +390,7 @@ BaseType "Uncut Spirit Gem"
 
 #### Show Uncut Skill Gem
 Show
-BaseType == "Uncut Skill Gem"
+BaseType "Uncut Skill Gem"
     PlayAlertSound 2 300
     PlayEffect Cyan
     MinimapIcon 1 Cyan Triangle
@@ -401,7 +401,7 @@ BaseType == "Uncut Skill Gem"
 
 #### Shows Uncut Support Gem
 Show
-BaseType == "Uncut Support Gem"
+BaseType "Uncut Support Gem"
     PlayAlertSound 2 300
     PlayEffect Cyan
     MinimapIcon 1 Cyan Triangle
@@ -435,7 +435,7 @@ Class "Gem"
 #===============================================================================================================
 
 Show
-Class = Tablet
+Class Tablet
     PlayEffect Purple
     PlayAlertSound 10 200
     MinimapIcon 1 Purple Hexagon
@@ -455,7 +455,7 @@ BaseType "Simulacrum" " Tablet" "Breachstone" "Cowardly Fate" "Deadly Fate" "Vic
     SetBackgroundColor 255 255 255 255
 
 Show
-Class = Map Fragments
+Class Map Fragments
     PlayEffect Green
     PlayAlertSound 7 200
     MinimapIcon 2 Green Pentagon
@@ -470,7 +470,7 @@ Class = Map Fragments
 
 # Shows All Unknown Socketable Or Socketable not properly tagged
 Show
-Class = "Socketable"
+Class "Socketable"
     PlayEffect Grey
     MinimapIcon 2 Grey Circle
     SetFontSize 15
@@ -480,7 +480,7 @@ Class = "Socketable"
 
 # Shows All Unknown Currency Or Currency not properly tagged
 Show
-Class == "Currency"
+Class "Currency"
     PlayEffect Grey
     MinimapIcon 2 Grey Circle
     SetFontSize 15
@@ -494,7 +494,7 @@ Class == "Currency"
 
 #### There is no SetTextColor to show Rarity of the actual maps
 Show
-Class = Waystones
+Class Waystones
     MinimapIcon 2 Grey Pentagon
     PlayEffect Grey
     PlayAlertSound 10 150
@@ -507,7 +507,7 @@ Class = Waystones
 #===============================================================================================================
 
 Show
-Class = "Life Flasks"
+Class "Life Flasks"
 Quality >= 1
     MinimapIcon 2 Red Moon
     PlayEffect Red
@@ -518,7 +518,7 @@ Quality >= 1
     SetBackgroundColor 1 1 1 255
 
 Show
-Class = "Mana Flasks"
+Class "Mana Flasks"
 Quality >= 1
     MinimapIcon 2 Blue Moon
     PlayEffect Blue
@@ -533,7 +533,7 @@ Quality >= 1
 #------------------------------------
 
 Show
-	Class == "Life Flasks"
+	Class "Life Flasks"
 	BaseType "Medium"
 	AreaLevel <= 8
     SetFontSize 15
@@ -542,7 +542,7 @@ Show
     SetBackgroundColor 1 1 1 255
 
 Show
-	Class == "Life Flasks"
+	Class "Life Flasks"
 	BaseType "Greater"
 	AreaLevel <= 15
     SetFontSize 15
@@ -551,7 +551,7 @@ Show
     SetBackgroundColor 1 1 1 255
 
 Show
-	Class == "Life Flasks"
+	Class "Life Flasks"
 	BaseType "Grand"
 	AreaLevel <= 22
     SetFontSize 15
@@ -560,7 +560,7 @@ Show
     SetBackgroundColor 1 1 1 255
 
 Show
-	Class == "Life Flasks"
+	Class "Life Flasks"
 	BaseType "Giant"
 	AreaLevel <= 29
     SetFontSize 15
@@ -569,7 +569,7 @@ Show
     SetBackgroundColor 1 1 1 255
 
 Show
-	Class == "Life Flasks"
+	Class "Life Flasks"
 	BaseType "Colossal"
 	AreaLevel <= 39
     SetFontSize 15
@@ -578,14 +578,14 @@ Show
     SetBackgroundColor 1 1 1 255
 
 Show
-	Class == "Life Flasks"
+	Class "Life Flasks"
 	BaseType "Gargantuan"
 	AreaLevel <= 49
 	SetFontSize 18
 	SetBorderColor 20 140 60
 
 Show
-	Class == "Life Flasks"
+	Class "Life Flasks"
 	BaseType "Transcendent"
 	AreaLevel <= 59
     SetFontSize 15
@@ -594,7 +594,7 @@ Show
     SetBackgroundColor 1 1 1 255
 
 Show
-	Class == "Life Flasks"
+	Class "Life Flasks"
 	BaseType "Ultimate"
 	AreaLevel <= 65
     SetFontSize 15
@@ -607,7 +607,7 @@ Show
 #------------------------------------
 
 Show
-	Class == "Mana Flasks"
+	Class "Mana Flasks"
 	BaseType "Medium"
 	AreaLevel <= 8
     SetFontSize 15
@@ -616,7 +616,7 @@ Show
     SetBackgroundColor 1 1 1 255
 
 Show
-	Class == "Mana Flasks"
+	Class "Mana Flasks"
 	BaseType "Greater"
 	AreaLevel <= 15
     SetFontSize 15
@@ -625,7 +625,7 @@ Show
     SetBackgroundColor 1 1 1 255
 
 Show
-	Class == "Mana Flasks"
+	Class "Mana Flasks"
 	BaseType "Grand"
 	AreaLevel <= 22
     SetFontSize 15
@@ -634,7 +634,7 @@ Show
     SetBackgroundColor 1 1 1 255
 
 Show
-	Class == "Mana Flasks"
+	Class "Mana Flasks"
 	BaseType "Giant"
 	AreaLevel <= 29
     SetFontSize 15
@@ -643,7 +643,7 @@ Show
     SetBackgroundColor 1 1 1 255
 
 Show
-	Class == "Mana Flasks"
+	Class "Mana Flasks"
 	BaseType "Colossal"
 	AreaLevel <= 39
     SetFontSize 15
@@ -652,7 +652,7 @@ Show
     SetBackgroundColor 1 1 1 255
 
 Show
-	Class == "Mana Flasks"
+	Class "Mana Flasks"
 	BaseType "Gargantuan"
 	AreaLevel <= 49
     SetFontSize 15
@@ -661,7 +661,7 @@ Show
     SetBackgroundColor 1 1 1 255
 
 Show
-	Class == "Mana Flasks"
+	Class "Mana Flasks"
 	BaseType "Transcendent"
 	AreaLevel <= 59
     SetFontSize 15
@@ -670,7 +670,7 @@ Show
     SetBackgroundColor 1 1 1 255
 
 Show
-	Class == "Mana Flasks"
+	Class "Mana Flasks"
 	BaseType "Ultimate"
 	AreaLevel <= 65
     SetFontSize 15
@@ -684,7 +684,7 @@ Show
 
 # Show all Uniques
 Show
-Rarity = Unique
+Rarity Unique
     PlayEffect Brown
     MinimapIcon 2 Brown Circle
     SetFontSize 20
@@ -698,8 +698,8 @@ Rarity = Unique
 
 # Show all Rare Jewelry items
 Show
-Class == "Ring" "Amulet" "Belt"
-Rarity = Rare
+Class "Ring" "Amulet" "Belt"
+Rarity Rare
     MinimapIcon 1 Yellow Cross
     PlayEffect Yellow
     SetFontSize 17
@@ -709,7 +709,7 @@ Rarity = Rare
 
 # Show all Rare items
 Show
-Rarity = Rare
+Rarity Rare
     MinimapIcon 1 Yellow Cross
     PlayEffect Yellow
     SetFontSize 13
@@ -723,7 +723,7 @@ Rarity = Rare
 
 Show
 Class "Jewel"
-    BaseType == "Time-Lost Emerald" "Time-Lost Ruby" "Time-Lost Sapphire"
+    BaseType "Time-Lost Emerald" "Time-Lost Ruby" "Time-Lost Sapphire"
     PlayAlertSound 3 300
     PlayEffect Blue
     MinimapIcon 0 Blue Diamond
@@ -733,7 +733,7 @@ Class "Jewel"
 	SetBackgroundColor 1 1 1 255
 
 Show
-Class = Jewels
+Class Jewels
     PlayAlertSound 2 300
 	PlayEffect Blue
 	MinimapIcon 1 Blue Diamond
@@ -743,7 +743,7 @@ Class = Jewels
 	SetBackgroundColor 1 1 1 255
 
 Show
-Class == "Augment"
+Class "Augment"
 BaseType "Timeless"
     PlayAlertSound 2 300
 	PlayEffect Blue
@@ -759,8 +759,8 @@ BaseType "Timeless"
 
 # Show Specific Ring bases
 Show
-Rarity == Normal Magic
-BaseType == "Breach Ring" "Iron Ring" "Sapphire Ring" "Ruby Ring" "Topaz Ring" "Prismatic Ring" "Gold Ring" "Amethyst Ring" 
+Rarity Normal Magic
+BaseType "Breach Ring" "Iron Ring" "Sapphire Ring" "Ruby Ring" "Topaz Ring" "Prismatic Ring" "Gold Ring" "Amethyst Ring" 
     PlayEffect White
     MinimapIcon 2 White Square 
     PlayEffect White
@@ -771,8 +771,8 @@ BaseType == "Breach Ring" "Iron Ring" "Sapphire Ring" "Ruby Ring" "Topaz Ring" "
 
 # Show Specific Amulets bases
 Show
-Rarity == Normal Magic
-BaseType == "Stellar Amulet" "Solar Amulet" "Amber Amulet" "Gold Amulet" 
+Rarity Normal Magic
+BaseType "Stellar Amulet" "Solar Amulet" "Amber Amulet" "Gold Amulet" 
     PlayEffect White
     MinimapIcon 2 White Square 
     PlayEffect White
@@ -783,7 +783,7 @@ BaseType == "Stellar Amulet" "Solar Amulet" "Amber Amulet" "Gold Amulet"
 
 # Show Specific bases to sell for Crafting as Chance Items
 Show
-Rarity == Normal
+Rarity Normal
 BaseType "Heavy Belt" "Thawing Charm" "Gauze Wraps" "Linen Belt" "Wide Belt" "Armoured Vest" "Crimson Amulet" "Double Belt" "Emerald Ring" "Fine Belt" "Iron Ring" "Lazuli Ring" "Long Belt" "Rawhide Belt" "Utility Belt" "Vile Robe" "Obliterator Bow" "Visceral Quiver" 
     PlayEffect Green
     MinimapIcon 1 Green Kite
@@ -799,7 +799,7 @@ BaseType "Heavy Belt" "Thawing Charm" "Gauze Wraps" "Linen Belt" "Wide Belt" "Ar
 Show # Super GG CHARM
 	Quality >= 10
 	ItemLevel >= 82
-	Class == "Charms"
+	Class "Charms"
     PlayAlertSound 3 300
 	PlayEffect Blue
 	MinimapIcon 0 Blue Diamond
@@ -811,7 +811,7 @@ Show # Super GG CHARM
 
 Show # Show Quality Charms
 	Quality > 0
-	Class == "Charms"
+	Class "Charms"
 	AreaLevel >= 65
     PlayEffect Blue
 	MinimapIcon 2 Blue Diamond
@@ -821,8 +821,8 @@ Show # Show Quality Charms
 	SetBackgroundColor 1 1 1 255
 
 Show # Show ENDGAME CHARMS charms
-	Class == "Charms"
-	BaseType == "Amethyst Charm" "Antidote Charm" "Dousing Charm" "Golden Charm" "Grounding Charm" "Silver Charm" "Staunching Charm" "Stone Charm" "Thawing Charm"
+	Class "Charms"
+	BaseType "Amethyst Charm" "Antidote Charm" "Dousing Charm" "Golden Charm" "Grounding Charm" "Silver Charm" "Staunching Charm" "Stone Charm" "Thawing Charm"
     PlayEffect Blue
 	MinimapIcon 2 Blue Diamond
     SetFontSize 15
@@ -831,7 +831,7 @@ Show # Show ENDGAME CHARMS charms
 	SetBackgroundColor 1 1 1 255
 
 Show # All Charms in zones lower than 65 (Campaign)
-	Class == "Charms"
+	Class "Charms"
 	AreaLevel < 65
 	SetFontSize 15
 	SetTextColor 125 200 255 255
@@ -844,8 +844,8 @@ Show # All Charms in zones lower than 65 (Campaign)
 
 Show
 Sockets > 0
-Class == "Helmets" "Boots" "Gloves" "Staves" "Wands" "Talismans" "Daggers" "Claws" "Spears" "Bucklers"
-Rarity == Normal Magic
+Class "Helmets" "Boots" "Gloves" "Staves" "Wands" "Talismans" "Daggers" "Claws" "Spears" "Bucklers"
+Rarity Normal Magic
     SetFontSize 15
     SetTextColor 90 150 90
     SetBorderColor 90 150 90
@@ -853,7 +853,7 @@ Rarity == Normal Magic
 
 Show
 Sockets > 0
-Rarity == Normal Magic
+Rarity Normal Magic
 AreaLevel < 45
     SetFontSize 15
     SetTextColor 90 150 90
@@ -862,8 +862,8 @@ AreaLevel < 45
 
 Show
 Quality >= 1
-Class == "Helmets" "Boots" "Gloves" "Staves" "Wands" "Talismans" "Daggers" "Claws" "Spears" "Bucklers"
-Rarity == Normal Magic
+Class "Helmets" "Boots" "Gloves" "Staves" "Wands" "Talismans" "Daggers" "Claws" "Spears" "Bucklers"
+Rarity Normal Magic
     SetFontSize 15
     SetTextColor 90 150 90
     SetBorderColor 90 150 90
@@ -871,7 +871,7 @@ Rarity == Normal Magic
 
 Show
 Quality >= 1
-Rarity == Normal Magic
+Rarity Normal Magic
 AreaLevel < 45
     SetFontSize 15
     SetTextColor 90 150 90
@@ -879,7 +879,7 @@ AreaLevel < 45
     SetBackgroundColor 1 1 1 200
 
 Show
-Class = "Life Flasks" "Mana Flasks"
+Class "Life Flasks" "Mana Flasks"
 Quality >= 1
     SetFontSize 15
     SetTextColor 90 150 90
@@ -892,8 +892,8 @@ Quality >= 1
 
 # Show EnergyShield/Evasion Only Gear
 Show
-Class = "Helmet" 
-Rarity == Normal Magic
+Class "Helmet" 
+Rarity Normal Magic
 BaseArmour <= 1
 BaseEvasion >= 1
 BaseEnergyShield >= 1
@@ -903,8 +903,8 @@ BaseEnergyShield >= 1
 
 # Show Pure Evasion Only Gear
 Show
-Class = "Helmet" "Body Armour" "Glove" "Boots"
-Rarity == Normal Magic
+Class "Helmet" "Body Armour" "Glove" "Boots"
+Rarity Normal Magic
 BaseArmour <= 1
 BaseEvasion >= 1
 BaseEnergyShield <= 1
@@ -914,15 +914,15 @@ BaseEnergyShield <= 1
 
 # Show Bows and Quivers
 Show
-BaseType == "Primed Quiver" "Visceral Quiver" "Broadhead Quiver" "Obliterator Bow" "Artillery Bow" "Recurve Bow"
-Rarity == Normal Magic
+BaseType "Primed Quiver" "Visceral Quiver" "Broadhead Quiver" "Obliterator Bow" "Artillery Bow" "Recurve Bow"
+Rarity Normal Magic
     SetFontSize 15
     SetBackgroundColor 1 1 1 150
 
 # Show Belts & Rings & Amulets
 Show
-BaseType == "Rawhide Belt" "Utility Belt"
-Rarity == Normal Magic
+BaseType "Rawhide Belt" "Utility Belt"
+Rarity Normal Magic
     PlayEffect Blue
     MinimapIcon 2 Blue Square 
     PlayEffect Blue
@@ -932,8 +932,8 @@ Rarity == Normal Magic
 
 # Show Rings & Amulets
 Show
-Class == "Rings" "Amulets"
-Rarity == Normal Magic
+Class "Rings" "Amulets"
+Rarity Normal Magic
     PlayEffect Blue
     MinimapIcon 2 Blue Square 
     PlayEffect Blue
@@ -947,15 +947,15 @@ Rarity == Normal Magic
 
 # Hide all Gear
 Hide
-Class = "Boots" "Gloves" "Helmets" "Body Armours"
-Rarity == Normal Magic
+Class "Boots" "Gloves" "Helmets" "Body Armours"
+Rarity Normal Magic
     SetFontSize 15
     SetBackgroundColor 1 1 1 150
 
 # Hide all Weapons
 Hide
-Class = "Crossbows" "Bows" "Two Hand Maces" "Staves" "Wands" "Shields" "Foci" "One Hand Maces" "Quivers" "Sceptres" "Focus" "Talisman"
-Rarity == Normal Magic
+Class "Crossbows" "Bows" "Two Hand Maces" "Staves" "Wands" "Shields" "Foci" "One Hand Maces" "Quivers" "Sceptres" "Focus" "Talisman"
+Rarity Normal Magic
 	AreaLevel >= 39
     SetFontSize 15
     SetBackgroundColor 1 1 1 150
@@ -968,6 +968,6 @@ Class "Rings" "Amulets" "Belt"
     
 #### This is a Hides all
 Hide
-    Rarity == Normal Magic
+    Rarity Normal Magic
     SetFontSize 15
     SetBackgroundColor 1 1 1 150
