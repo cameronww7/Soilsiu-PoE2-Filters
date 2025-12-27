@@ -338,7 +338,7 @@ BaseType == "Amanamu's Tithe" "Arbiter's Ignition" "Atalui's Bloodletting" "Dial
 #### Show lvl 20 Gems
 Show
 BaseType "Uncut Support Gem" "Uncut Skill Gem" "Uncut Spirit Gem"
-ItemLevel = 20
+ItemLevel = 19 20
     PlayAlertSound 3 300
     PlayEffect Green
     MinimapIcon 0 Green Star

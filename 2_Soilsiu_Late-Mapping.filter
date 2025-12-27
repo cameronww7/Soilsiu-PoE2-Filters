@@ -342,11 +342,11 @@ BaseType == "Amanamu's Tithe" "Arbiter's Ignition" "Atalui's Bloodletting" "Dial
 #### Show lvl 20 Gems
 Show
 BaseType "Uncut Support Gem" "Uncut Skill Gem" "Uncut Spirit Gem"
-ItemLevel = 20
+ItemLevel = 19 20
     PlayAlertSound 3 300
     PlayEffect Green
     MinimapIcon 0 Green Star
-    SetFontSize 15
+    SetFontSize 18
     SetTextColor 0 255 0 255
     SetBorderColor 0 255 0 255
     SetBackgroundColor 1 1 1 255
@@ -718,9 +718,24 @@ BaseType "Heavy Belt" "Thawing Charm" "Gauze Wraps" "Linen Belt" "Wide Belt" "Ar
 
 # Bases I know are Selling well
 Show
+Rarity == Magic Rare
+UnidentifiedItemTier = 1 2
+ItemLevel >= 79
+BaseType == "Obliterator Bow" "Visceral Quiver" 
+    PlayAlertSound 3 300
+    PlayEffect White
+    MinimapIcon 1 White Diamond
+    SetFontSize 18
+    SetFontSize 15
+    SetTextColor 200 200 255
+    SetBorderColor 200 200 255 250
+    SetBackgroundColor 1 1 1 150
+
+# Bases I know are Selling well
+Show
 Rarity == Normal
 ItemLevel >= 79
-BaseType == "Vile Robe" "Linen Belt" "Jade Tiara" "Wide Belt" "Skullcrusher Quarterstaff" "Obliterator Bow" "Visceral Quiver" 
+BaseType == "Chiming Staff" "Pyrophyte Staff" "Fury Talisman" "Jade Tiara" "Reaping Staff" "Skullcrusher Quarterstaff" "Spiny Talisman" "Plate Belt" "Vile Robe" "Linen Belt" "Jade Tiara" "Wide Belt" "Obliterator Bow" "Visceral Quiver" 
     PlayAlertSound 3 300
     PlayEffect White
     MinimapIcon 1 White Diamond
@@ -746,7 +761,7 @@ Class == "Ring" "Amulet" "Belt"
 # Hiding Normal Items not selling well
 Hide 
 Rarity == Normal
-Class = "Shield" "Mace" "Crossbow" "Spear" "Bows" "Quivers"
+Class = "Shield" "Mace" "Crossbow" "Spear" "Bows" "Quivers" "Buckler"
     ItemLevel >= 79
     PlayAlertSound 3 300
     PlayEffect White
@@ -759,7 +774,7 @@ Class = "Shield" "Mace" "Crossbow" "Spear" "Bows" "Quivers"
 # Hiding Normal Items not selling well
 Hide 
 Rarity == Normal
-BaseType == "Bulwark Greaves" "Stone Cuirass" "Opulent Gloves" "Treerunner Shoes" "Stoic Sceptre" "Waxing Quarterstaff" "Ornate Plate" "Ancestral Mail" "Bone Wand" "Deerstalker Hood" "Cultist Gauntlets" "Cinched Boots" "Vaal Wraps" "Saintly Crown" "Cavalry Bow" "Vaal Tower Shield" "Shamanistic Leggings" "Occultist Mantle" "Ornate Greaves" "Luxurious Slippers" "Apostle Leggings" "Paragon Greathelm" "Inquisitor Crown" "Soldier Cuirass" "Aegis Quarterstaff" "Faridun Mask" "WAr Wraps" "Marauding Mace" "Trailblazer Armour" "Wanderer Shoes" "Thunder Talisman" "Cultist Focus" "Flying Spear" "Cavalry Bow" "Falconer's Jacket" "Guardian Spear" "Disintegrating Maul" "Desert Cap" "Cultist Gauntlets" "Ceremonial Robe" "Masked Greathelm" "Cryptic Helm" "Strife Pick" "Glowering Crest Shield" "Deerstalker Hood" "Fanatic Greathammer" "Pariah Mask" "Volatile Wand" "Pronged Spear" "Flowing Raiment" "Cinched Boots"
+BaseType == "Veteran Sabatons" "Slipstrike Vest" "Fortress Sabatons" "Grim Gloves" "Attuned Wand" "Commander Gauntlets" "Woven Cap" "Plated Vestments" "Stalking Bracers" "Dragonscale Boots" "Sorcerous Tiara" "freebooter Cap" "Trapper Hood" "Striking Quarterstaff" "Rambler Jacket" "Verisium Cuffs" "Ornate Cuffs" "Golden Mail" "Bulwark Greaves" "Stone Cuirass" "Opulent Gloves" "Treerunner Shoes" "Stoic Sceptre" "Waxing Quarterstaff" "Ornate Plate" "Ancestral Mail" "Bone Wand" "Deerstalker Hood" "Cultist Gauntlets" "Cinched Boots" "Vaal Wraps" "Saintly Crown" "Cavalry Bow" "Vaal Tower Shield" "Shamanistic Leggings" "Occultist Mantle" "Ornate Greaves" "Luxurious Slippers" "Apostle Leggings" "Paragon Greathelm" "Inquisitor Crown" "Soldier Cuirass" "Aegis Quarterstaff" "Faridun Mask" "WAr Wraps" "Marauding Mace" "Trailblazer Armour" "Wanderer Shoes" "Thunder Talisman" "Cultist Focus" "Flying Spear" "Cavalry Bow" "Falconer's Jacket" "Guardian Spear" "Disintegrating Maul" "Desert Cap" "Cultist Gauntlets" "Ceremonial Robe" "Masked Greathelm" "Cryptic Helm" "Strife Pick" "Glowering Crest Shield" "Deerstalker Hood" "Fanatic Greathammer" "Pariah Mask" "Volatile Wand" "Pronged Spear" "Flowing Raiment" "Cinched Boots"
     ItemLevel >= 79
     PlayAlertSound 3 300
     PlayEffect White
@@ -769,7 +784,11 @@ BaseType == "Bulwark Greaves" "Stone Cuirass" "Opulent Gloves" "Treerunner Shoes
     SetBorderColor 255 255 255 250
     SetBackgroundColor 1 1 1 250
 
-Show
+# Toggle this once in T13+ maps on to figure out what will sell or not
+# Toggle this once in T13+ maps on to figure out what will sell or not
+# Toggle this once in T13+ maps on to figure out what will sell or not
+#   Then turn it off ocne you feel good with enough stuff showing as will sell
+Hide
 Rarity == Normal
 Class == "Amulets" "Belts" "Body Armours" "Boots" "Bows" "Bucklers" "Crossbows" "Foci" "Gloves" "Helmets" "One Hand Maces" "Quarterstaves" "Quivers" "Rings" "Sceptres" "Shields" "Spears" "Staves" "Talismans" "Two Hand Maces" "Wands"
     ItemLevel >= 79
