@@ -1,7 +1,7 @@
 #===============================================================================================================
 # Soilsiu's Campaign Filter - for Path of Exile 2
 #===============================================================================================================
-# VERSION:  0.4.0
+# VERSION:  0.5.0
 # TYPE:     Early Mapping
 # AUTHOR:   Soilsiu
 # 
@@ -29,42 +29,42 @@
 #  This is a section to toss in overrides, such as wanting to always show a certain base
 #===============================================================================================================
 
-# End Campaign Base Bows
-Show
-BaseType "Obliterator Bow" "Fanatic Bow"
-    SetFontSize 20
-    MinimapIcon 1 Green Square
-    PlayEffect Green
+### End Campaign Base Bows
+### Show
+### BaseType "Obliterator Bow" "Fanatic Bow"
+###     SetFontSize 20
+###     MinimapIcon 1 Green Square
+###     PlayEffect Green
 
-# End Campaign Base Quivers
-Show
-BaseType "Primed Quiver" "Visceral Quiver"
-    SetFontSize 20
-    MinimapIcon 1 Green Square
-    PlayEffect Green
+### End Campaign Base Quivers
+### Show
+### BaseType "Primed Quiver" "Visceral Quiver"
+###     SetFontSize 20
+###     MinimapIcon 1 Green Square
+###     PlayEffect Green
 
-# Early Campaign Game Base Bows
-Show
-BaseType "Artillery Bow" 
-    SetFontSize 20
-    MinimapIcon 1 Green Square
-    PlayEffect Green
+### Early Campaign Game Base Bows
+### Show
+### BaseType "Artillery Bow" 
+###     SetFontSize 20
+###     MinimapIcon 1 Green Square
+###     PlayEffect Green
 
-# Early Campaign Game Base Bows
-Show
-BaseType "Dualstring Bow" "Cultist Bow" "Zealot Bow"
-    AreaLevel <= 45
-    SetFontSize 20
-    MinimapIcon 1 Green Square
-    PlayEffect Green
+### Early Campaign Game Base Bows
+### Show
+### BaseType "Dualstring Bow" "Cultist Bow" "Zealot Bow"
+###     AreaLevel <= 45
+###     SetFontSize 20
+###     MinimapIcon 1 Green Square
+###     PlayEffect Green
 
-# Early Campaign Game Base Quivers
-Show
-BaseType "Primed Quiver" "Broadhead Quiver"
-    AreaLevel <= 60
-    SetFontSize 20
-    MinimapIcon 1 Green Square
-    PlayEffect Green
+### Early Campaign Game Base Quivers
+### Show
+### BaseType "Primed Quiver" "Broadhead Quiver"
+###     AreaLevel <= 60
+###     SetFontSize 20
+###     MinimapIcon 1 Green Square
+###     PlayEffect Green
 
 #===============================================================================================================
 # Hide Scrolls of Wisdom once you get the Deckard Cain Dood
@@ -72,7 +72,7 @@ BaseType "Primed Quiver" "Broadhead Quiver"
 
 Hide
 BaseType "Scroll of Wisdom"
-AreaLevel >= 20
+AreaLevel >= 50
     SetFontSize 15
     SetTextColor 220 190 132
     SetBorderColor 220 190 132 150
@@ -225,10 +225,42 @@ BaseType "Ancient Collarbone" "Ancient Jawbone" "Ancient Rib" "Preserved Cranium
     SetBorderColor 150 0 255
     SetBackgroundColor 1 1 1 255
 
+# Color is A dark GOLDish
+Show
+Class "Stackable Currency"
+BaseType "Artificer's Shard" "Arcanist's Etcher" "Armourer's Scrap" "Blacksmith's Whetstone" "Regal Shard" 
+    PlayEffect Grey
+    MinimapIcon 2 Grey Raindrop
+    SetFontSize 15
+    SetTextColor 220 190 175
+    SetBorderColor 220 190 132 175
+    SetBackgroundColor 1 1 1 175
+
+Show
+Class "Stackable Currency"
+BaseType "Orb of Augmentation" "Orb of Transmutation"
+    PlayEffect Grey Temp
+    SetFontSize 15
+    SetTextColor 220 190 175
+    SetBackgroundColor 1 1 1 175
+
+# Color is TEALISH
+Show
+Class "Augment"
+BaseType "Rune"
+    MinimapIcon 2 Cyan Circle
+    PlayEffect Cyan Temp
+    PlayAlertSound 2 200
+    SetFontSize 15
+    SetTextColor 0 240 190 255
+    SetBorderColor 0 240 190 255
+    SetBackgroundColor 1 1 1 255
+
 # Color is PURPLE
 Show
 Class "Stackable Currency"
-BaseType "Simulacrum Splinter" "Breach Splinter" "Artifact" "Liquid " "Catalyst" "Essence of" "Cowardly Fate" "Deadly Fate" "Victorious Fate" "Omen of "
+# "Legacy " "Emergent " " Alloy" " Ore" " Flux" "Cryptic Key" "Shattered Triskelion" "Altered Collarbone" "Verisium" "Exceptional Verisium"
+BaseType " Splinter" "Artifact" "Liquid " "Catalyst" "Essence of" "Omen of " " Infuser" "Refined " "Carved " " Crest" "Soul" "Talisman" "Cowardly Fate" "Deadly Fate" "Victorious Fate"
     PlayAlertSound 13 150
     PlayEffect Purple
     MinimapIcon 2 Purple Moon
@@ -251,29 +283,16 @@ Class "Omen"
 # Color is TEALISH
 Show
 Class "Augment"
-BaseType "Rune" "Soul" "Talisman" "Liquid " " Splinter" "Catalyst" "Essence"
-    MinimapIcon 2 Cyan Circle
-    PlayEffect Cyan Temp
-    PlayAlertSound 2 200
+    PlayAlertSound 13 150
+    PlayEffect Purple
+    MinimapIcon 2 Purple Moon
     SetFontSize 15
-    SetTextColor 0 240 190 255
-    SetBorderColor 0 240 190 255
+    SetTextColor 150 0 255 255
+    SetBorderColor 150 0 255
     SetBackgroundColor 1 1 1 255
 
-# Color is A dark GOLDish
 Show
 Class "Stackable Currency"
-BaseType "Artificer's Shard" "Arcanist's Etcher" "Armourer's Scrap" "Blacksmith's Whetstone" "Regal Shard" 
-    PlayEffect Grey
-    MinimapIcon 2 Grey Raindrop
-    SetFontSize 15
-    SetTextColor 220 190 175
-    SetBorderColor 220 190 132 175
-    SetBackgroundColor 1 1 1 175
-
-Show
-Class "Stackable Currency"
-BaseType "Orb of Augmentation" "Orb of Transmutation"
     PlayEffect Grey Temp
     SetFontSize 15
     SetTextColor 220 190 175
@@ -356,7 +375,8 @@ Class Relics
 
 Show
 Class "Skill Gems" "Support Gems"
-BaseType "Amanamu's Tithe" "Arbiter's Ignition" "Atalui's Bloodletting" "Dialla's Desire" "Esh's Radiance" "Garukhan's Resolve" "Ixchel's Torment" "Rakiata's Flow" "Rigwald's Ferocity" "Tul's Stillness" "Uhtred's Augury" "Uhtred's Exodus" "Uhtred's Omen" "Uul-Netol's Embrace" "Xoph's Pyre" "Atziri's Call" "Atziri's Communion" "Atziri's Impatience" "Brutus' Brain" "Doedre's Undoing" "Dreamer's Knell" "Eonyr's Thunder" "Helbrym's Hide" "Khatal's Rejuvenation" "Kulemak's Dominion" "Sione's Temper" "Tecrod's Revenge" "Zerphi's Infamy" "Ailith's Chimes" "Arjun's Medal" "Atziri's Allure" "Dominus' Grasp" "Hayoxi's Fulmination" "Ratha's Assault" "Uruk's Smelting" "Zarokh's Revolt" "Ahn's Citadel" "Arakaali's Lust" "Daresso's Passion" "Doedre's Undoing" "Kaom's Madness" "Kurgal's Leash" "Paquate's Pact" "Sione's Temper" "Tacati's Ire" "Tawhoa's Tending" "Tecrod's Revenge" "Uruk's Smelting" "Vilenta's Propulsion"
+# "Animus Exchange" "Animus Splinters" "Bitter Dead" "Conductive Runes" "Detonate Living" "Eternal March" "Explosive Transmutation" "Fragments of the Past" "Frostflame Nova" "Grim Pillars" "Hollow Shell" "Leylines" "Powered by Verisium" "Rain of Blades" "Refutation" "Remnants of Kalguur" "Repulsion" "Runic Reprieve" "Skyfall" "Triskelion Cascade" "Verisium Manifestations" "Voltaic Barrier" "Wardbound Minions" "Tangmazu's Thurible" "Catha's Brilliance" "Mórrigan's Insight" "Prototype Seventeen" "Arbiter's Reach" "Her Declaration" "Seraph's Heart" "Trickster's Shard" "Esh's Prowess" "Tul's Avalanche" "Breachlord's Amalgam" "Vruun's Aftermath" "Vruun's Inevitability" "Uhtred's Rite" "Uhtred's Constellation" "Medved's Felling" "Vorana's Siege" "Styrn's Mountain" "Styrn's Ferocity" "Eonyr's Thunder" "Helbrym's Hide" "Concussive Runes" "Fist of Kalguur" "Healing Runes" "Kalguuran Conviction" "Olroth's Hubris" "Runeforged Blades" "Runic Extraction" "Runic Infusion" "Scouring Flame" "Minion Splash I" "Minion Splash II"
+BaseType "Amanamu's Tithe" "Arbiter's Ignition" "Atalui's Bloodletting" "Dialla's Desire" "Esh's Radiance" "Garukhan's Resolve" "Ixchel's Torment" "Rakiata's Flow" "Rigwald's Ferocity" "Tul's Stillness" "Uhtred's Augury" "Uhtred's Exodus" "Uhtred's Omen" "Uul-Netol's Embrace" "Xoph's Pyre" "Atziri's Call" "Atziri's Communion" "Atziri's Impatience" "Brutus' Brain" "Doedre's Undoing" "Dreamer's Knell" "Eonyr's Thunder" "Helbrym's Hide" "Khatal's Rejuvenation" "Kulemak's Dominion" "Sione's Temper" "Tecrod's Revenge" "Zerphi's Infamy" "Ailith's Chimes" "Arjun's Medal" "Atziri's Allure" "Dominus' Grasp" "Hayoxi's Fulmination" "Ratha's Assault" "Uruk's Smelting" "Zarokh's Revolt" "Ahn's Citadel" "Arakaali's Lust" "Daresso's Passion" "Doedre's Undoing" "Kaom's Madness" "Kurgal's Leash" "Paquate's Pact" "Sione's Temper" "Tacati's Ire" "Tawhoa's Tending" "Tecrod's Revenge" "Uruk's Smelting" "Vilenta's Propulsion" 
     PlayAlertSound 2 300
     PlayEffect Cyan
     MinimapIcon 1 Cyan Triangle
@@ -696,7 +716,7 @@ Rarity Unique
 # Show All Rares 
 #===============================================================================================================
 
-# Show all Rare Jewelry items
+# Show all Rare Jewelry & Belts items
 Show
 Class "Ring" "Amulet" "Belt"
 Rarity Rare
@@ -781,13 +801,24 @@ BaseType "Stellar Amulet" "Solar Amulet" "Amber Amulet" "Gold Amulet"
     SetBorderColor 100 150 150 255
     SetBackgroundColor 1 1 1 255
 
-# Show Specific bases to sell for Crafting as Chance Items
+# Show all Normal Belts items
 Show
+Class "Belt"
 Rarity Normal
-BaseType "Heavy Belt" "Thawing Charm" "Gauze Wraps" "Linen Belt" "Wide Belt" "Armoured Vest" "Crimson Amulet" "Double Belt" "Emerald Ring" "Fine Belt" "Iron Ring" "Lazuli Ring" "Long Belt" "Rawhide Belt" "Utility Belt" "Vile Robe" "Obliterator Bow" "Visceral Quiver" 
     PlayEffect Green
     MinimapIcon 1 Green Kite
-    SetFontSize 18
+    SetFontSize 13
+    SetTextColor 100 255 150
+    SetBorderColor 100 255 150 255
+    SetBackgroundColor 1 1 1 255
+
+# Show all Normal/Magic Jewelry
+Show
+Class "Ring" "Amulet"
+Rarity Normal Magic
+    PlayEffect Green
+    MinimapIcon 1 Green Kite
+    SetFontSize 13
     SetTextColor 100 255 150
     SetBorderColor 100 255 150 255
     SetBackgroundColor 1 1 1 255
@@ -842,43 +873,28 @@ Show # All Charms in zones lower than 65 (Campaign)
 # Salvagable Items For Socket Shards or Quality Shards
 #===============================================================================================================
 
-Show
+#Show
+Hide
 Sockets > 0
-Class "Helmets" "Boots" "Gloves" "Staves" "Wands" "Talismans" "Daggers" "Claws" "Spears" "Bucklers"
+Class "Helmets" "Boots" "Gloves" "Wands" "Talismans" "Daggers" "Claws" "Spears" "Bucklers"
 Rarity Normal Magic
     SetFontSize 15
     SetTextColor 90 150 90
     SetBorderColor 90 150 90
     SetBackgroundColor 1 1 1 200
 
-Show
-Sockets > 0
-Rarity Normal Magic
-AreaLevel < 45
-    SetFontSize 15
-    SetTextColor 90 150 90
-    SetBorderColor 90 150 90
-    SetBackgroundColor 1 1 1 200
-
-Show
+#Show
+Hide
 Quality >= 1
-Class "Helmets" "Boots" "Gloves" "Staves" "Wands" "Talismans" "Daggers" "Claws" "Spears" "Bucklers"
+Class "Helmets" "Boots" "Gloves" "Wands" "Talismans" "Daggers" "Claws" "Spears" "Bucklers"
 Rarity Normal Magic
     SetFontSize 15
     SetTextColor 90 150 90
     SetBorderColor 90 150 90
     SetBackgroundColor 1 1 1 200
 
-Show
-Quality >= 1
-Rarity Normal Magic
-AreaLevel < 45
-    SetFontSize 15
-    SetTextColor 90 150 90
-    SetBorderColor 90 150 90
-    SetBackgroundColor 1 1 1 200
-
-Show
+#Show
+Hide
 Class "Life Flasks" "Mana Flasks"
 Quality >= 1
     SetFontSize 15
@@ -890,55 +906,84 @@ Quality >= 1
 # Crafting Bases
 #===============================================================================================================
 
-# Show EnergyShield/Evasion Only Gear
-Show
-Class "Helmet" 
-Rarity Normal Magic
-BaseArmour <= 1
-BaseEvasion >= 1
-BaseEnergyShield >= 1
-	AreaLevel < 50
-    SetFontSize 15
-    SetBackgroundColor 1 1 1 150
-
-# Show Pure Evasion Only Gear
+# Show Armor/Evasion Only Gear
 Show
 Class "Helmet" "Body Armour" "Glove" "Boots"
 Rarity Normal Magic
-BaseArmour <= 1
+BaseArmour >= 1
 BaseEvasion >= 1
 BaseEnergyShield <= 1
-	AreaLevel < 50
-    SetFontSize 15
+	AreaLevel < 55
+    SetFontSize 16
     SetBackgroundColor 1 1 1 150
 
-# Show Bows and Quivers
+# Show Pure Armor Only Gear
 Show
-BaseType "Primed Quiver" "Visceral Quiver" "Broadhead Quiver" "Obliterator Bow" "Artillery Bow" "Recurve Bow"
+Class "Helmet" "Body Armour" "Glove" "Boots"
 Rarity Normal Magic
-    SetFontSize 15
+BaseArmour >= 1
+BaseEvasion <= 1
+BaseEnergyShield <= 1
+ 	 AreaLevel < 50
+    SetFontSize 16
     SetBackgroundColor 1 1 1 150
 
-# Show Belts & Rings & Amulets
+# Show EnergyShield/Evasion Only Gear
+#Show
+#Class "Helmet" "Body Armour" "Glove" "Boots"
+#Rarity Normal Magic
+#BaseArmour <= 1
+#BaseEvasion >= 1
+#BaseEnergyShield >= 1
+#	AreaLevel < 55
+#    SetFontSize 16
+#    SetBackgroundColor 1 1 1 150
+
+# Show Pure Evasion Only Gear
+#Show
+#Class "Helmet" "Body Armour" "Glove" "Boots"
+#Rarity Normal Magic
+#BaseArmour <= 1
+#BaseEvasion >= 1
+#BaseEnergyShield <= 1
+# 	 AreaLevel < 50
+#    SetFontSize 16
+#    SetBackgroundColor 1 1 1 150
+
+# Show Key Leveling Weapons
 Show
-BaseType "Rawhide Belt" "Utility Belt"
-Rarity Normal Magic
-    PlayEffect Blue
-    MinimapIcon 2 Blue Square 
-    PlayEffect Blue
-    SetFontSize 15
-    SetBorderColor 0 0 180 250
+Class "Quarterstave"
+    SetFontSize 16
+    AreaLevel < 14
     SetBackgroundColor 1 1 1 150
 
 # Show Rings & Amulets
 Show
 Class "Rings" "Amulets"
-Rarity Normal Magic
     PlayEffect Blue
     MinimapIcon 2 Blue Square 
     PlayEffect Blue
-    SetFontSize 15
+    SetFontSize 16
     SetBorderColor 0 0 180 250
+    SetBackgroundColor 1 1 1 150
+
+
+#===============================================================================================================
+# Show all First Few Levels
+#===============================================================================================================
+
+# Put on Talisman ASAP - At lvl 6 put ponce on
+Show
+Class "Talisman"
+	AreaLevel < 10
+    SetFontSize 15
+    SetBackgroundColor 1 1 1 150
+
+
+# Show Everything during the first few levels
+Show
+	AreaLevel < 5
+    SetFontSize 15
     SetBackgroundColor 1 1 1 150
 
 #===============================================================================================================
@@ -956,13 +1001,6 @@ Rarity Normal Magic
 Hide
 Class "Crossbows" "Bows" "Two Hand Maces" "Staves" "Wands" "Shields" "Foci" "One Hand Maces" "Quivers" "Sceptres" "Focus" "Talisman"
 Rarity Normal Magic
-	AreaLevel >= 39
-    SetFontSize 15
-    SetBackgroundColor 1 1 1 150
-
-# Hide all Belts & Rings & Amulets
-Hide
-Class "Rings" "Amulets" "Belt"
     SetFontSize 15
     SetBackgroundColor 1 1 1 150
     

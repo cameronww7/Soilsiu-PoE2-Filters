@@ -1,7 +1,7 @@
 #===============================================================================================================
 # Soilsiu's Early Mapping Filter - for Path of Exile 2
 #===============================================================================================================
-# VERSION:  0.4.0
+# VERSION:  0.5.0
 # TYPE:     Early Mapping
 # AUTHOR:   Soilsiu
 # 
@@ -175,7 +175,7 @@ BaseType "Chaos Orb" "Exalted Orb" "Greater Chaos Orb" "Greater Exalted Orb" "Fr
     MinimapIcon 1 Green Cross
     PlayAlertSound 5 200
     PlayEffect Green
-    SetFontSize 18
+    SetFontSize 17
     SetTextColor 0 200 0 255
     SetBorderColor 0 200 0 255 
     SetBackgroundColor 1 1 1 255
@@ -202,10 +202,41 @@ BaseType "Ancient Collarbone" "Ancient Jawbone" "Ancient Rib" "Preserved Cranium
     SetBorderColor 150 0 255
     SetBackgroundColor 1 1 1 255
 
+# Color is A dark GOLDish
+Show
+Class "Stackable Currency"
+BaseType "Artificer's Shard" "Arcanist's Etcher" "Armourer's Scrap" "Blacksmith's Whetstone" "Regal Shard" 
+    PlayEffect Grey
+    MinimapIcon 2 Grey Raindrop
+    SetFontSize 15
+    SetTextColor 220 190 175
+    SetBorderColor 220 190 132 175
+    SetBackgroundColor 1 1 1 175
+
+Show
+Class "Stackable Currency"
+BaseType "Orb of Augmentation" "Orb of Transmutation"
+    PlayEffect Grey Temp
+    SetFontSize 15
+    SetTextColor 220 190 175
+    SetBackgroundColor 1 1 1 175
+
+# Color is TEALISH
+Show
+Class "Augment"
+BaseType "Rune"
+    MinimapIcon 2 Cyan Circle
+    PlayEffect Cyan Temp
+    PlayAlertSound 2 200
+    SetFontSize 15
+    SetTextColor 0 240 190 255
+    SetBorderColor 0 240 190 255
+    SetBackgroundColor 1 1 1 255
+
 # Color is PURPLE
 Show
 Class "Stackable Currency"
-BaseType "Simulacrum Splinter" "Breach Splinter" "Artifact" "Liquid " "Catalyst" "Essence of" "Cowardly Fate" "Deadly Fate" "Victorious Fate" "Omen of "
+BaseType " Splinter" "Artifact" "Liquid " "Catalyst" "Essence of" "Omen of " "Legacy " " Infuser" "Refined " "Carved " "Emergent " " Alloy" " Ore" " Flux" " Crest" "Soul" "Talisman" "Cryptic Key" "Cowardly Fate" "Deadly Fate" "Victorious Fate" "Shattered Triskelion" "Altered Collarbone" "Verisium" "Exceptional Verisium"
     PlayAlertSound 13 150
     PlayEffect Purple
     MinimapIcon 2 Purple Moon
@@ -228,24 +259,19 @@ Class "Omen"
 # Color is TEALISH
 Show
 Class "Augment"
-BaseType "Rune" "Soul" "Talisman" "Liquid " " Splinter" "Catalyst" "Essence"
-    MinimapIcon 2 Cyan Circle
-    PlayEffect Cyan Temp
-    PlayAlertSound 2 200
+    PlayAlertSound 13 150
+    PlayEffect Purple
+    MinimapIcon 2 Purple Moon
     SetFontSize 15
-    SetTextColor 0 240 190 255
-    SetBorderColor 0 240 190 255
+    SetTextColor 150 0 255 255
+    SetBorderColor 150 0 255
     SetBackgroundColor 1 1 1 255
 
-# Color is A dark GOLDish
 Show
 Class "Stackable Currency"
-BaseType "Artificer's Shard" "Arcanist's Etcher" "Armourer's Scrap" "Blacksmith's Whetstone" "Regal Shard" "Orb of Augmentation" "Orb of Transmutation"
-    PlayEffect Grey
-    MinimapIcon 2 Grey Raindrop
+    PlayEffect Grey Temp
     SetFontSize 15
     SetTextColor 220 190 175
-    SetBorderColor 220 190 132 175
     SetBackgroundColor 1 1 1 175
 
 #===============================================================================================================
@@ -326,7 +352,7 @@ Class Relics
 
 Show
 Class "Skill Gems" "Support Gems"
-BaseType "Amanamu's Tithe" "Arbiter's Ignition" "Atalui's Bloodletting" "Dialla's Desire" "Esh's Radiance" "Garukhan's Resolve" "Ixchel's Torment" "Rakiata's Flow" "Rigwald's Ferocity" "Tul's Stillness" "Uhtred's Augury" "Uhtred's Exodus" "Uhtred's Omen" "Uul-Netol's Embrace" "Xoph's Pyre" "Atziri's Call" "Atziri's Communion" "Atziri's Impatience" "Brutus' Brain" "Doedre's Undoing" "Dreamer's Knell" "Eonyr's Thunder" "Helbrym's Hide" "Khatal's Rejuvenation" "Kulemak's Dominion" "Sione's Temper" "Tecrod's Revenge" "Zerphi's Infamy" "Ailith's Chimes" "Arjun's Medal" "Atziri's Allure" "Dominus' Grasp" "Hayoxi's Fulmination" "Ratha's Assault" "Uruk's Smelting" "Zarokh's Revolt" "Ahn's Citadel" "Arakaali's Lust" "Daresso's Passion" "Doedre's Undoing" "Kaom's Madness" "Kurgal's Leash" "Paquate's Pact" "Sione's Temper" "Tacati's Ire" "Tawhoa's Tending" "Tecrod's Revenge" "Uruk's Smelting" "Vilenta's Propulsion"
+BaseType "Amanamu's Tithe" "Arbiter's Ignition" "Atalui's Bloodletting" "Dialla's Desire" "Esh's Radiance" "Garukhan's Resolve" "Ixchel's Torment" "Rakiata's Flow" "Rigwald's Ferocity" "Tul's Stillness" "Uhtred's Augury" "Uhtred's Exodus" "Uhtred's Omen" "Uul-Netol's Embrace" "Xoph's Pyre" "Atziri's Call" "Atziri's Communion" "Atziri's Impatience" "Brutus' Brain" "Doedre's Undoing" "Dreamer's Knell" "Eonyr's Thunder" "Helbrym's Hide" "Khatal's Rejuvenation" "Kulemak's Dominion" "Sione's Temper" "Tecrod's Revenge" "Zerphi's Infamy" "Ailith's Chimes" "Arjun's Medal" "Atziri's Allure" "Dominus' Grasp" "Hayoxi's Fulmination" "Ratha's Assault" "Uruk's Smelting" "Zarokh's Revolt" "Ahn's Citadel" "Arakaali's Lust" "Daresso's Passion" "Doedre's Undoing" "Kaom's Madness" "Kurgal's Leash" "Paquate's Pact" "Sione's Temper" "Tacati's Ire" "Tawhoa's Tending" "Tecrod's Revenge" "Uruk's Smelting" "Vilenta's Propulsion" "Animus Exchange" "Animus Splinters" "Bitter Dead" "Conductive Runes" "Detonate Living" "Eternal March" "Explosive Transmutation" "Fragments of the Past" "Frostflame Nova" "Grim Pillars" "Hollow Shell" "Leylines" "Powered by Verisium" "Rain of Blades" "Refutation" "Remnants of Kalguur" "Repulsion" "Runic Reprieve" "Skyfall" "Triskelion Cascade" "Verisium Manifestations" "Voltaic Barrier" "Wardbound Minions" "Tangmazu's Thurible" "Catha's Brilliance" "Mórrigan's Insight" "Prototype Seventeen" "Arbiter's Reach" "Her Declaration" "Seraph's Heart" "Trickster's Shard" "Esh's Prowess" "Tul's Avalanche" "Breachlord's Amalgam" "Vruun's Aftermath" "Vruun's Inevitability" "Uhtred's Rite" "Uhtred's Constellation" "Medved's Felling" "Vorana's Siege" "Styrn's Mountain" "Styrn's Ferocity" "Eonyr's Thunder" "Helbrym's Hide" "Concussive Runes" "Fist of Kalguur" "Healing Runes" "Kalguuran Conviction" "Olroth's Hubris" "Runeforged Blades" "Runic Extraction" "Runic Infusion" "Scouring Flame" "Minion Splash I" "Minion Splash II"
     PlayAlertSound 2 300
     PlayEffect Cyan
     MinimapIcon 1 Cyan Triangle
@@ -583,7 +609,7 @@ Class "Ring" "Amulet" "Belt"
     SetBorderColor 255 255 0 250
     SetBackgroundColor 1 1 1 150
 
-# Show all Rare Unidentified Jewelry items
+# Show all Rare Jewelry & Belts items
 Show
 Rarity Rare
 UnidentifiedItemTier <= 9
@@ -715,6 +741,17 @@ BaseType "Heavy Belt" "Thawing Charm" "Gauze Wraps" "Linen Belt" "Wide Belt" "Ar
     SetBorderColor 100 255 150 255
     SetBackgroundColor 1 1 1 255
 
+# Show all Normal Jewelry & Belts items
+Show
+Class "Ring" "Amulet" "Belt"
+Rarity Normal Magic
+    PlayEffect Green
+    MinimapIcon 1 Green Kite
+    SetFontSize 13
+    SetTextColor 100 255 150
+    SetBorderColor 100 255 150 255
+    SetBackgroundColor 1 1 1 255
+
 #===============================================================================================================
 # Endgame Base Items
 #===============================================================================================================
@@ -742,6 +779,7 @@ Class "Ring" "Amulet" "Belt"
     SetBorderColor 255 255 255 250
     SetBackgroundColor 1 1 1 250
 
+# This is to attempt to sell things and see what sells
 Show
 Rarity Normal
     ItemLevel >= 79
@@ -837,6 +875,23 @@ Quality >= 1
 # Crafting Bases
 #===============================================================================================================
 
+# Show Key Weapons with Tier 1-5
+Show
+Class "Quarterstave"
+    UnidentifiedItemTier <= 5
+    ItemLevel >= 60
+    SetFontSize 16
+    SetBackgroundColor 1 1 1 150
+
+# Show Key Normal Weapons
+Show
+Rarity Normal
+Class "Quarterstave"
+    ItemLevel >= 60
+    SetFontSize 16
+    SetBackgroundColor 1 1 1 150
+
+
 # Pure Evasion Only Gear
 #Show
 #Class "Body Armour"
@@ -858,6 +913,18 @@ Quality >= 1
 #BaseEnergyShield >= 1
 #    SetFontSize 13
 #    SetBackgroundColor 1 1 1 150
+
+# Show Rings & Amulets & Belts
+Show
+Class "Rings" "Amulets" "Belts"
+Rarity Normal Magic
+    AreaLevel < 80
+    PlayEffect Blue
+    MinimapIcon 2 Blue Square 
+    PlayEffect Blue
+    SetFontSize 15
+    SetBorderColor 0 0 180 250
+    SetBackgroundColor 1 1 1 150
 
 #===============================================================================================================
 # Hide Item Options
