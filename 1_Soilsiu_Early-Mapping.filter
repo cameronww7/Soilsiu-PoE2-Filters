@@ -1,7 +1,7 @@
 #===============================================================================================================
-# Soilsiu's Early Mapping Filter - for Path of Exile 2
+# Section - Soilsiu's Early Mapping Filter - for Path of Exile 2
 #===============================================================================================================
-# VERSION:  0.5.0
+# Section - VERSION:  0.5.0
 # TYPE:     Early Mapping
 # AUTHOR:   Soilsiu
 # 
@@ -21,11 +21,11 @@
 # 2) INGAME: Escape -> Options -> UI -> Scroll down -> Select the filter from the Dropdown box
 # 
 #===============================================================================================================
-# Filter Settings
+# Section - Filter Settings
 #===============================================================================================================
 
 #===============================================================================================================
-# Overrides
+# Section - Overrides
 #  This is a section to toss in overrides, such as wanting to always show a certain base
 #===============================================================================================================
 
@@ -36,12 +36,12 @@ UnidentifiedItemTier <= 2
     MinimapIcon 2 Green Square 
     PlayEffect Green
     SetFontSize 20
-    SetTextColor 0 255 0
-    SetBorderColor 0 255 0 255
+    SetTextColor 0 200 0
+    SetBorderColor 0 200 0 255
     SetBackgroundColor 255 255 255 255
 
 #===============================================================================================================
-# Exceptional Items - 3 Socket or 21%+ Quality
+# Section - Exceptional Items - 3 Socket or 21%+ Quality
 #===============================================================================================================
 
 Show
@@ -59,7 +59,7 @@ Quality >= 21
     SetBackgroundColor 1 1 1 200
 
 #===============================================================================================================
-# Hide Scrolls of Wisdom
+# Section - Hide Scrolls of Wisdom
 #===============================================================================================================
 
 Hide
@@ -71,18 +71,27 @@ AreaLevel >= 20
     SetBackgroundColor 1 1 1 150
 
 #===============================================================================================================
-# Quest Items
+# Section - Quest Items
 #===============================================================================================================
 
 Show
-Class "Instance Local Items" "Quest Items"
+Class == "Quest Items"
+    PlayAlertSound 2 200
     MinimapIcon 1 Grey Square
-    SetFontSize 15
+    SetFontSize 20
+    SetBorderColor 0 191 0 200
+    SetBackgroundColor 1 1 1 150
+
+Show
+Class == "Instance Local Items"
+    PlayAlertSound 2 200
+    MinimapIcon 1 Grey Square
+    SetFontSize 20
     SetBorderColor 0 191 0 200
     SetBackgroundColor 1 1 1 150
 
 #===============================================================================================================
-# Gold
+# Section - Gold
 #===============================================================================================================
 
 Show
@@ -90,7 +99,7 @@ StackSize >= 5000
 BaseType "Gold"
 	PlayEffect Orange Temp
 	MinimapIcon 0 Orange Cross
-    SetFontSize 17
+    SetFontSize 20
 	SetTextColor 200 175 0 255
 	SetBorderColor 200 175 0 255
     SetBackgroundColor 1 1 1 255
@@ -100,40 +109,40 @@ StackSize >= 2500
 BaseType "Gold"
 	PlayEffect Orange Temp
 	MinimapIcon 0 Orange Cross
-    SetFontSize 16
-	SetTextColor 200 175 0 225
-	SetBorderColor 200 175 0 225
-    SetBackgroundColor 1 1 1 225   
+    SetFontSize 19
+	SetTextColor 200 175 0 255
+	SetBorderColor 200 175 0 255
+    SetBackgroundColor 1 1 1 255
     
 Show
 StackSize >= 1000
 BaseType "Gold"
 	PlayEffect Orange Temp
     MinimapIcon 1 Orange Cross
-    SetFontSize 15
-	SetTextColor 200 175 0 200
-	SetBorderColor 200 175 0 200
+    SetFontSize 18
+	SetTextColor 200 175 0 225
+	SetBorderColor 200 175 0 225
     SetBackgroundColor 1 1 1 200
 
 Show
 StackSize >= 500
 BaseType "Gold"
 	PlayEffect Orange Temp
-    SetFontSize 14
-	SetTextColor 200 175 0 200
-	SetBorderColor 1 1 1 200
+    SetFontSize 17
+	SetTextColor 200 175 0 225
+	SetBorderColor 200 175 0 225
     SetBackgroundColor 1 1 1 200
 
 #### Shows all Gold
 Show
 BaseType == "Gold"
-    SetFontSize 13
+    SetFontSize 14
 	SetTextColor 200 175 0 175
     SetBorderColor 1 1 1 0
     SetBackgroundColor 1 1 1 0
 
 #===============================================================================================================
-# Exotic Bases
+# Section - Exotic Bases
 #===============================================================================================================
 
 Show # Showing Super Exotic Bases
@@ -170,7 +179,7 @@ Show # Showing Fishing Rod
 	SetBackgroundColor 70 0 20 255
 
 #===============================================================================================================
-# Currency Settings
+# Section - Currency
 #===============================================================================================================
 
 Show # PREMO Currency
@@ -179,42 +188,42 @@ BaseType "Albino Rhoa Feather" "Altered Collarbone" "Ancient Collarbone" "Ancien
     PlayAlertSound 3 300
     PlayEffect Green
     MinimapIcon 0 Green Star
-    SetFontSize 22
+    SetFontSize 30
     SetTextColor 0 255 0 255
     SetBorderColor 0 255 0 255 
     SetBackgroundColor 1 1 1 255
 
 Show # Even more GG Currency
 Class "Stackable Currency"
-BaseType "Chaos Orb" "Exalted Orb" "Greater Chaos Orb" "Greater Exalted Orb" "Fracturing Orb" "Orb of Annulment" "Perfect Regal Orb"
+BaseType "Greater Chaos Orb" "Greater Exalted Orb" "Orb of Annulment" "Perfect Regal Orb" "Orb of Alchemy" "Perfect Orb of Transmutation" "Perfect Orb of Augmentation"
     MinimapIcon 1 Green Cross
     PlayAlertSound 5 200
     PlayEffect Green
-    SetFontSize 17
+    SetFontSize 25
+    SetTextColor 0 200 0 255
+    SetBorderColor 0 200 0 255 
+    SetBackgroundColor 1 1 1 255
+
+Show # Even more GG Currency
+Class "Stackable Currency"
+BaseType "Chaos Orb" "Exalted Orb" "Greater Jeweller's Orb" "Vaal Orb" "Greater Orb of Transmutation" "Greater Orb of Augmentation"
+    MinimapIcon 1 Green Cross
+    PlayAlertSound 5 200
+    PlayEffect Green
+    SetFontSize 22
     SetTextColor 0 200 0 255
     SetBorderColor 0 200 0 255 
     SetBackgroundColor 1 1 1 255
 
 Show
 Class "Stackable Currency"
-BaseType "Gemcutter's Prism" "Glassblower's Bauble" "Jeweller" "Perfect" "Greater" "Artificer's Orb" "Chance Shard" "Orb of Alchemy" "Regal Orb" "Vaal Orb"  "Orb of Chance" "Exotic Coinage" 
+BaseType "Gemcutter's Prism" "Glassblower's Bauble" "Jeweller" "Artificer's Orb" "Chance Shard" "Regal Orb" "Vaal Orb"  "Orb of Chance" "Exotic Coinage" 
     MinimapIcon 2 Green Cross
     PlayAlertSound 5 200
     PlayEffect Green
-    SetFontSize 15
+    SetFontSize 18
     SetTextColor 0 175 0 255
     SetBorderColor 0 175 0 255 
-    SetBackgroundColor 1 1 1 255
-
-Show # Even more GG Currency
-Class "Stackable Currency"
-BaseType "Ancient Collarbone" "Ancient Jawbone" "Ancient Rib" "Preserved Cranium" "Preserved Vertebrae" "Gnawed Collarbone" "Gnawed Jawbone" "Gnawed Rib" "Preserved Collarbone" "Preserved Jawbone" "Preserved Rib"
-    PlayAlertSound 13 150
-    PlayEffect Purple
-    MinimapIcon 2 Purple Moon
-    SetFontSize 15
-    SetTextColor 200 75 255 255
-    SetBorderColor 200 75 255
     SetBackgroundColor 1 1 1 255
 
 # Color is A dark GOLDish
@@ -237,42 +246,102 @@ BaseType "Orb of Augmentation" "Orb of Transmutation"
     SetTextColor 220 190 175
     SetBackgroundColor 1 1 1 175
 
-# Color is TEALISH
-Show
-Class "Augment"
-BaseType "Rune"
-    MinimapIcon 2 Cyan Circle
-    PlayEffect Cyan Temp
-    PlayAlertSound 2 200
-    SetFontSize 15
-    SetTextColor 0 240 190 255
-    SetBorderColor 0 240 190 255
+# Special Endgame Mechanic/Activites Currency
+Show 
+Class "Stackable Currency"
+BaseType "Ancient Collarbone" "Ancient Jawbone" "Ancient Rib" "Preserved Cranium" "Preserved Vertebrae" "Gnawed Collarbone" "Gnawed Jawbone" "Gnawed Rib" "Preserved Collarbone" "Preserved Jawbone" "Preserved Rib"
+    PlayAlertSound 13 150
+    PlayEffect Purple
+    MinimapIcon 2 Purple Moon
+    SetFontSize 25
+    SetTextColor 200 75 255 255
+    SetBorderColor 200 75 255
     SetBackgroundColor 1 1 1 255
 
-# Color is PURPLE
+# Special Endgame Mechanic/Activites Currency
 Show
 Class == "Incubators" "Stackable Currency"
 BaseType " Splinter" "Breach" "Runic" "Simulacrum" "Petition" "Artifact" "Liquid " "Catalyst" "Essence of" "Omen of " "Legacy " "Breachlord Sac" " Infuser" "Refined " "Carved " "Emergent " " Alloy" " Ore" " Flux" " Crest" "Soul" "Talisman" "Cryptic Key" "Cowardly Fate" "Deadly Fate" "Victorious Fate" "Shattered Triskelion" "Altered Collarbone" "Verisium" "Exceptional Verisium"
     PlayAlertSound 13 150
     PlayEffect Purple
     MinimapIcon 2 Purple Moon
-    SetFontSize 15
+    SetFontSize 22
     SetTextColor 200 75 255 255
-    SetBorderColor 200 75 255
+    SetBorderColor 200 75 255 255
+    SetBackgroundColor 237 233 222 255
+
+# S Tier Meta-Crafting Runes
+Show
+  Class == "Augment"
+  BaseType == "Aldur's Legacy" "Serle's Triumph" "Cadigan's Epiphany" "Astrid's Creativity" "Masterwork Rune" "Uhtred's Sidereus" "Kolr's Hunt" "Medved's Tending" "Katla's Gloom" "Passion of Aldur" "Breath of Aldur" "Ire of Aldur" "Betrayal of Aldur" "Vorana's Carnage" "Thrud's Might"
+    MinimapIcon 2 Cyan Circle
+    PlayEffect Cyan Temp
+    PlayAlertSound 2 200
+    SetFontSize 25
+    SetTextColor 0 240 190 255
+    SetBorderColor 0 240 190 255
     SetBackgroundColor 1 1 1 255
 
-# Color is PURPLE
+# Teal Runes
+Show
+Class "Augment"
+BaseType == "Hedgewitch Assandra's Rune of Wisdom" "Farrul's Rune of the Chase" "Saqawal's Rune of the Sky" "Fenumus' Rune of Agony" "Farrul's Rune of Grace" "Craiceann's Rune of Warding" "Saqawal's Rune of Memory" "Saqawal's Rune of Erosion" "Farrul's Rune of the Hunt" "Craiceann's Rune of Recovery" "Courtesan Mannan's Rune of Cruelty" "Thane Grannell's Rune of Mastery" "Fenumus' Rune of Spinning" "Countess Seske's Rune of Archery" "The Greatwolf's Rune of Claws" "The Greatwolf's Rune of Willpower" "Thane Girt's Rune of Wildness" "Fenumus' Rune of Draining" "Thane Myrk's Rune of Summer" "Lady Hestra's Rune of Winter" "Thane Leld's Rune of Spring"
+    MinimapIcon 2 Cyan Circle
+    PlayEffect Cyan Temp
+    PlayAlertSound 2 200
+    SetFontSize 25
+    SetTextColor 0 240 190 255
+    SetBorderColor 0 240 190 255
+    SetBackgroundColor 1 1 1 255
+
+# Teal Runes
+Show
+Class "Augment"
+BaseType "Greater Rune"
+    MinimapIcon 2 Cyan Circle
+    PlayEffect Cyan Temp
+    PlayAlertSound 2 200
+    SetFontSize 20
+    SetTextColor 0 240 190 255
+    SetBorderColor 0 240 190 255
+    SetBackgroundColor 1 1 1 255
+
+# Teal Runes
+Show
+Class "Augment"
+BaseType "Lesser Body Rune" "Lesser Robust Rune" "Lesser Adept Rune" "Lesser Mind Rune" "Lesser Stone Rune" "Lesser Vision Rune" "Lesser Desert Rune" "Lesser Glacial Rune" "Lesser Storm Rune" "Lesser Iron Rune" "Lesser Rebirth Rune" "Lesser Inspiration Rune" "Lesser Resolve Rune" "Lesser Ward Rune" "Lesser Charging Rune"
+    MinimapIcon 2 Cyan Circle
+    PlayEffect Cyan Temp
+    PlayAlertSound 2 200
+    SetFontSize 13
+    SetTextColor 0 240 190 255
+    SetBorderColor 0 240 190 255
+    SetBackgroundColor 1 1 1 255
+
+# Teal Runes
+Show
+Class "Augment"
+BaseType "Rune"
+    MinimapIcon 2 Cyan Circle
+    PlayEffect Cyan Temp
+    PlayAlertSound 2 200
+    SetFontSize 13
+    SetTextColor 0 240 190 255
+    SetBorderColor 0 240 190 255
+    SetBackgroundColor 1 1 1 255
+
+# Purple Omens
 Show
 Class "Omen" 
     PlayAlertSound 13 150
     PlayEffect Purple
     MinimapIcon 2 Purple Moon
-    SetFontSize 15
+    SetFontSize 20
     SetTextColor 200 75 255 255
     SetBorderColor 200 75 255
     SetBackgroundColor 1 1 1 255
 
-# Color is TEALISH
+# Teal Augments
 Show
 Class "Augment"
     PlayAlertSound 13 150
@@ -292,7 +361,7 @@ Class "Stackable Currency"
     SetBackgroundColor 1 1 1 175
 
 #===============================================================================================================
-# Trails/Keys/Etc Items
+# Section - Trails/Keys/Etc Items
 #===============================================================================================================
 
 Show
@@ -339,7 +408,7 @@ BaseType "An Audience with the King" "Breachstone" "Call of the Shadows" "Coward
     MinimapIcon 1 Purple Star
     PlayAlertSound 12 200
     PlayEffect Purple
-    SetFontSize 15
+    SetFontSize 25
     SetTextColor 200 75 255 255
     SetBorderColor 100 100 255 255
     SetBackgroundColor 1 1 1 150
@@ -355,7 +424,7 @@ Show # Show Vault Keys
 	MinimapIcon 0 Red Star
 
 #===============================================================================================================
-# Show All Relics
+# Section - Relics
 #===============================================================================================================
 
 Show
@@ -363,13 +432,24 @@ Class Relics
     SetFontSize 15
 
 #===============================================================================================================
-# Uncut Gems (Skill, Spirit, Support, etc)
+# Section - Gems Lineage
 #===============================================================================================================
 
-Show
-Class "Skill Gems" "Support Gems"
-BaseType "Ailith's Chimes" "Amanamu's Tithe" "Arbiter's Ignition" "Arbiter's Reach" "Arakaali's Lust" "Arjun's Medal" "Ahn's Citadel" "Atalui's Bloodletting" "Atziri's Allure" "Atziri's Call" "Atziri's Communion" "Atziri's Impatience" "Bhatair's Vengeance" "Breachlord's Amalgam" "Breachlord's Rift" "Brutus' Brain" "Catha's Brilliance" "Cirel's Cultivation" "Daresso's Passion" "Dialla's Desire" "Doedre's Undoing" "Dominus' Grasp" "Dreamer's Knell" "Einhar's Beastrite" "Eonyr's Thunder" "Esh's Prowess" "Esh's Radiance" "Garukhan's Resolve" "Guatelitzi's Ablation" "Hayoxi's Fulmination" "Helbrym's Hide" "Her Declaration" "Ixchel's Torment" "Kalisa's Crescendo" "Kaom's Madness" "Khatal's Rejuvenation" "Kulemak's Dominion" "Kurgal's Leash" "Medved's Felling" "Mórrigan's Insight" "Morgana's Tempest" "Oisín's Oath" "Olroth's Conviction" "Olroth's Hubris" "Paquate's Pact" "Prototype Seventeen" "Rakiata's Flow" "Ratha's Assault" "Rigwald's Ferocity" "Romira's Requital" "Seraph's Heart" "Sione's Temper" "Styrn's Ferocity" "Styrn's Mountain" "Tacati's Ire" "Tangmazu's Thurible" "Tasalio's Rhythm" "Tawhoa's Tending" "Tecrod's Revenge" "Trickster's Shard" "Tul's Avalanche" "Tul's Stillness" "Uhtred's Augury" "Uhtred's Constellation" "Uhtred's Exodus" "Uhtred's Omen" "Uhtred's Rite" "Uul-Netol's Embrace" "Varashta's Blessing" "Vilenta's Propulsion" "Vorana's Siege" "Vruun's Aftermath" "Vruun's Inevitability" "Xibaqua's Rending" "Xoph's Pyre" "Zarokh's Refrain" "Zarokh's Revolt" "Zerphi's Infamy"
-    PlayAlertSound 2 300
+Show # S-Tier Support Gems (currency)
+Class == "Support Gems"
+BaseType == "Brutus' Brain" "Tecrod's Revenge" "Dialla's Desire" "Xoph's Pyre" "Esh's Radiance" "Tul's Stillness" "Uul-Netol's Embrace" "Rakiata's Flow" "Rigwald's Ferocity" "Uhtred's Exodus" "Uhtred's Omen" "Uhtred's Augury" "Garukhan's Resolve" "Amanamu's Tithe" "Arbiter's Ignition" "Catha's Brilliance" "Seraph's Heart" "Breachlord's Amalgam" "Uhtred's Constellation" "Vorana's Siege" "Olroth's Conviction" "Her Declaration"
+    PlayAlertSound 6 250
+    PlayEffect Red
+    MinimapIcon 1 Red Star
+    SetFontSize 25
+    SetTextColor 255 100 100 255
+    SetBorderColor 255 100 100 255
+    SetBackgroundColor 200 200 200 255
+
+Show # A-Tier Support Gems (currency)
+Class == "Support Gems"
+BaseType == "Atalui's Bloodletting" "Ailith's Chimes" "Sione's Temper" "Ixchel's Torment" "Atziri's Communion" "Dreamer's Knell" "Khatal's Rejuvenation" "Atziri's Call" "Zerphi's Infamy" "Helbrym's Hide" "Eonyr's Thunder" "Tangmazu's Thurible" "Mórrigan's Insight" "Trickster's Shard" "Esh's Prowess" "Atziri's Communion"
+    PlayAlertSound 6 200
     PlayEffect Red
     MinimapIcon 1 Red Star
     SetFontSize 20
@@ -377,22 +457,113 @@ BaseType "Ailith's Chimes" "Amanamu's Tithe" "Arbiter's Ignition" "Arbiter's Rea
     SetBorderColor 255 100 100 255
     SetBackgroundColor 200 200 200 255
 
+Show # B-Tier Support Gems (currency)
+  Class == "Support Gems"
+  BaseType == "Ahn's Citadel" "Uruk's Smelting" "Doedre's Undoing" "Arjun's Medal" "Romira's Requital" "Atziri's Allure" "Zarokh's Refrain" "Oisín's Oath" "Hayoxi's Fulmination" "Atziri's Impatience" "Zarokh's Revolt" "Arbiter's Reach" "Tul's Avalanche" "Uhtred's Rite" "Medved's Felling" "Styrn's Mountain" "Styrn's Ferocity" "Olroth's Hubris" "Prototype Seventeen"
+    PlayAlertSound 6 150
+    PlayEffect Red
+    MinimapIcon 1 Red Star
+    SetFontSize 18
+    SetTextColor 255 100 100 255
+    SetBorderColor 255 100 100 255
+    SetBackgroundColor 200 200 200 255
+
+Show # C-Tier Support Gems (currency)
+  Class == "Support Gems"
+  BaseType == "Einhar's Beastrite" "Vilenta's Propulsion" "Paquate's Pact" "Ratha's Assault" "Kaom's Madness" "Tawhoa's Tending" "Dominus' Grasp" "Kalisa's Crescendo" "Daresso's Passion" "Tacati's Ire" "Kurgal's Leash" "Kulemak's Dominion" "Varashta's Blessing" "Arakaali's Lust" "Xibaqua's Rending" "Tasalio's Rhythm" "Guatelitzi's Ablation" "Morgana's Tempest" "Bhatair's Vengeance" "Cirel's Cultivation" "Vruun's Aftermath" "Vruun's Inevitability"
+    PlayAlertSound 6 100
+    PlayEffect Red
+    MinimapIcon 1 Red Star
+    SetFontSize 15
+    SetTextColor 255 100 100 255
+    SetBorderColor 255 100 100 255
+    SetBackgroundColor 200 200 200 255
+
+Show # Catch All
+Class "Skill Gems" "Support Gems"
+BaseType "Ailith's Chimes" "Amanamu's Tithe" "Arbiter's Ignition" "Arbiter's Reach" "Arakaali's Lust" "Arjun's Medal" "Ahn's Citadel" "Atalui's Bloodletting" "Atziri's Allure" "Atziri's Call" "Atziri's Communion" "Atziri's Impatience" "Bhatair's Vengeance" "Breachlord's Amalgam" "Breachlord's Rift" "Brutus' Brain" "Catha's Brilliance" "Cirel's Cultivation" "Daresso's Passion" "Dialla's Desire" "Doedre's Undoing" "Dominus' Grasp" "Dreamer's Knell" "Einhar's Beastrite" "Eonyr's Thunder" "Esh's Prowess" "Esh's Radiance" "Garukhan's Resolve" "Guatelitzi's Ablation" "Hayoxi's Fulmination" "Helbrym's Hide" "Her Declaration" "Ixchel's Torment" "Kalisa's Crescendo" "Kaom's Madness" "Khatal's Rejuvenation" "Kulemak's Dominion" "Kurgal's Leash" "Medved's Felling" "Mórrigan's Insight" "Morgana's Tempest" "Oisín's Oath" "Olroth's Conviction" "Olroth's Hubris" "Paquate's Pact" "Prototype Seventeen" "Rakiata's Flow" "Ratha's Assault" "Rigwald's Ferocity" "Romira's Requital" "Seraph's Heart" "Sione's Temper" "Styrn's Ferocity" "Styrn's Mountain" "Tacati's Ire" "Tangmazu's Thurible" "Tasalio's Rhythm" "Tawhoa's Tending" "Tecrod's Revenge" "Trickster's Shard" "Tul's Avalanche" "Tul's Stillness" "Uhtred's Augury" "Uhtred's Constellation" "Uhtred's Exodus" "Uhtred's Omen" "Uhtred's Rite" "Uul-Netol's Embrace" "Varashta's Blessing" "Vilenta's Propulsion" "Vorana's Siege" "Vruun's Aftermath" "Vruun's Inevitability" "Xibaqua's Rending" "Xoph's Pyre" "Zarokh's Refrain" "Zarokh's Revolt" "Zerphi's Infamy"
+    PlayAlertSound 6 300
+    PlayEffect Red
+    MinimapIcon 1 Red Star
+    SetFontSize 15
+    SetTextColor 255 100 100 255
+    SetBorderColor 255 100 100 255
+    SetBackgroundColor 200 200 200 255
+
+#===============================================================================================================
+# Section - Kalguuran Gems (Skill, Spirit, Support, etc)
+#===============================================================================================================
+
+#### Show Uncut Spirit Gem
+Show
+Class == "Skill Gems"
+BaseType == "Animus Exchange" "Animus Splinters" "Bitter Dead" "Conductive Runes" "Detonate Living" "Eternal March" "Explosive Transmutation" "Fragments of the Past" "Frostflame Nova" "Grim Pillars" "Hollow Shell" "Leylines" "Powered by Verisium" "Rain of Blades" "Refutation" "Remnants of Kalguur" "Repulsion" "Runic Reprieve" "Skyfall" "Triskelion Cascade" "Verisium Manifestations" "Voltaic Barrier" "Wardbound Minions" "Concussive Runes" "Fist of Kalguur" "Healing Runes" "Runeforged Blades" "Runic Extraction" "Runic Infusion" "Scouring Flame"
+    PlayAlertSound 2 250
+    PlayEffect Cyan
+    MinimapIcon 1 Cyan Triangle
+    SetFontSize 18
+    SetTextColor 150 225 150 255
+    SetBorderColor 150 225 150  255
+    SetBackgroundColor 1 1 1 255
+
+#===============================================================================================================
+# Section - Gems (Skill, Spirit, Support, etc)
+#===============================================================================================================
+
 #### Show lvl 20 Gems
 Show
-BaseType "Uncut Support Gem" "Uncut Skill Gem" "Uncut Spirit Gem"
-ItemLevel 19 20
+Class "Uncut Support Gem" "Uncut Skill Gem" "Uncut Spirit Gem"
+BaseType = "(Level 20)"
     PlayAlertSound 3 300
     PlayEffect Green
     MinimapIcon 0 Green Star
-    SetFontSize 25
+    SetFontSize 30
     SetTextColor 0 255 0 255
     SetBorderColor 0 255 0 255
+    SetBackgroundColor 1 1 1 255
+
+#----------------------------------
+
+#### Show Uncut Spirit Gem
+Show
+Class == "Uncut Spirit Gems"
+BaseType == "Uncut Spirit Gem (Level 19)"
+    PlayAlertSound 2 250
+    PlayEffect Cyan
+    MinimapIcon 1 Cyan Triangle
+    SetFontSize 25
+    SetTextColor 70 240 150 255
+    SetBorderColor 70 240 150 255
+    SetBackgroundColor 1 1 1 255
+
+#### Show Uncut Spirit Gem
+Show
+Class == "Uncut Spirit Gems"
+BaseType == "Uncut Spirit Gem (Level 16)" "Uncut Spirit Gem (Level 17)" "Uncut Spirit Gem (Level 18)"
+    PlayAlertSound 2 200
+    PlayEffect Cyan
+    MinimapIcon 1 Cyan Triangle
+    SetFontSize 20
+    SetTextColor 70 240 150 255
+    SetBorderColor 70 240 150 255
+    SetBackgroundColor 1 1 1 255
+
+#### Show Uncut Spirit Gem
+Show
+Class == "Uncut Spirit Gems"
+BaseType == "Uncut Spirit Gem (Level 13)" "Uncut Spirit Gem (Level 14)" "Uncut Spirit Gem (Level 15)"
+    PlayAlertSound 2 150
+    PlayEffect Cyan
+    MinimapIcon 1 Cyan Triangle
+    SetFontSize 20
+    SetTextColor 70 240 150 255
+    SetBorderColor 70 240 150 255
     SetBackgroundColor 1 1 1 255
 
 #### Show Uncut Spirit Gem
 Show
 BaseType "Uncut Spirit Gem"
-    PlayAlertSound 2 300
+    PlayAlertSound 2 100
     PlayEffect Cyan
     MinimapIcon 1 Cyan Triangle
     SetFontSize 15
@@ -400,15 +571,91 @@ BaseType "Uncut Spirit Gem"
     SetBorderColor 70 240 150 255
     SetBackgroundColor 1 1 1 255
 
+#----------------------------------
+
+#### Show Uncut Skill Gem
+Show
+Class "Uncut Skill Gem"
+BaseType == "Uncut Skill Gem (Level 19)"
+    PlayAlertSound 2 250
+    PlayEffect Cyan
+    MinimapIcon 1 Cyan Triangle
+    SetFontSize 25
+    SetTextColor 125 255 100 255
+    SetBorderColor 125 255 100 255
+    SetBackgroundColor 1 1 1 255
+
+#### Show Uncut Skill Gem
+Show
+Class "Uncut Skill Gem"
+BaseType == "Uncut Skill Gem (Level 16)" "Uncut Skill Gem (Level 17)" "Uncut Skill Gem (Level 18)"
+    PlayAlertSound 2 200
+    PlayEffect Cyan
+    MinimapIcon 1 Cyan Triangle
+    SetFontSize 20
+    SetTextColor 125 255 100 255
+    SetBorderColor 125 255 100 255
+    SetBackgroundColor 1 1 1 255
+
+#### Show Uncut Skill Gem
+Show
+Class "Uncut Skill Gem"
+BaseType == "Uncut Skill Gem (Level 13)" "Uncut Skill Gem (Level 14)" "Uncut Skill Gem (Level 15)"
+    PlayAlertSound 2 150
+    PlayEffect Cyan
+    MinimapIcon 1 Cyan Triangle
+    SetFontSize 20
+    SetTextColor 125 255 100 255
+    SetBorderColor 125 255 100 255
+    SetBackgroundColor 1 1 1 255
+
 #### Show Uncut Skill Gem
 Show
 BaseType "Uncut Skill Gem"
-    PlayAlertSound 2 300
+    PlayAlertSound 2 100
     PlayEffect Cyan
     MinimapIcon 1 Cyan Triangle
     SetFontSize 15
-    SetTextColor 75 180 200 255
-    SetBorderColor 75 180 200 255
+    SetTextColor 125 255 100 255
+    SetBorderColor 125 255 100 255
+    SetBackgroundColor 1 1 1 255
+
+#----------------------------------
+
+#### Shows Uncut Support Gem
+Show
+Class "Uncut Support Gem"
+BaseType == "Uncut Support Gem (Level 5)"
+    PlayAlertSound 2 300
+    PlayEffect Cyan
+    MinimapIcon 1 Cyan Triangle
+    SetFontSize 22
+    SetTextColor 20 240 240 255
+    SetBorderColor 20 240 240 255
+    SetBackgroundColor 1 1 1 255
+
+#### Shows Uncut Support Gem
+Show
+Class "Uncut Support Gem"
+BaseType == "Uncut Support Gem (Level 4)"
+    PlayAlertSound 2 300
+    PlayEffect Cyan
+    MinimapIcon 1 Cyan Triangle
+    SetFontSize 20
+    SetTextColor 20 240 240 255
+    SetBorderColor 20 240 240 255
+    SetBackgroundColor 1 1 1 255
+
+#### Shows Uncut Support Gem
+Show
+Class "Uncut Support Gem"
+BaseType == "Uncut Support Gem (Level 2)" "Uncut Support Gem (Level 3)"
+    PlayAlertSound 2 300
+    PlayEffect Cyan
+    MinimapIcon 1 Cyan Triangle
+    SetFontSize 17
+    SetTextColor 20 240 240 255
+    SetBorderColor 20 240 240 255
     SetBackgroundColor 1 1 1 255
 
 #### Shows Uncut Support Gem
@@ -422,7 +669,9 @@ BaseType "Uncut Support Gem"
     SetBorderColor 20 240 240 255
     SetBackgroundColor 1 1 1 255
 
-#### Show all Gems in Campaign Zones
+#----------------------------------
+
+#### Show all Support, Skill, Spirit Gems
 Show
 BaseType "Uncut Support Gem" "Uncut Skill Gem" "Uncut Spirit Gem"
     PlayAlertSound 2 300
@@ -436,13 +685,16 @@ BaseType "Uncut Support Gem" "Uncut Skill Gem" "Uncut Spirit Gem"
 #### Show all gems that did not meet above requirements
 Show
 Class "Gem"
+    PlayAlertSound 2 300
+    PlayEffect Cyan
+    MinimapIcon 1 Cyan Triangle
     SetFontSize 15
     SetTextColor 20 240 240 255
     SetBorderColor 20 240 240 255
     SetBackgroundColor 1 1 1 255
 
 #===============================================================================================================
-# Mapping Utility Items
+# Section - Mapping Utility Items
 #===============================================================================================================
 
 Show
@@ -456,7 +708,7 @@ Class "Map Fragments" "Tablet"
     SetBackgroundColor 255 255 255 255
 
 #===============================================================================================================
-# Shows all Currencies that were untagged
+# Section - Currencies
 #===============================================================================================================
 
 # Shows All Unknown Socketable Or Socketable not properly tagged
@@ -480,7 +732,7 @@ Class "Currency"
     SetBackgroundColor 1 1 1 150
 
 #===============================================================================================================
-# Waystone's aka Map's
+# Section - Waystone
 #===============================================================================================================
 
 # Makes Maps 15 and higher Super Green GG Drops
@@ -543,7 +795,7 @@ Class Waystones
     SetBackgroundColor 255 255 255 150
 
 #===============================================================================================================
-# Flasks (Endgame, Only shows Flasks with Quality 10% or Higher)
+# Section - Flasks (Endgame, Only shows Flasks with Quality 10% or Higher)
 #===============================================================================================================
 
 Show
@@ -597,7 +849,7 @@ Class "Mana Flasks"
     SetBackgroundColor 1 1 1 255
 
 #===============================================================================================================
-# Show All Uniques
+# Section - Uniques
 #===============================================================================================================
 
 # Show all Uniques
@@ -611,8 +863,13 @@ Rarity Unique
     SetBackgroundColor 1 1 1 250
 
 #===============================================================================================================
-# Show All Rares 
+# Section - Rares 
 #===============================================================================================================
+
+#
+# Note to Future Soilsiu
+#   You Cannot Filter by Tier - Filter by Item Type and Item Level - BEST WE CAN DO
+#
 
 # Show all Rare Identified Jewelry items
 Show
@@ -626,82 +883,52 @@ Class "Ring" "Amulet"
     SetBackgroundColor 1 1 1 255
 
 # Hide all Rare items of Unidentified After Filtering
-Show
+Hide
+Class "Maces" "Shields" "Focus" "Bucklers" "Crossbows" "Quivers" "Spears"
 Rarity Rare
-UnidentifiedItemTier = 1
     PlayEffect Yellow
-    SetFontSize 20
+    SetFontSize 13
     SetTextColor 255 215 0
     SetBorderColor 255 255 0 250
     SetBackgroundColor 1 1 1 255
 
-# Hide all Rare items of Unidentified After Filtering
-Show
+# Hide Armor Only Gear
+Hide
+Class "Body Armour" "Glove" "Boots" "Helm"
 Rarity Rare
-UnidentifiedItemTier = 2
+    BaseArmour >= 1
+    BaseEvasion <= 1
+    BaseEnergyShield <= 1
     PlayEffect Yellow
-    SetFontSize 17
+    SetFontSize 13
     SetTextColor 255 215 0
     SetBorderColor 255 255 0 250
     SetBackgroundColor 1 1 1 255
 
-# Hide all Rare items of Unidentified After Filtering
+# Shows all Rare items Above Item level 60
 Show
 Rarity Rare
-UnidentifiedItemTier = 3
+ItemLevel >= 60
+    MinimapIcon 1 Yellow Cross
     PlayEffect Yellow
-    SetFontSize 15
+    SetFontSize 13
     SetTextColor 255 215 0
     SetBorderColor 255 255 0 250
     SetBackgroundColor 1 1 1 255
 
-# Hide Large Rare Items all Rare items that are not T1 Or T2
+# Hide all Rare Below Item Level 60
 Hide
 Rarity Rare
-UnidentifiedItemTier >= 4
-BaseType "Mace" "Quarterstaff" "Shield" "Bow" "Crossbow" "Focus" "Sceptre" "Quiver" "Spear" "Staff"
+ItemLevel < 60
     MinimapIcon 1 Yellow Cross
     PlayEffect Yellow
     SetFontSize 13
     SetTextColor 255 215 0
     SetBorderColor 255 255 0 250
-    SetBackgroundColor 1 1 1 150
-
-# Show all Rare items Unidentified Tier 1-4
-Show
-Rarity Rare
-UnidentifiedItemTier <= 4
-    AreaLevel >= 65 
-    MinimapIcon 1 Yellow Cross
-    PlayEffect Yellow
-    SetFontSize 13
-    SetTextColor 255 215 0
-    SetBorderColor 255 255 0 250
-    SetBackgroundColor 1 1 1 150
-
-# Hide all Rare items of Unidentified After Filtering
-Hide
-Rarity Rare
-UnidentifiedItemTier <= 9
-    MinimapIcon 1 Yellow Cross
-    PlayEffect Yellow
-    SetFontSize 13
-    SetTextColor 255 215 0
-    SetBorderColor 255 255 0 250
-    SetBackgroundColor 1 1 1 150
-
-# Hide all Rare items Identified After Filtering
-Hide
-Rarity Rare
-    MinimapIcon 1 Yellow Cross
-    PlayEffect Yellow
-    SetFontSize 13
-    SetTextColor 255 215 0
-    SetBorderColor 255 255 0 250
-    SetBackgroundColor 1 1 1 150
+    SetBackgroundColor 1 1 1 255
 
 #===============================================================================================================
-# Jewels
+# Section - Jewels
 #===============================================================================================================
 
 Show
@@ -712,8 +939,8 @@ Class "Jewel"
     MinimapIcon 0 Blue Diamond
     SetFontSize 25
 	SetTextColor 0 100 255 255
-	SetBorderColor 0 100 255 255
-	SetBackgroundColor 1 1 1 255
+	SetBorderColor 0 200 0 255
+	SetBackgroundColor 0 200 0 255
 
 Show
 Class Jewels
@@ -722,8 +949,8 @@ Class Jewels
 	MinimapIcon 0 Blue Diamond
     SetFontSize 15
 	SetTextColor 0 100 255 255
-	SetBorderColor 0 100 255 255
-	SetBackgroundColor 1 1 1 255
+	SetBorderColor 0 200 0 255
+	SetBackgroundColor 0 200 0 255
 
 Show
 Class "Augment"
@@ -733,11 +960,11 @@ BaseType "Timeless"
 	MinimapIcon 1 Blue Diamond
     SetFontSize 15
 	SetTextColor 0 100 255 255
-	SetBorderColor 0 100 255 255
-	SetBackgroundColor 1 1 1 255
+	SetBorderColor 0 200 0 255
+	SetBackgroundColor 0 200 0 255
 
 #===============================================================================================================
-# Ring / Amulets / Belts
+# Section - Ring / Amulets / Belts
 #===============================================================================================================
 
 # Show all Normal Jewelry & Belts items
@@ -765,11 +992,11 @@ Class "Ring" "Amulet" "Belt"
     SetBackgroundColor 1 1 1 250
 
 #===============================================================================================================
-# Charms
+# Section - Charms
 #===============================================================================================================
 
 Show # Super GG CHARM
-Class "Charms"
+Class Charms
 Quality >= 10
     PlayAlertSound 3 300
 	PlayEffect Blue
@@ -780,8 +1007,9 @@ Quality >= 10
 	SetBorderColor 125 200 255 255
 	SetBackgroundColor 1 1 1 255
 
-Show # Show Quality Charms
-Class "Charms"
+# Show Quality Charms
+Show 
+Class Charms
 Quality > 0
     PlayEffect Blue
 	MinimapIcon 2 Blue Diamond
@@ -790,10 +1018,9 @@ Quality > 0
 	SetBorderColor 125 200 255 255
 	SetBackgroundColor 1 1 1 255
 
-Show # Show Affix Specific ENDGAME CHARMS charms
-Class "Charms"
+# Show Affix Specific ENDGAME CHARMS charms
+Show 
 BaseType "Amethyst Charm" "Stone Charm" "Thawing Charm" "Staunching Charm" "Dousing Charm"
-    AreaLevel <= 70
     PlayEffect Blue
 	MinimapIcon 2 Blue Diamond
     SetFontSize 15
@@ -801,21 +1028,21 @@ BaseType "Amethyst Charm" "Stone Charm" "Thawing Charm" "Staunching Charm" "Dous
 	SetBorderColor 125 200 255 255
 	SetBackgroundColor 1 1 1 255
 
-Hide # Basic Charms
-Class "Charms"
-Rarity Magic
-    BaseType "Ruby Charm" "Sapphire Charm" "Topaz Charm"
+Hide
+BaseType "Ruby Charm" "Sapphire Charm" "Topaz Charm"
+Rarity Normal Magic
     SetFontSize 15
 
-Show # All Charms
-Class "Charms"
+# Show All Charms
+Show 
+Class Charms
     SetFontSize 15
 	SetTextColor 125 200 255 255
 	SetBorderColor 125 200 255 255
 	SetBackgroundColor 1 1 1 255
 
 #===============================================================================================================
-# Salvagable Items For Socket Shards or Quality Shards
+# Section - Salvagable Items For Socket Shards or Quality Shards
 #===============================================================================================================
 
 #### Salvage Socketed items for Socket Shards
@@ -850,7 +1077,7 @@ Quality >= 1
     SetBackgroundColor 1 1 1 200
 
 #===============================================================================================================
-# Crafting Bases
+# Section - Crafting Bases
 #===============================================================================================================
 
 # Show Key Weapons with Tier 1-3
@@ -858,38 +1085,39 @@ Show
 Class "Quarterstave"
 Rarity Magic
     UnidentifiedItemTier <= 3
-    ItemLevel >= 65
+    ItemLevel >= 80
     MinimapIcon 2 Green Square 
     PlayEffect Green
     SetFontSize 15
-    SetTextColor 0 255 0
-    SetBorderColor 0 255 0 255
+    SetTextColor 0 200 0
+    SetBorderColor 0 200 0 255
     SetBackgroundColor 255 255 255 255
 
 # Pure EnergyShield/Evasion Only Gear
-Hide
+Show
 Class "Body Armour" "Glove" "Boots" "Helm"
+#BaseType "Sleek Jacket" "Rambler Jacket" "Grinning Mask" "Vaal Wraps" "Quickslip Shoes" "Daggerfoot Shoes" "Secured Wraps" ""
 Rarity Magic
-    UnidentifiedItemTier <= 3
-    ItemLevel >= 65
+UnidentifiedItemTier <= 2
+ItemLevel >= 80
     BaseArmour <= 1
     BaseEvasion >= 1
     BaseEnergyShield >= 1
     MinimapIcon 2 Green Square 
     PlayEffect Green
     SetFontSize 15
-    SetTextColor 0 255 0
-    SetBorderColor 0 255 0 255
+    SetTextColor 0 200 0
+    SetBorderColor 0 200 0 255
     SetBackgroundColor 255 255 255 255
 
 #===============================================================================================================
-# Endgame Base Items
+# Section - Bases
 #===============================================================================================================
 
 # Bases I know are Selling well
 Show
 Rarity Normal
-BaseType "Flying Spear" "Soaring Spear" "Obliterator Bow" "Gemini Bow" "Visceral Quiver" "Warmonger Bow" "Volant Quiver" "Sinister Quarterstaff" "Bladed Quarterstaff" "Bolting Quarterstaff" "Vaal Wraps" "Grand Bracers" "Bladed Shoes" "Quickslip Shoes"  "Sirenscale Gloves" "Sekhema Sandals"
+BaseType "Obliterator Bow" "Warmonger Bow" "Sinister Quarterstaff" "Vaal Wraps" "Bladed Shoes" "Quickslip Shoes"  "Sirenscale Gloves" "Sekhema Sandals"
     PlayAlertSound 3 300
     PlayEffect White
     MinimapIcon 1 White Diamond
@@ -897,18 +1125,6 @@ BaseType "Flying Spear" "Soaring Spear" "Obliterator Bow" "Gemini Bow" "Visceral
     SetTextColor 200 200 255
     SetBorderColor 200 200 255 250
     SetBackgroundColor 1 1 1 150
-
-# Bases I know are Selling well
-Show
-Rarity Normal
-BaseType "Flying Spear" "Soaring Spear" "Obliterator Bow" "Visceral Quiver" "Volant Quiver" "Sinister Quarterstaff" "Bladed Quarterstaff" "Bolting Quarterstaff" "Vaal Wraps" "Grand Bracers" "Bladed Shoes" "Quickslip Shoes"  "Sirenscale Gloves" "Sekhema Sandals"
-    PlayAlertSound 3 300
-    PlayEffect White
-    MinimapIcon 1 White Diamond
-    SetFontSize 18
-    SetTextColor 255 255 255
-    SetBorderColor 255 255 255 250
-    SetBackgroundColor 1 1 1 250
 
 # Hiding Normal Items not selling well
 Hide 
@@ -935,7 +1151,18 @@ BaseType "Vile Robe" "Adherent Bow" "Guardian Quarterstaff"
     SetBackgroundColor 1 1 1 250
 
 #===============================================================================================================
-# Hide Item Options
+# Section - Show All Identifed Items
+#===============================================================================================================
+
+# Show Identified Items
+Show 
+    Identified True
+    SetFontSize 15
+    SetBorderColor 0 0 0 0
+	SetBackgroundColor 1 1 1 200
+
+#===============================================================================================================
+# Section - Hide Item Options
 #===============================================================================================================
 
 #### This is a Hides all
